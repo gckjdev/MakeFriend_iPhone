@@ -13,6 +13,10 @@
     UITextField *loginIdField;
     NSString *token;
     NSString *tokenSecret;
+    UISegmentedControl *genderSegControl;
+    UILabel *genderLabel;
+    
+    NSString *gender;
 }
 
 @property (nonatomic, retain) IBOutlet UITextField *loginIdField;
@@ -26,6 +30,11 @@
 - (IBAction)clickRegister:(id)sender;
 - (IBAction)clickSinaLogin:(id)sender;
 - (IBAction)clickQQLogin:(id)sender;
+@property (nonatomic, retain) IBOutlet UISegmentedControl *genderSegControl;
+@property (nonatomic, retain) IBOutlet UILabel *genderLabel;
+@property (nonatomic, retain) NSString *gender;
+
+- (IBAction)genderChange:(id)sender;
 
 @end
 

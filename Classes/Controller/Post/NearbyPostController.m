@@ -17,6 +17,7 @@
 #import "PostTableViewCell.h"
 #import "ResultUtils.h"
 #import "MoreTableViewCell.h"
+#import "PostActionCell.h"
 #import "PrivateMessageControllerUtils.h"
 
 @implementation NearbyPostController
@@ -33,7 +34,7 @@
 }
 
 - (void)dealloc
-{
+{    
     [superController release];
     [super dealloc];
 }
@@ -48,15 +49,26 @@
 
 #pragma mark - View lifecycle
 
+- (void)loadDataList
+{
+    self.dataList = [PostManager getAllNearbyPost:nil];     
+    [self updateMoreRowIndexPath];    
+}
+
 - (void)nearbyPostDataRefresh:(int)result
 {    
     if (result == ERROR_SUCCESS){
-        self.dataList = [PostManager getAllNearbyPost:nil];        
+        [self loadDataList];
         [self.dataTableView reloadData];
     }
 
     if ([self isReloading]){
         [self dataSourceDidFinishLoadingNewData];
+    }
+    
+    if ([self.moreLoadingView isAnimating]){
+        [self.moreLoadingView stopAnimating];
+        [self.dataTableView deselectRowAtIndexPath:moreRowIndexPath animated:NO];
     }
 }
 
@@ -81,10 +93,11 @@
     }        
 }
 
+
+
 - (void)initDataList
 {
-    NSString* userId = [UserManager getUserId];
-    self.dataList = [PostManager getAllNearbyPost:userId];
+    [self loadDataList];
     [self requestPostListFromServer:YES];    
 }
 
@@ -93,6 +106,7 @@
     supportRefreshHeader = YES;
     
     [self initDataList];
+    [self enableMoreRowAtSection:0];
     
     [super viewDidLoad];
 
@@ -103,7 +117,7 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
-    self.dataList = [PostManager getAllNearbyPost:nil]; 
+    [self loadDataList];
     [super viewDidAppear:YES];
 }
 
@@ -122,62 +136,18 @@
 
 #pragma mark Table View Delegate
 
-//- (NSArray *)sectionIndexTitlesForTableView:(UITableView *)aTableView 
-//{
-//	NSMutableArray* array = [NSMutableArray arrayWithArray:[ArrayOfCharacters getArray]];
-//	[array addObject:kSectionNull];
-//	return array;
-//	
-////		NSMutableArray *indices = [NSMutableArray arrayWithObject:UITableViewIndexSearch];
-////		return nil;
-//}
-//
-//
-//- (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index
-//{
-//	return [groupData sectionForLetter:title];
-//}
-
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-	
-	NSString *sectionHeader = [groupData titleForSection:section];	
-	
-	//	switch (section) {
-	//		case <#constant#>:
-	//			<#statements#>
-	//			break;
-	//		default:
-	//			break;
-	//	}
-	
-	return sectionHeader;
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {		
+	return @"";
 }
-
-//- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
-//{
-//	return [self getSectionView:tableView section:section];
-//}
-
-//- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
-//{
-//	return sectionImageHeight;
-//}
-
-//- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
-//{
-//	return [self getFooterView:tableView section:section];
-//}
-
-//- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
-//{
-//	return footerImageHeight;
-//}
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
 	// return [self getRowHeight:indexPath.row totalRow:[dataList count]];
 	// return cellImageHeight;
-    if ([self isMoreRow:indexPath.row]){
+    if ([self.controlRowIndexPath isEqual:indexPath])
+        return [PostActionCell getCellHeight];
+    
+    if ([self isMoreRowIndexPath:indexPath]){
         return [MoreTableViewCell getRowHeight];
     }
 
@@ -185,28 +155,32 @@
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;		// default implementation
-	
-	// return [groupData totalSectionCount];
+    return 1;		
 }
 
 // Customize the number of rows in the table view.
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [self dataListCountWithMore];
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {  
+    return [self calcRowCount];
 }
 
 
 // Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)theTableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    // tag_more_rows
-    if ([self isMoreRow:indexPath.row]){
-        // check if it's last row - to load more
+    if ([self isMoreRowIndexPath:indexPath]){
         MoreTableViewCell* moreCell = [MoreTableViewCell createCell:theTableView];
         self.moreLoadingView = moreCell.loadingView;
         return moreCell;
     }
 
+    if ([self isControlRowIndexPath:indexPath]){
+        NSString *CellIdentifier = [PostActionCell getCellIdentifier];
+        PostActionCell *cell = (PostActionCell*)[theTableView dequeueReusableCellWithIdentifier:CellIdentifier];
+        if (cell == nil) {
+            cell = [PostActionCell createCell];
+        }        
+        return cell;
+    }
     
     NSString *CellIdentifier = [PostTableViewCell getCellIdentifier];
 	PostTableViewCell *cell = (PostTableViewCell*)[theTableView dequeueReusableCellWithIdentifier:CellIdentifier];
@@ -214,6 +188,8 @@
 		cell = [PostTableViewCell createCell:self];
 	}
 	
+    indexPath = [self modelIndexPathForIndexPath:indexPath];
+    
 	cell.accessoryView = accessoryView;
 	
 	// set text label
@@ -233,50 +209,13 @@
 	
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-	
-    // tag_more_rows
-    if ([self isMoreRow:indexPath.row]){
-        [self.moreLoadingView startAnimating];
-        [self requestPostListFromServer:NO];
-        return;
-    }
-    
-	if (indexPath.row > [dataList count] - 1)
-		return;
-	
-	// do select row action
-    [PostControllerUtils gotoPostController:self.superController 
-                                       post:[dataList objectAtIndex:indexPath.row]];
-    
-}
-
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-	if (editingStyle == UITableViewCellEditingStyleDelete) {
-		
-		if (indexPath.row > [dataList count] - 1)
-			return;
-		
-		// take delete action below, update data list
-		// NSObject* dataObject = [dataList objectAtIndex:indexPath.row];		
-		
-		// update table view
-		
-	}
-	
-}
-
 - (void)clickPlaceNameButton:(id)sender atIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.row >= [dataList count])
         return;
     
     Post* post = [dataList objectAtIndex:indexPath.row];
-    [PostControllerUtils askFollowPlace:post.placeId placeName:post.placeName  viewController:self];
-    
-    
-    
+    [PostControllerUtils askFollowPlace:post.placeId placeName:post.placeName  viewController:self];            
 }
 
 - (void)clickUserAvatarButton:(id)sender atIndexPath:(NSIndexPath *)indexPath
@@ -289,6 +228,11 @@
                                                    userNickName:post.userNickName
                                                      userAvatar:post.userAvatar
                                                  viewController:self.superController];      
+}
+
+- (void)didSelectMoreRow
+{
+    [self requestPostListFromServer:YES];
 }
 
 #pragma Pull Refresh Delegate

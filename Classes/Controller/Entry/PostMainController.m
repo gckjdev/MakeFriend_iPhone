@@ -16,9 +16,10 @@
 
 enum SELECT_POST_TYPE {
     SELECT_NEARBY = 0,
-    SELECT_FOLLOW,
-    SELECT_MINE,
+    SELECT_LATEST,
     SELECT_PRIVATE_MESSAGE,
+    SELECT_FOLLOW,                  // not used, reserved
+    SELECT_MINE,
     };
 
 @implementation PostMainController
@@ -113,15 +114,16 @@ enum SELECT_POST_TYPE {
 - (void)viewDidLoad
 {
     // set right button
-    UIBarButtonItem *newPostButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCompose target:self action:@selector(clickCreatePost:)];
-    self.navigationItem.rightBarButtonItem = newPostButton;
-    [newPostButton release];
+//    UIBarButtonItem *newPostButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(clickCreatePost:)];
+//    self.navigationItem.rightBarButtonItem = newPostButton;
+//    [newPostButton release];
     
     [self createNavigationTitleToolbar:
                     [NSArray arrayWithObjects:
+                     NSLS(@"kLatestPost"),
                      NSLS(@"kNearbyPost"),
-                     NSLS(@"kFollowPost"),
-                     NSLS(@"kAtMePost"),
+//                     NSLS(@"kFollowPost"),
+//                     NSLS(@"kAtMePost"),
                      NSLS(@"kMyPrivateMessage"),
                      nil]
                     defaultSelectIndex:SELECT_NEARBY];    

@@ -21,6 +21,7 @@
 
 @class PlaceSNSService;
 @class MessageService;
+@class PostService;
 
 #define _THREE20_		1
 #define kAppId			@"388419035"					// To be changed for each project
@@ -39,6 +40,7 @@ LocalDataServiceDelegate, UserServiceDelegate> {
     RegisterController  *registerController;
     PlaceSNSService     *snsService;
     MessageService      *messageService;
+    PostService         *postService;
 
     EnterPlaceAppController *enterController;    
     NSString                *placeNameForRegistration;
@@ -54,6 +56,7 @@ LocalDataServiceDelegate, UserServiceDelegate> {
 @property (nonatomic, retain) UserService                   *userService;
 @property (nonatomic, retain) PlaceSNSService               *snsService;
 @property (nonatomic, retain) MessageService                *messageService;
+@property (nonatomic, retain) PostService                   *postService;
 @property (nonatomic, retain) RegisterController            *registerController;
 @property (nonatomic, retain) EnterPlaceAppController       *enterController;    
 @property (nonatomic, retain) NSString                      *placeNameForRegistration;

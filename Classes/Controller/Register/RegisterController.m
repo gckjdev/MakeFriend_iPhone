@@ -14,6 +14,12 @@
 #import "OAuthCore.h"
 #import "JSON.h"
 #import "PlaceSNSService.h"
+#import "VariableConstants.h"
+
+enum{
+    SELECT_BOY,
+    SELECT_GIRL
+};
 
 #define sinaAppKey                      @"1528146353"
 #define sinaAppSecret                   @"4815b7938e960380395e6ac1fe645a5c"
@@ -33,6 +39,9 @@
 #define renrenAppSecret                 @"60d5fe4a88b847be80cd7bd126cdfed2"
 
 @implementation RegisterController
+@synthesize genderSegControl;
+@synthesize genderLabel;
+@synthesize gender;
 
 @synthesize loginIdField;
 @synthesize token;
@@ -56,6 +65,9 @@
     frame.origin.y = 20;
     self.view.frame = frame;
     
+    genderLabel.text = NSLS(@"kGenderLabel");
+    [self genderChange:self.genderSegControl];
+    
     [super viewDidLoad];
 }
 
@@ -75,6 +87,8 @@
 }
 
 - (void)viewDidUnload {
+    [self setGenderSegControl:nil];
+    [self setGenderLabel:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -83,10 +97,13 @@
 
 
 - (void)dealloc {
-    [super dealloc];
+    [genderSegControl release];
+    [genderLabel release];
     [loginIdField release];
     [token release];
     [tokenSecret release];
+    [gender release];
+    [super dealloc];
 }
 
 - (IBAction)textFieldDoneEditing:(id)sender {
@@ -127,7 +144,7 @@
 - (IBAction)clickRegister:(id)sender {
     
     UserService* userService = GlobalGetUserService();
-    [userService loginUserWithLoginId:loginIdField.text viewController:self];     
+    [userService loginUserWithLoginId:loginIdField.text gender:gender viewController:self];     
 }
 
 - (IBAction)clickSinaLogin:(id)sender
@@ -142,6 +159,14 @@
     [snsService qqInitiateLogin:self];
 }
 
-
+- (IBAction)genderChange:(id)sender
+{
+    if (genderSegControl.selectedSegmentIndex == SELECT_BOY){
+        self.gender = GENDER_MALE;
+    }
+    else{
+        self.gender = GENDER_FEMALE;
+    }
+}
 
 @end

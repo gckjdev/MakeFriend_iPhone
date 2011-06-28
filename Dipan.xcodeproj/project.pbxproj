@@ -78,6 +78,8 @@
 		CA13B6D713B860CC0016FE54 /* PlaceSNSService.m in Sources */ = {isa = PBXBuildFile; fileRef = CA13B6AB13B860CC0016FE54 /* PlaceSNSService.m */; };
 		CA13B6D813B860CC0016FE54 /* QQService.m in Sources */ = {isa = PBXBuildFile; fileRef = CA13B6AD13B860CC0016FE54 /* QQService.m */; };
 		CA13B6D913B860CC0016FE54 /* UserService.m in Sources */ = {isa = PBXBuildFile; fileRef = CA13B6AF13B860CC0016FE54 /* UserService.m */; };
+		CA13B6DD13B875780016FE54 /* NewMakeFriendPostMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA13B6DB13B875780016FE54 /* NewMakeFriendPostMainController.m */; };
+		CA13B6DE13B875780016FE54 /* NewMakeFriendPostMainController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA13B6DC13B875780016FE54 /* NewMakeFriendPostMainController.xib */; };
 		CA2A016E138E2F87007EBEA9 /* NearbyPostController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA2A016C138E2F86007EBEA9 /* NearbyPostController.m */; };
 		CA2A016F138E2F87007EBEA9 /* NearbyPostController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA2A016D138E2F86007EBEA9 /* NearbyPostController.xib */; };
 		CA2A0173138E2FD3007EBEA9 /* FollowPostController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA2A0171138E2FD2007EBEA9 /* FollowPostController.m */; };
@@ -164,6 +166,9 @@
 		CAAA41EB137CDC6F00FB7C25 /* CreatePostController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAAA41E9137CDC6F00FB7C25 /* CreatePostController.xib */; };
 		CAAA41EF137CDE1800FB7C25 /* PostMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAA41ED137CDE1200FB7C25 /* PostMainController.m */; };
 		CAAA41F0137CDE1900FB7C25 /* PostMainController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAAA41EE137CDE1200FB7C25 /* PostMainController.xib */; };
+		CAAC17BF13B88A3F007978E5 /* SelectPostPhotoController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAC17BD13B88A3F007978E5 /* SelectPostPhotoController.m */; };
+		CAAC17C013B88A3F007978E5 /* SelectPostPhotoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAAC17BE13B88A3F007978E5 /* SelectPostPhotoController.xib */; };
+		CAAC17C313B8B367007978E5 /* PostService.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAC17C213B8B367007978E5 /* PostService.m */; };
 		CAAF01BF137FE03200E56503 /* AddressBookUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAFFF09137FE03000E56503 /* AddressBookUtils.m */; };
 		CAAF01C8137FE03200E56503 /* CustomIndexView.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAFFF1B137FE03000E56503 /* CustomIndexView.m */; };
 		CAAF01C9137FE03200E56503 /* EnhanceUIApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAFFF1D137FE03000E56503 /* EnhanceUIApplication.m */; };
@@ -282,6 +287,8 @@
 		CAAF030F137FE03200E56503 /* UIToolBarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAF0184137FE03100E56503 /* UIToolBarCell.m */; };
 		CAAF0310137FE03200E56503 /* UIWebViewUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAF0186137FE03100E56503 /* UIWebViewUtil.m */; };
 		CAB2F05A125F4CA600593157 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAB2F059125F4CA600593157 /* AudioToolbox.framework */; };
+		CAC4198413B9AA96007542BD /* PostActionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAC4198313B9AA96007542BD /* PostActionCell.xib */; };
+		CAC4198713B9AAC2007542BD /* PostActionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CAC4198613B9AAC2007542BD /* PostActionCell.m */; };
 		CAD19B1E137A6A3500A8817B /* FeedbackController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAD19B0C137A6A3500A8817B /* FeedbackController.m */; };
 		CAD19B1F137A6A3500A8817B /* FeedbackController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAD19B0D137A6A3500A8817B /* FeedbackController.xib */; };
 		CAD19B20137A6A3500A8817B /* InfoMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAD19B0F137A6A3500A8817B /* InfoMainController.m */; };
@@ -586,6 +593,9 @@
 		CA13B6AD13B860CC0016FE54 /* QQService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QQService.m; sourceTree = "<group>"; };
 		CA13B6AE13B860CC0016FE54 /* UserService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserService.h; sourceTree = "<group>"; };
 		CA13B6AF13B860CC0016FE54 /* UserService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserService.m; sourceTree = "<group>"; };
+		CA13B6DA13B875780016FE54 /* NewMakeFriendPostMainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewMakeFriendPostMainController.h; sourceTree = "<group>"; };
+		CA13B6DB13B875780016FE54 /* NewMakeFriendPostMainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewMakeFriendPostMainController.m; sourceTree = "<group>"; };
+		CA13B6DC13B875780016FE54 /* NewMakeFriendPostMainController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewMakeFriendPostMainController.xib; sourceTree = "<group>"; };
 		CA2A016B138E2F86007EBEA9 /* NearbyPostController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NearbyPostController.h; sourceTree = "<group>"; };
 		CA2A016C138E2F86007EBEA9 /* NearbyPostController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NearbyPostController.m; sourceTree = "<group>"; };
 		CA2A016D138E2F86007EBEA9 /* NearbyPostController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NearbyPostController.xib; sourceTree = "<group>"; };
@@ -729,6 +739,11 @@
 		CAAA41EC137CDE1000FB7C25 /* PostMainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostMainController.h; sourceTree = "<group>"; };
 		CAAA41ED137CDE1200FB7C25 /* PostMainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostMainController.m; sourceTree = "<group>"; };
 		CAAA41EE137CDE1200FB7C25 /* PostMainController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostMainController.xib; sourceTree = "<group>"; };
+		CAAC17BC13B88A3F007978E5 /* SelectPostPhotoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectPostPhotoController.h; sourceTree = "<group>"; };
+		CAAC17BD13B88A3F007978E5 /* SelectPostPhotoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectPostPhotoController.m; sourceTree = "<group>"; };
+		CAAC17BE13B88A3F007978E5 /* SelectPostPhotoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectPostPhotoController.xib; sourceTree = "<group>"; };
+		CAAC17C113B8B367007978E5 /* PostService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostService.h; sourceTree = "<group>"; };
+		CAAC17C213B8B367007978E5 /* PostService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostService.m; sourceTree = "<group>"; };
 		CAAF0018137FE03000E56503 /* TextEditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextEditorViewController.h; sourceTree = "<group>"; };
 		CAAF0019137FE03000E56503 /* TextEditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextEditorViewController.m; sourceTree = "<group>"; };
 		CAAF001A137FE03000E56503 /* TextEditorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextEditorViewController.xib; sourceTree = "<group>"; };
@@ -946,6 +961,9 @@
 		CAAFFFE6137FE03000E56503 /* SelectItemViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectItemViewController.xib; sourceTree = "<group>"; };
 		CAB2F059125F4CA600593157 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		CABC814813A1F5F8001CE1B8 /* ContollerConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContollerConstants.h; sourceTree = "<group>"; };
+		CAC4198313B9AA96007542BD /* PostActionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostActionCell.xib; sourceTree = "<group>"; };
+		CAC4198513B9AAC2007542BD /* PostActionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostActionCell.h; sourceTree = "<group>"; };
+		CAC4198613B9AAC2007542BD /* PostActionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostActionCell.m; sourceTree = "<group>"; };
 		CAD19B0B137A6A3500A8817B /* FeedbackController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedbackController.h; sourceTree = "<group>"; };
 		CAD19B0C137A6A3500A8817B /* FeedbackController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedbackController.m; sourceTree = "<group>"; };
 		CAD19B0D137A6A3500A8817B /* FeedbackController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedbackController.xib; sourceTree = "<group>"; };
@@ -1407,6 +1425,8 @@
 				CA13B6AD13B860CC0016FE54 /* QQService.m */,
 				CA13B6AE13B860CC0016FE54 /* UserService.h */,
 				CA13B6AF13B860CC0016FE54 /* UserService.m */,
+				CAAC17C113B8B367007978E5 /* PostService.h */,
+				CAAC17C213B8B367007978E5 /* PostService.m */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -1656,6 +1676,12 @@
 				CA5C847F13A9948200A22BB5 /* AtMePostController.h */,
 				CA5C848013A9948200A22BB5 /* AtMePostController.m */,
 				CA5C848113A9948200A22BB5 /* AtMePostController.xib */,
+				CAAC17BC13B88A3F007978E5 /* SelectPostPhotoController.h */,
+				CAAC17BD13B88A3F007978E5 /* SelectPostPhotoController.m */,
+				CAAC17BE13B88A3F007978E5 /* SelectPostPhotoController.xib */,
+				CAC4198313B9AA96007542BD /* PostActionCell.xib */,
+				CAC4198513B9AAC2007542BD /* PostActionCell.h */,
+				CAC4198613B9AAC2007542BD /* PostActionCell.m */,
 			);
 			path = Post;
 			sourceTree = "<group>";
@@ -2155,6 +2181,9 @@
 				CAAA41EC137CDE1000FB7C25 /* PostMainController.h */,
 				CAAA41ED137CDE1200FB7C25 /* PostMainController.m */,
 				CAAA41EE137CDE1200FB7C25 /* PostMainController.xib */,
+				CA13B6DA13B875780016FE54 /* NewMakeFriendPostMainController.h */,
+				CA13B6DB13B875780016FE54 /* NewMakeFriendPostMainController.m */,
+				CA13B6DC13B875780016FE54 /* NewMakeFriendPostMainController.xib */,
 			);
 			path = Entry;
 			sourceTree = "<group>";
@@ -2508,6 +2537,9 @@
 				CA8900DA13B6DE37005ED51A /* PrivateMessageUserCell.xib in Resources */,
 				CA8900E613B70480005ED51A /* CreatePrivateMessageController.xib in Resources */,
 				CA13B6BF13B860CC0016FE54 /* Server_Interface.txt in Resources */,
+				CA13B6DE13B875780016FE54 /* NewMakeFriendPostMainController.xib in Resources */,
+				CAAC17C013B88A3F007978E5 /* SelectPostPhotoController.xib in Resources */,
+				CAC4198413B9AA96007542BD /* PostActionCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2710,6 +2742,10 @@
 				CA13B6D713B860CC0016FE54 /* PlaceSNSService.m in Sources */,
 				CA13B6D813B860CC0016FE54 /* QQService.m in Sources */,
 				CA13B6D913B860CC0016FE54 /* UserService.m in Sources */,
+				CA13B6DD13B875780016FE54 /* NewMakeFriendPostMainController.m in Sources */,
+				CAAC17BF13B88A3F007978E5 /* SelectPostPhotoController.m in Sources */,
+				CAAC17C313B8B367007978E5 /* PostService.m in Sources */,
+				CAC4198713B9AAC2007542BD /* PostActionCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

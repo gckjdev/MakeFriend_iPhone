@@ -15,7 +15,7 @@
 @interface NearbyPostController : PPTableViewController <LocalDataServiceDelegate, PostTableViewCellDelegate> {
     
     
-    UIViewController     *superController;
+    UIViewController     *superController;    
 }
 
 @property (nonatomic, retain) UIViewController     *superController;

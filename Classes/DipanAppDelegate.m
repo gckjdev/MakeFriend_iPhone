@@ -20,7 +20,7 @@
 #import "MyInfoController.h"
 #import "InviteController.h"
 #import "FeedbackController.h"
-#import "PlaceMainController.h"
+#import "NewMakeFriendPostMainController.h"
 #import "PostMainController.h"
 
 #import "CommonManager.h"
@@ -31,10 +31,17 @@
 #import "PlaceManager.h"
 #import "PlaceSNSService.h"
 #import "MessageService.h"
+#import "PostService.h"
 
 #define kDbFileName			@"AppDB"
 
-extern MessageService*   GlobalGetMessageService()
+PostService* GlobalGetPostService()
+{
+    DipanAppDelegate* delegate = (DipanAppDelegate*)[[UIApplication sharedApplication] delegate];    
+    return [delegate postService];        
+}
+
+MessageService*   GlobalGetMessageService()
 {
     DipanAppDelegate* delegate = (DipanAppDelegate*)[[UIApplication sharedApplication] delegate];    
     return [delegate messageService];    
@@ -68,7 +75,12 @@ PlaceSNSService* GlobalGetSNSService()
 
 NSString* GlobalGetPlaceAppId()
 {
-    return @"PLACE";
+    return @"FRIEND";
+}
+
+NSString* GlobalGetServerURL()
+{
+    return @"http://192.168.1.188:8000/api/i?";
 }
 
 @implementation DipanAppDelegate
@@ -84,6 +96,7 @@ NSString* GlobalGetPlaceAppId()
 @synthesize enterController;
 @synthesize placeNameForRegistration;
 @synthesize messageService;
+@synthesize postService;
 
 #pragma mark -
 #pragma mark Application lifecycle
@@ -92,8 +105,8 @@ NSString* GlobalGetPlaceAppId()
 {
 	NSMutableArray* controllers = [[NSMutableArray alloc] init];
 
-	[UIUtils addViewController:[PlaceMainController alloc]
-					 viewTitle:NSLS(@"Nearby")
+	[UIUtils addViewController:[NewMakeFriendPostMainController alloc]
+					 viewTitle:NSLS(@"kNewPost")
 					 viewImage:@"app_globe_24.png"
 			  hasNavController:YES			
 			   viewControllers:controllers];	
@@ -179,6 +192,11 @@ void uncaughtExceptionHandler(NSException *exception) {
     self.snsService = [[PlaceSNSService alloc] init];
 }
 
+- (void)initPostService
+{
+    self.postService = [[PostService alloc] init];
+}
+
 - (void)showViewByUserStatus
 {
     [userService checkDevice];    
@@ -200,6 +218,7 @@ void uncaughtExceptionHandler(NSException *exception) {
     [self initUserService];
     [self initLocalDataService];       
     [self initMessageService];
+    [self initPostService];
 
     [self showViewByUserStatus];
     
