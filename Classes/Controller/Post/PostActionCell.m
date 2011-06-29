@@ -10,6 +10,10 @@
 
 
 @implementation PostActionCell
+@synthesize likeButton;
+@synthesize sendMessageButton;
+@synthesize delegate;
+@synthesize indexPath;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -29,6 +33,9 @@
 
 - (void)dealloc
 {
+    [likeButton release];
+    [sendMessageButton release];
+    [indexPath release];
     [super dealloc];
 }
 
@@ -41,7 +48,7 @@
     [self setCellStyle];
 }
 
-+ (PostActionCell*)createCell //:(id<PostTableViewCellDelegate>)delegate
++ (PostActionCell*)createCell:(id<PostActionCellDelegate>)delegate
 {
     NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"PostActionCell" owner:self options:nil];
     // Grab a pointer to the first object (presumably the custom cell, as that's all the XIB should contain).  
@@ -50,7 +57,7 @@
         return nil;
     }
     
-//    ((PostActionCell*)[topLevelObjects objectAtIndex:0]).delegate = delegate;
+    ((PostActionCell*)[topLevelObjects objectAtIndex:0]).delegate = delegate;
     
     return (PostActionCell*)[topLevelObjects objectAtIndex:0];
 }
@@ -63,6 +70,20 @@
 + (CGFloat)getCellHeight
 {
     return 44.0f;
+}
+
+- (IBAction)clickLikeButton:(id)sender
+{
+    if ([delegate respondsToSelector:@selector(clickLikeButton:atIndexPath:)]){
+        [delegate clickLikeButton:sender atIndexPath:indexPath];
+    }
+}
+
+- (IBAction)clickSendMessageButton:(id)sender
+{
+    if ([delegate respondsToSelector:@selector(clickSendMessageButton:atIndexPath:)]){
+        [delegate clickSendMessageButton:sender atIndexPath:indexPath];
+    }    
 }
 
 @end

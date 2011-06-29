@@ -19,10 +19,13 @@
 #import "MoreTableViewCell.h"
 #import "PostActionCell.h"
 #import "PrivateMessageControllerUtils.h"
+#import "CreatePrivateMessageController.h"
+#import "PostService.h"
 
 @implementation NearbyPostController
 
 @synthesize superController;
+@synthesize privateMssageController;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -35,6 +38,7 @@
 
 - (void)dealloc
 {    
+    [privateMssageController release];
     [superController release];
     [super dealloc];
 }
@@ -124,6 +128,9 @@
 - (void)viewDidUnload
 {
     [super viewDidUnload];
+    
+    self.privateMssageController = nil;
+    
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
 }
@@ -135,6 +142,19 @@
 }
 
 #pragma mark Table View Delegate
+
+- (Post*)postByIndexPath:(NSIndexPath*)indexPath
+{
+    NSIndexPath* modelIndexPath = [self modelIndexPathForIndexPath:indexPath];
+    if (modelIndexPath.row < [dataList count]){
+        return [dataList objectAtIndex:modelIndexPath.row];
+    }
+    else{
+        NSLog(@"<WARN> postByIndexPath by index path row (%d) > data list count (%d)",
+              modelIndexPath.row, [dataList count]);
+        return nil;
+    }
+}
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {		
 	return @"";
@@ -177,7 +197,8 @@
         NSString *CellIdentifier = [PostActionCell getCellIdentifier];
         PostActionCell *cell = (PostActionCell*)[theTableView dequeueReusableCellWithIdentifier:CellIdentifier];
         if (cell == nil) {
-            cell = [PostActionCell createCell];
+            cell = [PostActionCell createCell:self];
+            cell.indexPath = indexPath;
         }        
         return cell;
     }
@@ -191,18 +212,12 @@
     indexPath = [self modelIndexPathForIndexPath:indexPath];
     
 	cell.accessoryView = accessoryView;
+    //	[self setCellBackground:cell row:row count:count];        		
 	
-	// set text label
-	int row = [indexPath row];	
-	int count = [dataList count];
-	if (row >= count){
-		NSLog(@"[WARN] cellForRowAtIndexPath, row(%d) > data list total number(%d)", row, count);
-		return cell;
-	}
+    Post* post = [self postByIndexPath:indexPath];
+    if (post == nil)
+        return cell;
 	
-    //	[self setCellBackground:cell row:row count:count];        
-	
-	Post* post = [dataList objectAtIndex:row];
     [cell setCellInfoWithPost:post indexPath:indexPath];
 	
 	return cell;
@@ -211,24 +226,54 @@
 
 - (void)clickPlaceNameButton:(id)sender atIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.row >= [dataList count])
+    Post* post = [self postByIndexPath:indexPath];
+    if (post == nil)
         return;
-    
-    Post* post = [dataList objectAtIndex:indexPath.row];
+
     [PostControllerUtils askFollowPlace:post.placeId placeName:post.placeName  viewController:self];            
 }
 
 - (void)clickUserAvatarButton:(id)sender atIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.row >= [dataList count])
+    Post* post = [self postByIndexPath:indexPath];
+    if (post == nil)
         return;
-    
-    Post* post = [dataList objectAtIndex:indexPath.row];    
+
     [PrivateMessageControllerUtils showPrivateMessageController:post.userId 
                                                    userNickName:post.userNickName
                                                      userAvatar:post.userAvatar
                                                  viewController:self.superController];      
 }
+
+- (void)clickLikeButton:(id)sender atIndexPath:(NSIndexPath*)indexPath
+{
+    Post* post = [self postByIndexPath:indexPath];
+    if (post == nil)
+        return;
+
+    PostService* postService = GlobalGetPostService();
+    [postService actionOnPost:post.postId
+                   actionName:POST_ACTION_LIKE
+               viewController:self];
+}
+
+- (void)clickSendMessageButton:(id)sender atIndexPath:(NSIndexPath*)indexPath
+{
+    Post* post = [self postByIndexPath:indexPath];
+    if (post == nil)
+        return;
+    
+    if (self.privateMssageController == nil){
+        self.privateMssageController = [PrivateMessageControllerUtils showPrivateMessageController:post.userId 
+                                                   userNickName:post.userNickName
+                                                     userAvatar:post.userAvatar
+                                                 viewController:self.superController];      
+    }
+    else{
+        [self.superController.navigationController pushViewController:self.privateMssageController animated:YES];
+    }
+}
+
 
 - (void)didSelectMoreRow
 {

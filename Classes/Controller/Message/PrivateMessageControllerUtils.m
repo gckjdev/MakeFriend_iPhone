@@ -12,7 +12,7 @@
 
 @implementation PrivateMessageControllerUtils
 
-+ (void)showPrivateMessageController:(NSString*)userId 
++ (CreatePrivateMessageController*)showPrivateMessageController:(NSString*)userId 
                         userNickName:(NSString*)nickName
                           userAvatar:(NSString*)avatar
                       viewController:(UIViewController*)superViewController
@@ -23,6 +23,8 @@
     controller.messageUserAvatar = avatar;
     [superViewController.navigationController pushViewController:controller animated:YES];
     [controller release];
+    
+    return controller;
 }
 
 @end

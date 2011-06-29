@@ -131,6 +131,7 @@
 }
 
 - (void)setCellInfoWithTextContent:(NSString*)textContent 
+                        userGender:(NSString*)userGender
                       userNickName:(NSString*)userNickName 
                         createDate:(NSDate*)createDate
                         totalRelated:(int)totalRelated
@@ -160,7 +161,8 @@
         self.userAvatarImage.url = [NSURL URLWithString:userAvatar];
     }
     else{
-        self.userAvatarImage.url = [self bundleURL:DEFAULT_AVATAR];
+        NSString* defaultAvatar = [UserService defaultAvatarByGender:userGender];
+        self.userAvatarImage.url = [self bundleURL:defaultAvatar];
     }
     [GlobalGetImageCache() manage:self.userAvatarImage];
 
@@ -186,6 +188,7 @@
 {
     
     [self setCellInfoWithTextContent:post.textContent
+                          userGender:post.userGender
                         userNickName:post.userNickName
                           createDate:post.createDate
                           totalRelated:[post.totalRelated intValue]
@@ -199,6 +202,7 @@
 - (void)setCellInfoWithDict:(NSDictionary*)dict indexPath:(NSIndexPath*)indexPathValue
 {
     [self setCellInfoWithTextContent:[ResultUtils textContent:dict]
+                          userGender:[ResultUtils gender:dict]
                         userNickName:[ResultUtils nickName:dict]
                           createDate:[ResultUtils createDate:dict]
                           totalRelated:[ResultUtils totalRelated:dict]

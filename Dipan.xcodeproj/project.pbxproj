@@ -140,6 +140,9 @@
 		CA9E093E139CB7E2000B6FEE /* SNSServiceHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = CA9E093D139CB7E2000B6FEE /* SNSServiceHandler.m */; };
 		CA9E0941139CB803000B6FEE /* QQWeiboRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = CA9E0940139CB803000B6FEE /* QQWeiboRequest.m */; };
 		CA9E0944139CB817000B6FEE /* SINAWeiboRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = CA9E0943139CB817000B6FEE /* SINAWeiboRequest.m */; };
+		CAA54D3413BAD19F008D8D6B /* PPTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CAA54D3313BAD19F008D8D6B /* PPTableViewCell.m */; };
+		CAA5F69D13BAF32C00F3F2D2 /* girl1.png in Resources */ = {isa = PBXBuildFile; fileRef = CAA5F69B13BAF32C00F3F2D2 /* girl1.png */; };
+		CAA5F69E13BAF32C00F3F2D2 /* boy1.png in Resources */ = {isa = PBXBuildFile; fileRef = CAA5F69C13BAF32C00F3F2D2 /* boy1.png */; };
 		CAA6AB1213987F52009F26E3 /* touxiang.png in Resources */ = {isa = PBXBuildFile; fileRef = CAA6AB1113987F52009F26E3 /* touxiang.png */; };
 		CAA6AB3013988A2A009F26E3 /* HJCircularBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = CAA6AB1D13988A2A009F26E3 /* HJCircularBuffer.m */; };
 		CAA6AB3113988A2A009F26E3 /* HJManagedImageV.m in Sources */ = {isa = PBXBuildFile; fileRef = CAA6AB1F13988A2A009F26E3 /* HJManagedImageV.m */; };
@@ -699,6 +702,10 @@
 		CA9E0940139CB803000B6FEE /* QQWeiboRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QQWeiboRequest.m; sourceTree = "<group>"; };
 		CA9E0942139CB817000B6FEE /* SINAWeiboRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SINAWeiboRequest.h; sourceTree = "<group>"; };
 		CA9E0943139CB817000B6FEE /* SINAWeiboRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SINAWeiboRequest.m; sourceTree = "<group>"; };
+		CAA54D3213BAD19F008D8D6B /* PPTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPTableViewCell.h; sourceTree = "<group>"; };
+		CAA54D3313BAD19F008D8D6B /* PPTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPTableViewCell.m; sourceTree = "<group>"; };
+		CAA5F69B13BAF32C00F3F2D2 /* girl1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = girl1.png; sourceTree = "<group>"; };
+		CAA5F69C13BAF32C00F3F2D2 /* boy1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boy1.png; sourceTree = "<group>"; };
 		CAA6AB1113987F52009F26E3 /* touxiang.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = touxiang.png; sourceTree = "<group>"; };
 		CAA6AB1C13988A2A009F26E3 /* HJCircularBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJCircularBuffer.h; sourceTree = "<group>"; };
 		CAA6AB1D13988A2A009F26E3 /* HJCircularBuffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJCircularBuffer.m; sourceTree = "<group>"; };
@@ -1949,6 +1956,8 @@
 				CAAFFF26137FE03000E56503 /* TestPPViewController.h */,
 				CAAFFF27137FE03000E56503 /* TestPPViewController.m */,
 				CAAFFF28137FE03000E56503 /* TestPPViewController.xib */,
+				CAA54D3213BAD19F008D8D6B /* PPTableViewCell.h */,
+				CAA54D3313BAD19F008D8D6B /* PPTableViewCell.m */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -2121,6 +2130,8 @@
 		CAB2F04E125F4A8400593157 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				CAA5F69B13BAF32C00F3F2D2 /* girl1.png */,
+				CAA5F69C13BAF32C00F3F2D2 /* boy1.png */,
 				CAA6AB1113987F52009F26E3 /* touxiang.png */,
 			);
 			path = Image;
@@ -2540,6 +2551,8 @@
 				CA13B6DE13B875780016FE54 /* NewMakeFriendPostMainController.xib in Resources */,
 				CAAC17C013B88A3F007978E5 /* SelectPostPhotoController.xib in Resources */,
 				CAC4198413B9AA96007542BD /* PostActionCell.xib in Resources */,
+				CAA5F69D13BAF32C00F3F2D2 /* girl1.png in Resources */,
+				CAA5F69E13BAF32C00F3F2D2 /* boy1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2746,6 +2759,7 @@
 				CAAC17BF13B88A3F007978E5 /* SelectPostPhotoController.m in Sources */,
 				CAAC17C313B8B367007978E5 /* PostService.m in Sources */,
 				CAC4198713B9AAC2007542BD /* PostActionCell.m in Sources */,
+				CAA54D3413BAD19F008D8D6B /* PPTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

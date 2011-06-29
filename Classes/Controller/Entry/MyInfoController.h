@@ -13,7 +13,7 @@
 @interface MyInfoController : PPTableViewController <UIActionSheetDelegate> {
     IBOutlet UILabel         *loginIdLabel;
     IBOutlet UILabel         *loginIdTypeLabel;
-    IBOutlet UIImageView     *avatarView;
+    IBOutlet UIImageView     *avatarView;           // useless
     IBOutlet UILabel         *nicknameLabel;
     HJManagedImageV *avatarImageView;
     UIButton *logoutButton;

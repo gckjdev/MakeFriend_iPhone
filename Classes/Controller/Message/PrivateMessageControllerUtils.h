@@ -9,12 +9,13 @@
 #import <Foundation/Foundation.h>
 
 @class PPViewController;
+@class CreatePrivateMessageController;
 
 @interface PrivateMessageControllerUtils : NSObject {
     
 }
 
-+ (void)showPrivateMessageController:(NSString*)userId 
++ (CreatePrivateMessageController*)showPrivateMessageController:(NSString*)userId 
                         userNickName:(NSString*)nickName
                           userAvatar:(NSString*)avatar
                       viewController:(UIViewController*)superViewController;

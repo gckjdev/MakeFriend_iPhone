@@ -18,6 +18,7 @@
 #import "PlaceSNSService.h"
 #import "SelectItemViewController.h"
 #import "TextEditorViewController.h"
+#import "VariableConstants.h"
 
 enum{
     
@@ -29,6 +30,7 @@ enum{
 
 enum{
     ROW_NICKNAME,
+    ROW_GENDER,
     ROW_MOBILE,
     ROW_INFO_NUM    
 };
@@ -36,8 +38,8 @@ enum{
 enum{
     ROW_SINA,
     ROW_QQ,
+    ROW_SNS_NUM,
     ROW_RENREN,
-    ROW_SNS_NUM
 };
 
 @implementation MyInfoController
@@ -59,6 +61,47 @@ enum{
     return self;
 }
 */
+
+enum{
+    ROW_MALE,
+    ROW_FEMALE
+};
+
+- (NSString*)rowToGender:(int)row
+{
+    if (row == ROW_MALE){
+        return GENDER_MALE;
+    }
+    else
+        return GENDER_FEMALE;
+}
+
+- (int)genderToRow:(NSString*)gender
+{
+    if ([gender isEqualToString:GENDER_MALE]){
+        return ROW_MALE;
+    }
+    else{
+        return ROW_FEMALE;
+    }
+}
+
+- (NSString*)genderTextByRow:(int)row
+{
+    if (ROW_MALE == row)
+        return NSLS(@"Male");
+    else
+        return NSLS(@"Female");
+}
+
+- (NSString*)genderTextByGender:(NSString*)gender
+{
+    if ([gender isEqualToString:GENDER_MALE])
+        return NSLS(@"Male");
+    else
+        return NSLS(@"Female");
+}
+
 
 - (void)updateLoginId
 {
@@ -99,6 +142,12 @@ enum{
     
     self.dataTableView.backgroundColor = [UIColor whiteColor];
     self.view.backgroundColor = [UIColor whiteColor];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [self updateImageView];
+    [super viewDidAppear:animated];
 }
 
 /*
@@ -239,6 +288,15 @@ enum{
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 }
 
+- (void)setGenderCell:(UITableViewCell*)cell
+{
+    UserService *userService = GlobalGetUserService();
+    cell.textLabel.text = NSLS(@"kGender");
+    cell.detailTextLabel.text = [self genderTextByGender:[[userService user] gender]];    
+    
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+}
+
 - (NSString*)getBindText:(BOOL)bindFlag
 {
     if (bindFlag){
@@ -314,6 +372,10 @@ enum{
                     [self setMobileCell:cell];
                     break;
                     
+                case ROW_GENDER:
+                    [self setGenderCell:cell];
+                    break;
+
                 default:
                     break;
             }
@@ -396,7 +458,7 @@ enum{
                 {
                     [userService updateUserMobile:newText];                    
                 }
-                    break;
+                    break;                                        
                     
                 default:
                     break;
@@ -404,6 +466,14 @@ enum{
             
             break;
     }
+}
+
+
+- (BOOL)shouldContinueAfterRowSelect:(int)row
+{
+    UserService* userService = GlobalGetUserService();  
+    [userService updateUserGender:[self rowToGender:row]];
+    return YES;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -446,6 +516,24 @@ enum{
                 }
                     break;
                     
+                case ROW_GENDER:
+                {
+                    UserService* userService = GlobalGetUserService();                    
+                    
+                    SelectItemViewController* vc = [[SelectItemViewController alloc] init];
+                    [vc setDataList:[NSArray arrayWithObjects:
+                                     [self genderTextByRow:ROW_MALE], 
+                                     [self genderTextByRow:ROW_FEMALE], nil]];
+                    
+                    [vc setInputSelectRow:[self genderToRow:[userService.user gender]]];	
+                    vc.delegate = self;
+                    vc.navigationItem.title = NSLS(@"kSetGender");
+                    vc.view.backgroundColor = [UIColor whiteColor]; // to be removed
+                    [self.navigationController pushViewController:vc animated:YES];
+                    [vc release];
+                }
+                    break;
+
                 default:
                     break;
             }

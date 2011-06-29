@@ -252,6 +252,7 @@ enum{
                               srcPostId:srcPostId
                             replyPostId:replyPostId
                              userAvatar:user.avatar
+                             userGender:user.gender
                                  useFor:POST_FOR_PLACE];
                 
                 [self.navigationController popViewControllerAnimated:YES];

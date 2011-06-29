@@ -8,13 +8,32 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol PostActionCellDelegate <NSObject>
+
+- (void)clickLikeButton:(id)sender atIndexPath:(NSIndexPath*)indexPath;
+
+- (void)clickSendMessageButton:(id)sender atIndexPath:(NSIndexPath*)indexPath;
+
+@end
 
 @interface PostActionCell : UITableViewCell {
     
+    UIButton *likeButton;
+    UIButton *sendMessageButton;
+    NSIndexPath *indexPath;
+    
+    id<PostActionCellDelegate> delegate;
 }
 
-+ (PostActionCell*)createCell;
++ (PostActionCell*)createCell:(id<PostActionCellDelegate>)delegate;
 + (NSString*)getCellIdentifier;
 + (CGFloat)getCellHeight;
+@property (nonatomic, retain) IBOutlet UIButton *likeButton;
+@property (nonatomic, retain) IBOutlet UIButton *sendMessageButton;
+@property (nonatomic, assign) id<PostActionCellDelegate> delegate;
+@property (nonatomic, retain) NSIndexPath *indexPath;
+
+- (IBAction)clickLikeButton:(id)sender;
+- (IBAction)clickSendMessageButton:(id)sender;
 
 @end
