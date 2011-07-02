@@ -8,6 +8,8 @@
 
 #import "NewMakeFriendPostMainController.h"
 #import "SelectPostPhotoController.h"
+#import "SeeExamplePostController.h"
+#import "HelpWritePostController.h"
 #import "PostService.h"
 
 #define MIN_CONTENT_LEN 20
@@ -55,7 +57,7 @@
 #pragma mark - View lifecycle
 
 - (void)viewDidLoad
-{
+{        
     [self setNavigationRightButton:NSLS(@"Next") action:@selector(clickNext:)];
     [self updateTitle];
     [super viewDidLoad];
@@ -102,5 +104,61 @@
 {
     [self updateTitle];
 }
+
+- (IBAction)clickReferButton:(id)sender
+{
+    [postContentTextView resignFirstResponder];
+    [SeeExamplePostController showSeeExamplePostController:self];
+}
+
+- (IBAction)clickHelpButton:(id)sender
+{
+    [postContentTextView resignFirstResponder];
+    [HelpWritePostController showHelpWritePostController:self];
+}
+
+- (void)clickCancel:(id)sender
+{
+    [self.postContentTextView resignFirstResponder];
+    self.navigationItem.leftBarButtonItem = nil;
+}
+
+- (void)helpWritePostDone:(NSString*)text
+{
+    self.postContentTextView.text = text;
+}
+
+- (void)keyboardDidShowWithRect:(CGRect)keyboardRect
+{
+    CATransition *animation = [CATransition animation];
+    [animation setDuration:1.0f];
+    [animation setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear]];
+    [animation setType:kCATransitionFade];
+    [animation setSubtype:kCATransitionFromTop];
+//    animation.fillMode = kCAFillModeRemoved;
+    [self.view.layer addAnimation:animation forKey:@"Reveal"];
+    CGRect frame = self.view.frame;
+    frame.origin.y = -47;
+    self.view.frame = frame;
+    
+    [self setNavigationLeftButton:NSLS(@"Cancel") action:@selector(clickCancel:)];        
+}
+
+- (void)keyboardDidHide:(NSNotification *)notification
+{
+    CATransition *animation = [CATransition animation];
+    [animation setDuration:0.5f];
+    [animation setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear]];
+    [animation setType:kCATransitionFade];
+    [animation setSubtype:kCATransitionFromBottom];
+    [self.view.layer addAnimation:animation forKey:@"Reveal"];
+    
+    CGRect frame = self.view.frame;
+    frame.origin.y = 0;
+    self.view.frame = frame;
+        
+    self.navigationItem.leftBarButtonItem = nil;
+}
+
 
 @end

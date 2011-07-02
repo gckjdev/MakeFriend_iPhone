@@ -84,6 +84,9 @@
 		CA2A016F138E2F87007EBEA9 /* NearbyPostController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA2A016D138E2F86007EBEA9 /* NearbyPostController.xib */; };
 		CA2A0173138E2FD3007EBEA9 /* FollowPostController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA2A0171138E2FD2007EBEA9 /* FollowPostController.m */; };
 		CA2A0174138E2FD3007EBEA9 /* FollowPostController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA2A0172138E2FD3007EBEA9 /* FollowPostController.xib */; };
+		CA3F00F713BED06A000B456F /* GetPublicTimelinePostRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = CA3F00F613BED06A000B456F /* GetPublicTimelinePostRequest.m */; };
+		CA3F00FB13BEDF24000B456F /* PublicTimelinePostController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA3F00F913BEDF23000B456F /* PublicTimelinePostController.m */; };
+		CA3F00FC13BEDF24000B456F /* PublicTimelinePostController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA3F00FA13BEDF23000B456F /* PublicTimelinePostController.xib */; };
 		CA4005AB138F5852009B5BF9 /* PostController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA4005A9138F5850009B5BF9 /* PostController.m */; };
 		CA4005AC138F5852009B5BF9 /* PostController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA4005AA138F5851009B5BF9 /* PostController.xib */; };
 		CA4921DD13AAF55300744CCC /* SelectPlaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA4921DB13AAF55300744CCC /* SelectPlaceController.m */; };
@@ -118,8 +121,16 @@
 		CA60467A1395D8AE006C1D9F /* FollowPlaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA6046781395D8AE006C1D9F /* FollowPlaceController.m */; };
 		CA60467B1395D8AE006C1D9F /* FollowPlaceController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA6046791395D8AE006C1D9F /* FollowPlaceController.xib */; };
 		CA60467E1395D8C0006C1D9F /* PlaceControllerUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = CA60467D1395D8C0006C1D9F /* PlaceControllerUtils.m */; };
+		CA76FAAA13BD60AA008B0CA5 /* HelpWritePostController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA76FAA813BD60AA008B0CA5 /* HelpWritePostController.m */; };
+		CA76FAAB13BD60AA008B0CA5 /* HelpWritePostController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA76FAA913BD60AA008B0CA5 /* HelpWritePostController.xib */; };
+		CA76FAAF13BD60EA008B0CA5 /* SeeExamplePostController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA76FAAD13BD60EA008B0CA5 /* SeeExamplePostController.m */; };
+		CA76FAB013BD60EA008B0CA5 /* SeeExamplePostController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA76FAAE13BD60EA008B0CA5 /* SeeExamplePostController.xib */; };
 		CA7F9CD6137D5B530033FE12 /* PlaceLocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA7F9CD4137D5B530033FE12 /* PlaceLocationController.m */; };
 		CA7F9CD7137D5B530033FE12 /* PlaceLocationController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA7F9CD5137D5B530033FE12 /* PlaceLocationController.xib */; };
+		CA87F91413BD653900F34CCB /* FriendPostExampleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CA87F91013BD653900F34CCB /* FriendPostExampleManager.m */; };
+		CA87F91513BD653900F34CCB /* PostHelpQuestionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CA87F91213BD653900F34CCB /* PostHelpQuestionManager.m */; };
+		CA87F91813BD785E00F34CCB /* HelpWritePostCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CA87F91713BD785E00F34CCB /* HelpWritePostCell.m */; };
+		CA87F91A13BD787200F34CCB /* HelpWritePostCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA87F91913BD787200F34CCB /* HelpWritePostCell.xib */; };
 		CA8900CA13B6DA6F005ED51A /* PrivateMessageListController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA8900C813B6DA6F005ED51A /* PrivateMessageListController.m */; };
 		CA8900CB13B6DA6F005ED51A /* PrivateMessageListController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA8900C913B6DA6F005ED51A /* PrivateMessageListController.xib */; };
 		CA8900CE13B6DAAD005ED51A /* PrivateMessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CA8900CD13B6DAAD005ED51A /* PrivateMessageTableViewCell.m */; };
@@ -292,6 +303,8 @@
 		CAB2F05A125F4CA600593157 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAB2F059125F4CA600593157 /* AudioToolbox.framework */; };
 		CAC4198413B9AA96007542BD /* PostActionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAC4198313B9AA96007542BD /* PostActionCell.xib */; };
 		CAC4198713B9AAC2007542BD /* PostActionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CAC4198613B9AAC2007542BD /* PostActionCell.m */; };
+		CAC7CEA813BCADA2003849D0 /* PPTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAC7CEA613BCADA2003849D0 /* PPTabBarController.m */; };
+		CAC7CEAC13BCB968003849D0 /* UIBadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = CAC7CEAB13BCB968003849D0 /* UIBadgeView.m */; };
 		CAD19B1E137A6A3500A8817B /* FeedbackController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAD19B0C137A6A3500A8817B /* FeedbackController.m */; };
 		CAD19B1F137A6A3500A8817B /* FeedbackController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAD19B0D137A6A3500A8817B /* FeedbackController.xib */; };
 		CAD19B20137A6A3500A8817B /* InfoMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAD19B0F137A6A3500A8817B /* InfoMainController.m */; };
@@ -605,6 +618,11 @@
 		CA2A0170138E2FD2007EBEA9 /* FollowPostController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FollowPostController.h; sourceTree = "<group>"; };
 		CA2A0171138E2FD2007EBEA9 /* FollowPostController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FollowPostController.m; sourceTree = "<group>"; };
 		CA2A0172138E2FD3007EBEA9 /* FollowPostController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FollowPostController.xib; sourceTree = "<group>"; };
+		CA3F00F513BED06A000B456F /* GetPublicTimelinePostRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetPublicTimelinePostRequest.h; sourceTree = "<group>"; };
+		CA3F00F613BED06A000B456F /* GetPublicTimelinePostRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetPublicTimelinePostRequest.m; sourceTree = "<group>"; };
+		CA3F00F813BEDF22000B456F /* PublicTimelinePostController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicTimelinePostController.h; sourceTree = "<group>"; };
+		CA3F00F913BEDF23000B456F /* PublicTimelinePostController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublicTimelinePostController.m; sourceTree = "<group>"; };
+		CA3F00FA13BEDF23000B456F /* PublicTimelinePostController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PublicTimelinePostController.xib; sourceTree = "<group>"; };
 		CA4005A8138F584E009B5BF9 /* PostController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostController.h; sourceTree = "<group>"; };
 		CA4005A9138F5850009B5BF9 /* PostController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostController.m; sourceTree = "<group>"; };
 		CA4005AA138F5851009B5BF9 /* PostController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostController.xib; sourceTree = "<group>"; };
@@ -667,9 +685,22 @@
 		CA6046791395D8AE006C1D9F /* FollowPlaceController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FollowPlaceController.xib; sourceTree = "<group>"; };
 		CA60467C1395D8C0006C1D9F /* PlaceControllerUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceControllerUtils.h; sourceTree = "<group>"; };
 		CA60467D1395D8C0006C1D9F /* PlaceControllerUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceControllerUtils.m; sourceTree = "<group>"; };
+		CA76FAA713BD60AA008B0CA5 /* HelpWritePostController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpWritePostController.h; sourceTree = "<group>"; };
+		CA76FAA813BD60AA008B0CA5 /* HelpWritePostController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpWritePostController.m; sourceTree = "<group>"; };
+		CA76FAA913BD60AA008B0CA5 /* HelpWritePostController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HelpWritePostController.xib; sourceTree = "<group>"; };
+		CA76FAAC13BD60EA008B0CA5 /* SeeExamplePostController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeeExamplePostController.h; sourceTree = "<group>"; };
+		CA76FAAD13BD60EA008B0CA5 /* SeeExamplePostController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeeExamplePostController.m; sourceTree = "<group>"; };
+		CA76FAAE13BD60EA008B0CA5 /* SeeExamplePostController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SeeExamplePostController.xib; sourceTree = "<group>"; };
 		CA7F9CD3137D5B530033FE12 /* PlaceLocationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceLocationController.h; sourceTree = "<group>"; };
 		CA7F9CD4137D5B530033FE12 /* PlaceLocationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceLocationController.m; sourceTree = "<group>"; };
 		CA7F9CD5137D5B530033FE12 /* PlaceLocationController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlaceLocationController.xib; sourceTree = "<group>"; };
+		CA87F91013BD653900F34CCB /* FriendPostExampleManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendPostExampleManager.m; sourceTree = "<group>"; };
+		CA87F91113BD653900F34CCB /* FriendPostExampleManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendPostExampleManager.h; sourceTree = "<group>"; };
+		CA87F91213BD653900F34CCB /* PostHelpQuestionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostHelpQuestionManager.m; sourceTree = "<group>"; };
+		CA87F91313BD653900F34CCB /* PostHelpQuestionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostHelpQuestionManager.h; sourceTree = "<group>"; };
+		CA87F91613BD785E00F34CCB /* HelpWritePostCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpWritePostCell.h; sourceTree = "<group>"; };
+		CA87F91713BD785E00F34CCB /* HelpWritePostCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpWritePostCell.m; sourceTree = "<group>"; };
+		CA87F91913BD787200F34CCB /* HelpWritePostCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HelpWritePostCell.xib; sourceTree = "<group>"; };
 		CA8900C713B6DA6F005ED51A /* PrivateMessageListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrivateMessageListController.h; sourceTree = "<group>"; };
 		CA8900C813B6DA6F005ED51A /* PrivateMessageListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrivateMessageListController.m; sourceTree = "<group>"; };
 		CA8900C913B6DA6F005ED51A /* PrivateMessageListController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PrivateMessageListController.xib; sourceTree = "<group>"; };
@@ -971,6 +1002,10 @@
 		CAC4198313B9AA96007542BD /* PostActionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostActionCell.xib; sourceTree = "<group>"; };
 		CAC4198513B9AAC2007542BD /* PostActionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostActionCell.h; sourceTree = "<group>"; };
 		CAC4198613B9AAC2007542BD /* PostActionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostActionCell.m; sourceTree = "<group>"; };
+		CAC7CEA613BCADA2003849D0 /* PPTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPTabBarController.m; sourceTree = "<group>"; };
+		CAC7CEA713BCADA2003849D0 /* PPTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPTabBarController.h; sourceTree = "<group>"; };
+		CAC7CEAA13BCB968003849D0 /* UIBadgeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIBadgeView.h; sourceTree = "<group>"; };
+		CAC7CEAB13BCB968003849D0 /* UIBadgeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIBadgeView.m; sourceTree = "<group>"; };
 		CAD19B0B137A6A3500A8817B /* FeedbackController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedbackController.h; sourceTree = "<group>"; };
 		CAD19B0C137A6A3500A8817B /* FeedbackController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedbackController.m; sourceTree = "<group>"; };
 		CAD19B0D137A6A3500A8817B /* FeedbackController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedbackController.xib; sourceTree = "<group>"; };
@@ -1059,6 +1094,7 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				CA76FAB213BD6337008B0CA5 /* Model */,
 				8239C3FC125318180007CBBB /* Controller */,
 				FB51D2D01381106E001D5AC5 /* DipanAppDelegate.h */,
 				FB51D2D11381106E001D5AC5 /* DipanAppDelegate.m */,
@@ -1228,6 +1264,7 @@
 		8239C3FC125318180007CBBB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				CA76FAA613BD6066008B0CA5 /* PostGuide */,
 				CA8900C613B6DA6F005ED51A /* Message */,
 				CABC814713A1F5E6001CE1B8 /* Common */,
 				CAD19B0A137A6A3500A8817B /* Entry */,
@@ -1398,6 +1435,8 @@
 				CA13B69713B860CC0016FE54 /* GetPostRelatedPostRequest.m */,
 				CA13B69813B860CC0016FE54 /* GetUserFollowPostRequest.h */,
 				CA13B69913B860CC0016FE54 /* GetUserFollowPostRequest.m */,
+				CA3F00F513BED06A000B456F /* GetPublicTimelinePostRequest.h */,
+				CA3F00F613BED06A000B456F /* GetPublicTimelinePostRequest.m */,
 			);
 			path = Post;
 			sourceTree = "<group>";
@@ -1563,6 +1602,33 @@
 			path = /3PP/Flurry/FlurryLib;
 			sourceTree = "<absolute>";
 		};
+		CA76FAA613BD6066008B0CA5 /* PostGuide */ = {
+			isa = PBXGroup;
+			children = (
+				CA76FAA713BD60AA008B0CA5 /* HelpWritePostController.h */,
+				CA76FAA813BD60AA008B0CA5 /* HelpWritePostController.m */,
+				CA76FAA913BD60AA008B0CA5 /* HelpWritePostController.xib */,
+				CA76FAAC13BD60EA008B0CA5 /* SeeExamplePostController.h */,
+				CA76FAAD13BD60EA008B0CA5 /* SeeExamplePostController.m */,
+				CA76FAAE13BD60EA008B0CA5 /* SeeExamplePostController.xib */,
+				CA87F91613BD785E00F34CCB /* HelpWritePostCell.h */,
+				CA87F91713BD785E00F34CCB /* HelpWritePostCell.m */,
+				CA87F91913BD787200F34CCB /* HelpWritePostCell.xib */,
+			);
+			path = PostGuide;
+			sourceTree = "<group>";
+		};
+		CA76FAB213BD6337008B0CA5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CA87F91013BD653900F34CCB /* FriendPostExampleManager.m */,
+				CA87F91113BD653900F34CCB /* FriendPostExampleManager.h */,
+				CA87F91213BD653900F34CCB /* PostHelpQuestionManager.m */,
+				CA87F91313BD653900F34CCB /* PostHelpQuestionManager.h */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		CA8900C613B6DA6F005ED51A /* Message */ = {
 			isa = PBXGroup;
 			children = (
@@ -1689,6 +1755,9 @@
 				CAC4198313B9AA96007542BD /* PostActionCell.xib */,
 				CAC4198513B9AAC2007542BD /* PostActionCell.h */,
 				CAC4198613B9AAC2007542BD /* PostActionCell.m */,
+				CA3F00F813BEDF22000B456F /* PublicTimelinePostController.h */,
+				CA3F00F913BEDF23000B456F /* PublicTimelinePostController.m */,
+				CA3F00FA13BEDF23000B456F /* PublicTimelinePostController.xib */,
 			);
 			path = Post;
 			sourceTree = "<group>";
@@ -1844,6 +1913,7 @@
 		CAAF0111137FE03100E56503 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CAC7CEA913BCB968003849D0 /* UIBadgeView */,
 				CAAF014D137FE03100E56503 /* SearchHistoryManager.h */,
 				CAAF014E137FE03100E56503 /* SearchHistoryManager.m */,
 				CAAF014F137FE03100E56503 /* TextViewExt.h */,
@@ -1941,6 +2011,8 @@
 		CAAFFF0A137FE03000E56503 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				CAC7CEA613BCADA2003849D0 /* PPTabBarController.m */,
+				CAC7CEA713BCADA2003849D0 /* PPTabBarController.h */,
 				CAAFFF1A137FE03000E56503 /* CustomIndexView.h */,
 				CAAFFF1B137FE03000E56503 /* CustomIndexView.m */,
 				CAAFFF1C137FE03000E56503 /* EnhanceUIApplication.h */,
@@ -2143,6 +2215,15 @@
 				CABC814813A1F5F8001CE1B8 /* ContollerConstants.h */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		CAC7CEA913BCB968003849D0 /* UIBadgeView */ = {
+			isa = PBXGroup;
+			children = (
+				CAC7CEAA13BCB968003849D0 /* UIBadgeView.h */,
+				CAC7CEAB13BCB968003849D0 /* UIBadgeView.m */,
+			);
+			path = UIBadgeView;
 			sourceTree = "<group>";
 		};
 		CAD19B08137A69B600A8817B /* Place */ = {
@@ -2553,6 +2634,10 @@
 				CAC4198413B9AA96007542BD /* PostActionCell.xib in Resources */,
 				CAA5F69D13BAF32C00F3F2D2 /* girl1.png in Resources */,
 				CAA5F69E13BAF32C00F3F2D2 /* boy1.png in Resources */,
+				CA76FAAB13BD60AA008B0CA5 /* HelpWritePostController.xib in Resources */,
+				CA76FAB013BD60EA008B0CA5 /* SeeExamplePostController.xib in Resources */,
+				CA87F91A13BD787200F34CCB /* HelpWritePostCell.xib in Resources */,
+				CA3F00FC13BEDF24000B456F /* PublicTimelinePostController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2760,6 +2845,15 @@
 				CAAC17C313B8B367007978E5 /* PostService.m in Sources */,
 				CAC4198713B9AAC2007542BD /* PostActionCell.m in Sources */,
 				CAA54D3413BAD19F008D8D6B /* PPTableViewCell.m in Sources */,
+				CAC7CEA813BCADA2003849D0 /* PPTabBarController.m in Sources */,
+				CAC7CEAC13BCB968003849D0 /* UIBadgeView.m in Sources */,
+				CA76FAAA13BD60AA008B0CA5 /* HelpWritePostController.m in Sources */,
+				CA76FAAF13BD60EA008B0CA5 /* SeeExamplePostController.m in Sources */,
+				CA87F91413BD653900F34CCB /* FriendPostExampleManager.m in Sources */,
+				CA87F91513BD653900F34CCB /* PostHelpQuestionManager.m in Sources */,
+				CA87F91813BD785E00F34CCB /* HelpWritePostCell.m in Sources */,
+				CA3F00F713BED06A000B456F /* GetPublicTimelinePostRequest.m in Sources */,
+				CA3F00FB13BEDF24000B456F /* PublicTimelinePostController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

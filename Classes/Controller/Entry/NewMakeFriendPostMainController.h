@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "PPViewController.h"
 #import "UIRectTextView.h"
+#import "HelpWritePostController.h"
 
-@interface NewMakeFriendPostMainController : PPViewController <UITextViewDelegate> {
+@interface NewMakeFriendPostMainController : PPViewController <UITextViewDelegate, HelpWritePostControllerDelegate> {
     
     UILabel *newPostLabel;
     UIRectTextView *postContentTextView;
@@ -21,5 +22,8 @@
 @property (nonatomic, retain) IBOutlet UIRectTextView *postContentTextView;
 @property (nonatomic, retain) IBOutlet UIButton *referButton;
 @property (nonatomic, retain) IBOutlet UIButton *helpButton;
+
+- (IBAction)clickReferButton:(id)sender;
+- (IBAction)clickHelpButton:(id)sender;
 
 @end
