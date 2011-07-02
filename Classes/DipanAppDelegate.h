@@ -43,7 +43,7 @@ LocalDataServiceDelegate, UserServiceDelegate> {
     PostService         *postService;
 
     EnterPlaceAppController *enterController;    
-    NSString                *placeNameForRegistration;
+    NSString                *dataForRegistration;
     
     UIBackgroundTaskIdentifier backgroundTask;
 }
@@ -59,9 +59,9 @@ LocalDataServiceDelegate, UserServiceDelegate> {
 @property (nonatomic, retain) PostService                   *postService;
 @property (nonatomic, retain) RegisterController            *registerController;
 @property (nonatomic, retain) EnterPlaceAppController       *enterController;    
-@property (nonatomic, retain) NSString                      *placeNameForRegistration;
+@property (nonatomic, retain) NSString                      *dataForRegistration;
 
-- (BOOL)requireCreatePlace;
+- (BOOL)hasDataForRegistration;
 - (void)addEnterAppView;
 - (void)removeEnterAppView;
 - (void)addRegisterView;

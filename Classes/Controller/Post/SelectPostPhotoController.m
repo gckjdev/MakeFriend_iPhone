@@ -9,6 +9,7 @@
 #import "SelectPostPhotoController.h"
 #import "PostService.h"
 #import "UIImageUtil.h"
+#import "NetworkRequestResultCode.h"
 
 @implementation SelectPostPhotoController
 @synthesize selectPhotoLabel;
@@ -110,7 +111,12 @@
 
 - (void)createPostFinish:(int)result
 {
-    [self popupHappyMessage:NSLS(@"kNewPostSuccess") title:nil];
+    if (result == ERROR_SUCCESS){
+        [self popupHappyMessage:NSLS(@"kNewPostSuccess") title:nil];
+    }
+    else{
+//        [self popupHappyMessage:NSLS(@"kNewPostSuccess") title:nil];
+    }
 }
 
 - (IBAction)clickSubmitButton:(id)sender

@@ -152,8 +152,8 @@ enum SELECT_INDEX {
     [super viewDidLoad];
     
     DipanAppDelegate* appDelegate = (DipanAppDelegate*)[[UIApplication sharedApplication] delegate];
-    if ([appDelegate requireCreatePlace]){        
-        [self gotoCreatePlaceController:[appDelegate placeNameForRegistration]];
+    if ([appDelegate hasDataForRegistration]){        
+        [self gotoCreatePlaceController:[appDelegate dataForRegistration]];
     }
     
     [self showNearbyPlace];

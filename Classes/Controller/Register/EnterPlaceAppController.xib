@@ -2,7 +2,7 @@
 <archive type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="7.10">
 	<data>
 		<int key="IBDocument.SystemTarget">1056</int>
-		<string key="IBDocument.SystemVersion">10J3250</string>
+		<string key="IBDocument.SystemVersion">10J4138</string>
 		<string key="IBDocument.InterfaceBuilderVersion">1305</string>
 		<string key="IBDocument.AppKitVersion">1038.35</string>
 		<string key="IBDocument.HIToolboxVersion">461.00</string>
@@ -56,7 +56,7 @@
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<string key="IBUIText">第一时间抢注你所在小区/办公室地盘</string>
+						<string key="IBUIText">写下你此时此刻的内心独白，让TA看见</string>
 						<object class="NSFont" key="IBUIFont" id="882037039">
 							<string key="NSName">STHeitiSC-Light</string>
 							<double key="NSSize">12</double>
@@ -73,15 +73,16 @@
 					<object class="IBUILabel" id="798575118">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{16, 322}, {289, 110}}</string>
+						<string key="NSFrame">{{36, 322}, {269, 110}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<string key="IBUIText">地盘——基于位置的生活社区交流平台</string>
+						<string key="IBUIText">内心独白——基于位置的情感交友</string>
 						<object class="NSFont" key="IBUIFont">
 							<string key="NSName">STHeitiSC-Light</string>
 							<double key="NSSize">17</double>
@@ -109,7 +110,7 @@
 							<int key="NSfFlags">16</int>
 						</object>
 						<int key="IBUIButtonType">1</int>
-						<string key="IBUINormalTitle">创建地盘</string>
+						<string key="IBUINormalTitle"> 发表独白</string>
 						<object class="NSColor" key="IBUIHighlightedTitleColor" id="711948071">
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MQA</bytes>
@@ -136,7 +137,7 @@
 						<int key="IBUIContentVerticalAlignment">0</int>
 						<reference key="IBUIFont" ref="357127115"/>
 						<int key="IBUIButtonType">1</int>
-						<string key="IBUINormalTitle">立即注册</string>
+						<string key="IBUINormalTitle">立即进入</string>
 						<reference key="IBUIHighlightedTitleColor" ref="711948071"/>
 						<object class="NSColor" key="IBUINormalTitleColor">
 							<int key="NSColorSpace">1</int>
@@ -147,7 +148,7 @@
 					<object class="IBUITextField" id="578993002">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{36, 77}, {228, 31}}</string>
+						<string key="NSFrame">{{36, 77}, {254, 31}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="811652126"/>
@@ -157,7 +158,7 @@
 						<int key="IBUIContentVerticalAlignment">0</int>
 						<string key="IBUIText"/>
 						<int key="IBUIBorderStyle">3</int>
-						<string key="IBUIPlaceholder">Enter Instant Place Name</string>
+						<string key="IBUIPlaceholder">Enter sentences from your heart</string>
 						<object class="NSColor" key="IBUITextColor">
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MAA</bytes>
@@ -183,7 +184,7 @@
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<string key="IBUIText">或者马上注册，关注你周边地盘，参与活动聚会，邻里互助，生活经验分享，闲置物品买卖</string>
+						<string key="IBUIText">或者马上进入，看看你周边的TA发表的内心独白</string>
 						<reference key="IBUIFont" ref="882037039"/>
 						<reference key="IBUITextColor" ref="281373741"/>
 						<nil key="IBUIHighlightedColor"/>
@@ -311,9 +312,9 @@
 							<reference ref="578993002"/>
 							<reference ref="350055614"/>
 							<reference ref="811652126"/>
-							<reference ref="322510239"/>
 							<reference ref="269880922"/>
 							<reference ref="798575118"/>
+							<reference ref="322510239"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>

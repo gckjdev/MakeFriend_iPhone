@@ -12,6 +12,8 @@
 #import "HelpWritePostController.h"
 #import "PostService.h"
 
+#import "DipanAppDelegate.h"
+
 #define MIN_CONTENT_LEN 20
 #define MAX_CONTENT_LEN 140
 
@@ -61,7 +63,13 @@
     [self setNavigationRightButton:NSLS(@"Next") action:@selector(clickNext:)];
     [self updateTitle];
     [super viewDidLoad];
+
     // Do any additional setup after loading the view from its nib.
+    DipanAppDelegate* appDelegate = (DipanAppDelegate*)[[UIApplication sharedApplication] delegate];
+    if ([appDelegate hasDataForRegistration]){        
+        self.postContentTextView.text = [appDelegate dataForRegistration];
+        [self popupHappyMessage:NSLS(@"kTipsNext") title:nil];
+    }    
 }
 
 - (void)viewDidUnload

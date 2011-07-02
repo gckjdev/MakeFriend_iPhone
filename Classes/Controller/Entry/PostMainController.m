@@ -13,6 +13,7 @@
 #import "NearbyPostController.h"
 #import "CreatePostController.h"
 #import "PrivateMessageUserController.h"
+#import "PublicTimelinePostController.h"
 
 enum SELECT_POST_TYPE {
     SELECT_NEARBY = 0,
@@ -28,6 +29,7 @@ enum SELECT_POST_TYPE {
 @synthesize followPostController;
 @synthesize privateMessageController;
 @synthesize atMePostController;
+@synthesize latestPostController;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -44,6 +46,7 @@ enum SELECT_POST_TYPE {
     [followPostController release];
     [privateMessageController release];
     [atMePostController release];
+    [latestPostController release];
     [super dealloc];
 }
 
@@ -68,6 +71,19 @@ enum SELECT_POST_TYPE {
     
     [self.view bringSubviewToFront:nearbyPostController.view];
     [nearbyPostController viewDidAppear:NO];
+}
+
+- (void)showLatestPost
+{
+    if (self.latestPostController == nil){
+        self.latestPostController = [[PublicTimelinePostController alloc] init];
+        self.latestPostController.superController = self;
+        self.latestPostController.view.frame = self.view.bounds;        
+        [self.view addSubview:latestPostController.view];                
+    }
+    
+    [self.view bringSubviewToFront:latestPostController.view];
+    [latestPostController viewDidAppear:NO];
 }
 
 - (void)showFollowPost
@@ -120,8 +136,8 @@ enum SELECT_POST_TYPE {
     
     [self createNavigationTitleToolbar:
                     [NSArray arrayWithObjects:
-                     NSLS(@"kLatestPost"),
                      NSLS(@"kNearbyPost"),
+                     NSLS(@"kLatestPost"),
 //                     NSLS(@"kFollowPost"),
 //                     NSLS(@"kAtMePost"),
                      NSLS(@"kMyPrivateMessage"),
@@ -180,6 +196,9 @@ enum SELECT_POST_TYPE {
     else if (segControl.selectedSegmentIndex == SELECT_NEARBY){
         [self showNearbyPost];
     }
+    else if (segControl.selectedSegmentIndex == SELECT_LATEST){
+        [self showLatestPost];
+    }    
     else if (segControl.selectedSegmentIndex == SELECT_MINE){
         [self showAtMePost];
     }

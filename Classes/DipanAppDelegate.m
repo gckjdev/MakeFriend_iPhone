@@ -94,7 +94,7 @@ NSString* GlobalGetServerURL()
 @synthesize userService;
 @synthesize snsService;
 @synthesize enterController;
-@synthesize placeNameForRegistration;
+@synthesize dataForRegistration;
 @synthesize messageService;
 @synthesize postService;
 
@@ -373,16 +373,16 @@ void uncaughtExceptionHandler(NSException *exception) {
 - (void)doRegisterWithPlaceName:(NSString*)placeName
 {
     if ([placeName length] > 0){
-        self.placeNameForRegistration = placeName;                
+        self.dataForRegistration = placeName;                
     }
     
     [self removeEnterAppView];
     [self addRegisterView];
 }
 
-- (BOOL)requireCreatePlace
+- (BOOL)hasDataForRegistration
 {
-    return ([placeNameForRegistration length] > 0);
+    return ([dataForRegistration length] > 0);
 }
 
 - (void)addEnterAppView {
@@ -480,7 +480,7 @@ void uncaughtExceptionHandler(NSException *exception) {
     [localDataService release];
     [locationService release];
     [snsService release];
-    [placeNameForRegistration release];
+    [dataForRegistration release];
     [messageService release];
 	
     [super dealloc];

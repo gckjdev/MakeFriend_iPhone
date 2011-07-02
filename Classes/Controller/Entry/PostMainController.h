@@ -14,16 +14,19 @@
 #import "AtMePostController.h"
 
 @class PrivateMessageUserController;
+@class PublicTimelinePostController;
 
 @interface PostMainController : PPViewController {
     NearbyPostController    *nearbyPostController;
     FollowPostController    *followPostController;
     AtMePostController      *atMePostController;
     PrivateMessageUserController *privateMessageController;
+    PublicTimelinePostController *latestPostController;
 }
 
 @property (nonatomic, retain) NearbyPostController    *nearbyPostController;
 @property (nonatomic, retain) FollowPostController    *followPostController;
 @property (nonatomic, retain) PrivateMessageUserController *privateMessageController;
 @property (nonatomic, retain) AtMePostController      *atMePostController;
+@property (nonatomic, retain) PublicTimelinePostController *latestPostController;
 @end
