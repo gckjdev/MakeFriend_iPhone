@@ -32,8 +32,15 @@
 #import "PlaceSNSService.h"
 #import "MessageService.h"
 #import "PostService.h"
+#import "AppService.h"
 
 #define kDbFileName			@"AppDB"
+
+AppService* GlobalGetAppService()
+{
+    DipanAppDelegate* delegate = (DipanAppDelegate*)[[UIApplication sharedApplication] delegate];    
+    return [delegate appService];            
+}
 
 PostService* GlobalGetPostService()
 {
@@ -97,6 +104,7 @@ NSString* GlobalGetServerURL()
 @synthesize dataForRegistration;
 @synthesize messageService;
 @synthesize postService;
+@synthesize appService;
 
 #pragma mark -
 #pragma mark Application lifecycle
@@ -197,6 +205,12 @@ void uncaughtExceptionHandler(NSException *exception) {
     self.postService = [[PostService alloc] init];
 }
 
+- (void)initAppService
+{
+    self.appService = [[AppService alloc] init];
+}
+
+
 - (void)showViewByUserStatus
 {
     [userService checkDevice];    
@@ -219,11 +233,16 @@ void uncaughtExceptionHandler(NSException *exception) {
     [self initLocalDataService];       
     [self initMessageService];
     [self initPostService];
+    [self initAppService];    
 
     [self showViewByUserStatus];
+
     
     [window makeKeyAndVisible];
 	
+    // update app version
+    [appService startAppUpdate];
+
 	// Ask For Review
 	[ReviewRequest startReviewRequest:kAppId appName:GlobalGetAppName() isTest:NO];
 
@@ -286,6 +305,8 @@ void uncaughtExceptionHandler(NSException *exception) {
 	
 	[self initMobClick];
     [localDataService requestDataWhileEnterForeground];
+    
+    [appService startAppUpdate];
   
 }
 
@@ -482,6 +503,7 @@ void uncaughtExceptionHandler(NSException *exception) {
     [snsService release];
     [dataForRegistration release];
     [messageService release];
+    [appService release];
 	
     [super dealloc];
 }

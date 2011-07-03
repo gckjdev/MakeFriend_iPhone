@@ -302,6 +302,8 @@
 		CAAF030F137FE03200E56503 /* UIToolBarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAF0184137FE03100E56503 /* UIToolBarCell.m */; };
 		CAAF0310137FE03200E56503 /* UIWebViewUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAF0186137FE03100E56503 /* UIWebViewUtil.m */; };
 		CAB2F05A125F4CA600593157 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAB2F059125F4CA600593157 /* AudioToolbox.framework */; };
+		CAB3D34313C0365500F9DC02 /* GetAppUpdateRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB3D34213C0365500F9DC02 /* GetAppUpdateRequest.m */; };
+		CAB3D34613C03A9800F9DC02 /* AppService.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB3D34513C03A9800F9DC02 /* AppService.m */; };
 		CAC4198413B9AA96007542BD /* PostActionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAC4198313B9AA96007542BD /* PostActionCell.xib */; };
 		CAC4198713B9AAC2007542BD /* PostActionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CAC4198613B9AAC2007542BD /* PostActionCell.m */; };
 		CAC7CEA813BCADA2003849D0 /* PPTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAC7CEA613BCADA2003849D0 /* PPTabBarController.m */; };
@@ -1001,6 +1003,10 @@
 		CAAFFFE5137FE03000E56503 /* SelectItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectItemViewController.m; sourceTree = "<group>"; };
 		CAAFFFE6137FE03000E56503 /* SelectItemViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectItemViewController.xib; sourceTree = "<group>"; };
 		CAB2F059125F4CA600593157 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		CAB3D34113C0365500F9DC02 /* GetAppUpdateRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetAppUpdateRequest.h; sourceTree = "<group>"; };
+		CAB3D34213C0365500F9DC02 /* GetAppUpdateRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetAppUpdateRequest.m; sourceTree = "<group>"; };
+		CAB3D34413C03A9700F9DC02 /* AppService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppService.h; sourceTree = "<group>"; };
+		CAB3D34513C03A9800F9DC02 /* AppService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppService.m; sourceTree = "<group>"; };
 		CABC814813A1F5F8001CE1B8 /* ContollerConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContollerConstants.h; sourceTree = "<group>"; };
 		CAC4198313B9AA96007542BD /* PostActionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostActionCell.xib; sourceTree = "<group>"; };
 		CAC4198513B9AAC2007542BD /* PostActionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostActionCell.h; sourceTree = "<group>"; };
@@ -1365,6 +1371,7 @@
 			isa = PBXGroup;
 			children = (
 				CA13B66D13B860CC0016FE54 /* Common */,
+				CAB3D34013C0362F00F9DC02 /* App */,
 				CA13B67713B860CC0016FE54 /* Message */,
 				CA13B67E13B860CC0016FE54 /* Place */,
 				CA13B68D13B860CC0016FE54 /* Post */,
@@ -1478,6 +1485,8 @@
 				CA13B6AF13B860CC0016FE54 /* UserService.m */,
 				CAAC17C113B8B367007978E5 /* PostService.h */,
 				CAAC17C213B8B367007978E5 /* PostService.m */,
+				CAB3D34413C03A9700F9DC02 /* AppService.h */,
+				CAB3D34513C03A9800F9DC02 /* AppService.m */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -2214,6 +2223,15 @@
 			path = Image;
 			sourceTree = "<group>";
 		};
+		CAB3D34013C0362F00F9DC02 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				CAB3D34113C0365500F9DC02 /* GetAppUpdateRequest.h */,
+				CAB3D34213C0365500F9DC02 /* GetAppUpdateRequest.m */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
 		CABC814713A1F5E6001CE1B8 /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -2860,6 +2878,8 @@
 				CA3F00F713BED06A000B456F /* GetPublicTimelinePostRequest.m in Sources */,
 				CA3F00FB13BEDF24000B456F /* PublicTimelinePostController.m in Sources */,
 				CA3F00FF13BEEF06000B456F /* ActionOnPostRequest.m in Sources */,
+				CAB3D34313C0365500F9DC02 /* GetAppUpdateRequest.m in Sources */,
+				CAB3D34613C03A9800F9DC02 /* AppService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
