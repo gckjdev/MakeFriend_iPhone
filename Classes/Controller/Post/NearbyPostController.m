@@ -254,6 +254,7 @@
     PostService* postService = GlobalGetPostService();
     [postService actionOnPost:post.postId
                    actionName:POST_ACTION_LIKE
+                      placeId:MAKE_FRIEND_PLACEID
                viewController:self];
 }
 

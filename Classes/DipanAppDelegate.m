@@ -36,6 +36,11 @@
 
 #define kDbFileName			@"AppDB"
 
+NSString* GlobalGetServerURL()
+{
+    return @"http://192.168.1.188:8000/api/i?";
+}
+
 AppService* GlobalGetAppService()
 {
     DipanAppDelegate* delegate = (DipanAppDelegate*)[[UIApplication sharedApplication] delegate];    
@@ -85,10 +90,7 @@ NSString* GlobalGetPlaceAppId()
     return @"FRIEND";
 }
 
-NSString* GlobalGetServerURL()
-{
-    return @"http://192.168.1.188:8000/api/i?";
-}
+
 
 @implementation DipanAppDelegate
 

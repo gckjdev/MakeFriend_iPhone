@@ -21,6 +21,7 @@
 #import "PrivateMessageControllerUtils.h"
 #import "CreatePrivateMessageController.h"
 #import "PostService.h"
+#import "DipanAppDelegate.h"
 
 @implementation PublicTimelinePostController
 
@@ -261,6 +262,7 @@
     PostService* postService = GlobalGetPostService();
     [postService actionOnPost:post.postId
                    actionName:POST_ACTION_LIKE
+                      placeId:MAKE_FRIEND_PLACEID
                viewController:self];
 }
 

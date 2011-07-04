@@ -10,6 +10,7 @@
 #import "PostService.h"
 #import "UIImageUtil.h"
 #import "NetworkRequestResultCode.h"
+#import "DipanAppDelegate.h"
 
 @implementation SelectPostPhotoController
 @synthesize selectPhotoLabel;
@@ -106,8 +107,6 @@
     [controller release];    
     return controller;
 }
-
-#define MAKE_FRIEND_PLACEID @"MakeFriendPlaceID"
 
 - (void)createPostFinish:(int)result
 {

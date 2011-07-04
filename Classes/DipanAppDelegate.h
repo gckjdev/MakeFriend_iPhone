@@ -28,6 +28,8 @@
 #define kAppId			@"388419035"					// To be changed for each project
 #define kMobClickKey	@"4dba296b112cf77d98000015"		// To be changed for each project
 
+#define MAKE_FRIEND_PLACEID @"MakeFriendPlaceID"
+
 @interface DipanAppDelegate : PPApplication <UIApplicationDelegate, UITabBarControllerDelegate, MobClickDelegate, EnterPlaceAppDelegate,
 LocalDataServiceDelegate, UserServiceDelegate> {
 
