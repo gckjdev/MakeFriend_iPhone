@@ -107,6 +107,7 @@ NSString* GlobalGetPlaceAppId()
 @synthesize messageService;
 @synthesize postService;
 @synthesize appService;
+@synthesize reviewRequest;
 
 #pragma mark -
 #pragma mark Application lifecycle
@@ -246,7 +247,7 @@ void uncaughtExceptionHandler(NSException *exception) {
     [appService startAppUpdate];
 
 	// Ask For Review
-	[ReviewRequest startReviewRequest:kAppId appName:GlobalGetAppName() isTest:NO];
+	self.reviewRequest = [ReviewRequest startReviewRequest:kAppId appName:GlobalGetAppName() isTest:NO];
 
     return YES;
 }
@@ -506,6 +507,7 @@ void uncaughtExceptionHandler(NSException *exception) {
     [dataForRegistration release];
     [messageService release];
     [appService release];
+    [reviewRequest release];
 	
     [super dealloc];
 }
