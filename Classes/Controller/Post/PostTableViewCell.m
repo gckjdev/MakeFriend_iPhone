@@ -30,6 +30,7 @@
 @synthesize placeNameLabel;
 @synthesize indexPath;
 @synthesize delegate;
+@synthesize postImageButton;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -61,6 +62,7 @@
     [placeNameButton release];
     [indexPath release];
     [userAvatarButton release];
+    [postImageButton release];
     [super dealloc];
 }
 
@@ -238,6 +240,11 @@
     }
     
 }
-
+- (IBAction)clickPostImageButton:(id)sender
+{
+    if (delegate != nil && [delegate respondsToSelector:@selector(clickPostImageButton:atIndexPath:)]){
+        [delegate clickPostImageButton:sender atIndexPath:indexPath];
+    }
+}
 
 @end

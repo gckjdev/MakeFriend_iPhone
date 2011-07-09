@@ -2,7 +2,7 @@
 <archive type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="7.10">
 	<data>
 		<int key="IBDocument.SystemTarget">1056</int>
-		<string key="IBDocument.SystemVersion">10J4138</string>
+		<string key="IBDocument.SystemVersion">10J869</string>
 		<string key="IBDocument.InterfaceBuilderVersion">1305</string>
 		<string key="IBDocument.AppKitVersion">1038.35</string>
 		<string key="IBDocument.HIToolboxVersion">461.00</string>
@@ -160,6 +160,34 @@
 								<reference key="IBUIBackgroundColor" ref="738238824"/>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 							</object>
+							<object class="IBUIButton" id="640428706">
+								<reference key="NSNextResponder" ref="27607831"/>
+								<int key="NSvFlags">292</int>
+								<string key="NSFrame">{{78, 65}, {222, 57}}</string>
+								<reference key="NSSuperview" ref="27607831"/>
+								<reference key="NSWindow"/>
+								<bool key="IBUIOpaque">NO</bool>
+								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+								<int key="IBUIContentHorizontalAlignment">0</int>
+								<int key="IBUIContentVerticalAlignment">0</int>
+								<object class="NSFont" key="IBUIFont" id="999018932">
+									<string key="NSName">Helvetica-Bold</string>
+									<double key="NSSize">15</double>
+									<int key="NSfFlags">16</int>
+								</object>
+								<object class="NSColor" key="IBUIHighlightedTitleColor" id="401959844">
+									<int key="NSColorSpace">3</int>
+									<bytes key="NSWhite">MQA</bytes>
+								</object>
+								<object class="NSColor" key="IBUINormalTitleColor">
+									<int key="NSColorSpace">1</int>
+									<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
+								</object>
+								<object class="NSColor" key="IBUINormalTitleShadowColor" id="608510468">
+									<int key="NSColorSpace">3</int>
+									<bytes key="NSWhite">MC41AA</bytes>
+								</object>
+							</object>
 							<object class="IBUIButton" id="674002743">
 								<reference key="NSNextResponder" ref="27607831"/>
 								<int key="NSvFlags">292</int>
@@ -170,23 +198,13 @@
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 								<int key="IBUIContentHorizontalAlignment">0</int>
 								<int key="IBUIContentVerticalAlignment">0</int>
-								<object class="NSFont" key="IBUIFont">
-									<string key="NSName">Helvetica-Bold</string>
-									<double key="NSSize">15</double>
-									<int key="NSfFlags">16</int>
-								</object>
-								<object class="NSColor" key="IBUIHighlightedTitleColor">
-									<int key="NSColorSpace">3</int>
-									<bytes key="NSWhite">MQA</bytes>
-								</object>
+								<reference key="IBUIFont" ref="999018932"/>
+								<reference key="IBUIHighlightedTitleColor" ref="401959844"/>
 								<object class="NSColor" key="IBUINormalTitleColor">
 									<int key="NSColorSpace">1</int>
 									<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
 								</object>
-								<object class="NSColor" key="IBUINormalTitleShadowColor">
-									<int key="NSColorSpace">3</int>
-									<bytes key="NSWhite">MC41AA</bytes>
-								</object>
+								<reference key="IBUINormalTitleShadowColor" ref="608510468"/>
 							</object>
 						</object>
 						<string key="NSFrameSize">{320, 130}</string>
@@ -283,6 +301,14 @@
 					</object>
 					<int key="connectionID">30</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">postImageButton</string>
+						<reference key="source" ref="912718677"/>
+						<reference key="destination" ref="640428706"/>
+					</object>
+					<int key="connectionID">33</int>
+				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<object class="NSArray" key="orderedObjects">
@@ -316,6 +342,7 @@
 							<reference ref="674002743"/>
 							<reference ref="178121312"/>
 							<reference ref="737818473"/>
+							<reference ref="640428706"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -347,11 +374,19 @@
 					<object class="IBObjectRecord">
 						<int key="objectID">20</int>
 						<reference key="object" ref="292848123"/>
+						<object class="NSMutableArray" key="children">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+						</object>
 						<reference key="parent" ref="912718677"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">28</int>
 						<reference key="object" ref="674002743"/>
+						<reference key="parent" ref="912718677"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">32</int>
+						<reference key="object" ref="640428706"/>
 						<reference key="parent" ref="912718677"/>
 					</object>
 				</object>
@@ -368,6 +403,7 @@
 					<string>20.CustomClassName</string>
 					<string>20.IBPluginDependency</string>
 					<string>28.IBPluginDependency</string>
+					<string>32.IBPluginDependency</string>
 					<string>5.IBPluginDependency</string>
 					<string>6.IBPluginDependency</string>
 					<string>7.IBPluginDependency</string>
@@ -381,6 +417,7 @@
 					<string>PostTableViewCell</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>HJManagedImageV</string>
+					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -401,7 +438,7 @@
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">30</int>
+			<int key="maxID">33</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -422,10 +459,12 @@
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>clickPlaceNameButton:</string>
+							<string>clickPostImageButton:</string>
 							<string>clickUserAvatarButton:</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>id</string>
 							<string>id</string>
 							<string>id</string>
 						</object>
@@ -435,12 +474,17 @@
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>clickPlaceNameButton:</string>
+							<string>clickPostImageButton:</string>
 							<string>clickUserAvatarButton:</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<object class="IBActionInfo">
 								<string key="name">clickPlaceNameButton:</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
+								<string key="name">clickPostImageButton:</string>
 								<string key="candidateClassName">id</string>
 							</object>
 							<object class="IBActionInfo">
@@ -457,6 +501,7 @@
 							<string>createDateLabel</string>
 							<string>placeNameButton</string>
 							<string>placeNameLabel</string>
+							<string>postImageButton</string>
 							<string>textContentLabel</string>
 							<string>totalReplyLabel</string>
 							<string>userAvatarButton</string>
@@ -469,6 +514,7 @@
 							<string>UILabel</string>
 							<string>UIButton</string>
 							<string>UILabel</string>
+							<string>UIButton</string>
 							<string>UILabel</string>
 							<string>UILabel</string>
 							<string>UIButton</string>
@@ -484,6 +530,7 @@
 							<string>createDateLabel</string>
 							<string>placeNameButton</string>
 							<string>placeNameLabel</string>
+							<string>postImageButton</string>
 							<string>textContentLabel</string>
 							<string>totalReplyLabel</string>
 							<string>userAvatarButton</string>
@@ -507,6 +554,10 @@
 							<object class="IBToOneOutletInfo">
 								<string key="name">placeNameLabel</string>
 								<string key="candidateClassName">UILabel</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">postImageButton</string>
+								<string key="candidateClassName">UIButton</string>
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">textContentLabel</string>

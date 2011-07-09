@@ -15,6 +15,7 @@
 
 - (void)clickPlaceNameButton:(id)sender atIndexPath:(NSIndexPath*)indexPath;
 - (void)clickUserAvatarButton:(id)sender atIndexPath:(NSIndexPath*)indexPath;
+- (void)clickPostImageButton:(id)sender atIndexPath:(NSIndexPath*)indexPath;
 
 @end
 
@@ -33,6 +34,7 @@
     id<PostTableViewCellDelegate> delegate;
 
     IBOutlet UIButton *userAvatarButton;
+    IBOutlet UIButton *postImageButton;
 }
 @property (nonatomic, retain) IBOutlet HJManagedImageV *userAvatarImage;
 @property (nonatomic, retain) IBOutlet UILabel *userNickNameLabel;
@@ -42,6 +44,7 @@
 @property (nonatomic, retain) IBOutlet HJManagedImageV *contentImage;
 @property (nonatomic, retain) IBOutlet UIButton *placeNameButton;
 @property (nonatomic, retain) IBOutlet UILabel *placeNameLabel;
+@property (nonatomic, retain) IBOutlet UIButton *postImageButton;
 @property (nonatomic, retain) NSIndexPath *indexPath;
 @property (nonatomic, assign) id<PostTableViewCellDelegate> delegate;
 
@@ -54,5 +57,5 @@
 
 - (IBAction)clickPlaceNameButton:(id)sender;
 - (IBAction)clickUserAvatarButton:(id)sender;
-
+- (IBAction)clickPostImageButton:(id)sender;
 @end

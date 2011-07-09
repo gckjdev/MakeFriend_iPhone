@@ -20,6 +20,7 @@
 #import "PostActionCell.h"
 #import "PrivateMessageControllerUtils.h"
 #import "CreatePrivateMessageController.h"
+#import "ImageController.h"
 #import "PostService.h"
 
 @implementation PublicTimelinePostController
@@ -241,14 +242,25 @@
     Post* post = [self postByIndexPath:indexPath];
     if (post == nil)
         return;
-    
+
     [self deleteControlRow];
     [PrivateMessageControllerUtils showPrivateMessageController:post.userId 
                                                    userNickName:post.userNickName
                                                      userAvatar:post.userAvatar
                                                  viewController:self.superController];      
 }
-
+-(void)clickPostImageButton:(id)sender atIndexPath:(NSIndexPath *)indexPath
+{
+    Post *post = [self postByIndexPath:indexPath];
+    if (post == nil) {
+        return;
+    }
+    [self deleteControlRow];
+    NSString *imageURL = [post imageURL];
+    if ([imageURL length] > 0) {
+        [ImageController showImageController:self imageURL:imageURL];
+    }
+}
 - (void)clickLikeButton:(id)sender atIndexPath:(NSIndexPath*)indexPath
 {
 
