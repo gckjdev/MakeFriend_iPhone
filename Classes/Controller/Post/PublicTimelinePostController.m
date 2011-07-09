@@ -22,6 +22,7 @@
 #import "CreatePrivateMessageController.h"
 #import "ImageController.h"
 #import "PostService.h"
+#import "DipanAppDelegate.h"
 
 @implementation PublicTimelinePostController
 
@@ -156,6 +157,19 @@
     }
 }
 
+- (Post*)postByControlRowIndexPath:(NSIndexPath*)indexPath
+{
+    NSIndexPath* modelIndexPath = [NSIndexPath indexPathForRow:indexPath.row - 1 inSection:indexPath.section];
+    if (modelIndexPath.row < [dataList count]){
+        return [dataList objectAtIndex:modelIndexPath.row];
+    }
+    else{
+        NSLog(@"<WARN> postByIndexPath by index path row (%d) > data list count (%d)",
+              modelIndexPath.row, [dataList count]);
+        return nil;
+    }
+}
+
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {		
 	return @"";
 }
@@ -198,8 +212,9 @@
         PostActionCell *cell = (PostActionCell*)[theTableView dequeueReusableCellWithIdentifier:CellIdentifier];
         if (cell == nil) {
             cell = [PostActionCell createCell:self];
-            cell.indexPath = indexPath;
         }        
+        
+        cell.indexPath = [NSIndexPath indexPathForRow:indexPath.row inSection:indexPath.section];
         return cell;
     }
     
@@ -264,7 +279,7 @@
 - (void)clickLikeButton:(id)sender atIndexPath:(NSIndexPath*)indexPath
 {
 
-    Post* post = [self postByIndexPath:indexPath];
+    Post* post = [self postByControlRowIndexPath:indexPath];
     if (post == nil)
         return;
     
@@ -273,13 +288,14 @@
     PostService* postService = GlobalGetPostService();
     [postService actionOnPost:post.postId
                    actionName:POST_ACTION_LIKE
+                      placeId:MAKE_FRIEND_PLACEID
                viewController:self];
 }
 
 - (void)clickSendMessageButton:(id)sender atIndexPath:(NSIndexPath*)indexPath
 {
     
-    Post* post = [self postByIndexPath:indexPath];
+    Post* post = [self postByControlRowIndexPath:indexPath];
     if (post == nil)
         return;
     

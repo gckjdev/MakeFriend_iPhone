@@ -23,10 +23,13 @@
 @class MessageService;
 @class PostService;
 @class AppService;
+@class ReviewRequest;
 
 #define _THREE20_		1
 #define kAppId			@"388419035"					// To be changed for each project
 #define kMobClickKey	@"4dba296b112cf77d98000015"		// To be changed for each project
+
+#define MAKE_FRIEND_PLACEID @"MakeFriendPlaceID"
 
 @interface DipanAppDelegate : PPApplication <UIApplicationDelegate, UITabBarControllerDelegate, MobClickDelegate, EnterPlaceAppDelegate,
 LocalDataServiceDelegate, UserServiceDelegate> {
@@ -44,6 +47,7 @@ LocalDataServiceDelegate, UserServiceDelegate> {
     PostService         *postService;
     AppService          *appService;
 
+    ReviewRequest           *reviewRequest;
     EnterPlaceAppController *enterController;    
     NSString                *dataForRegistration;
     
@@ -63,6 +67,8 @@ LocalDataServiceDelegate, UserServiceDelegate> {
 @property (nonatomic, retain) RegisterController            *registerController;
 @property (nonatomic, retain) EnterPlaceAppController       *enterController;    
 @property (nonatomic, retain) NSString                      *dataForRegistration;
+@property (nonatomic, retain) ReviewRequest                 *reviewRequest;
+
 
 - (BOOL)hasDataForRegistration;
 - (void)addEnterAppView;

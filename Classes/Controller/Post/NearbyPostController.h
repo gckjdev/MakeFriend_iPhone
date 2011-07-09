@@ -11,10 +11,11 @@
 #import "LocalDataService.h"
 #import "PostTableViewCell.h"
 #import "PostActionCell.h"
+#import "PostService.h"
 
 @class CreatePrivateMessageController;
 
-@interface NearbyPostController : PPTableViewController <LocalDataServiceDelegate, PostActionCellDelegate, PostTableViewCellDelegate> {
+@interface NearbyPostController : PPTableViewController <LocalDataServiceDelegate, PostActionCellDelegate, PostTableViewCellDelegate, PostServiceDelegate> {
     
     
     UIViewController                *superController;    

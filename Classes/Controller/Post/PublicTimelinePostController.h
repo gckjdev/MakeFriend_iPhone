@@ -11,10 +11,11 @@
 #import "LocalDataService.h"
 #import "PostTableViewCell.h"
 #import "PostActionCell.h"
+#import "PostService.h"
 
 @class CreatePrivateMessageController;
 
-@interface PublicTimelinePostController : PPTableViewController <LocalDataServiceDelegate, PostActionCellDelegate, PostTableViewCellDelegate> {
+@interface PublicTimelinePostController : PPTableViewController <LocalDataServiceDelegate, PostActionCellDelegate, PostTableViewCellDelegate, PostServiceDelegate> {
     
     
     UIViewController                *superController;    

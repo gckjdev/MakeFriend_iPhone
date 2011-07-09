@@ -36,6 +36,11 @@
 
 #define kDbFileName			@"AppDB"
 
+NSString* GlobalGetServerURL()
+{
+    return @"http://192.168.1.188:8000/api/i?";
+}
+
 AppService* GlobalGetAppService()
 {
     DipanAppDelegate* delegate = (DipanAppDelegate*)[[UIApplication sharedApplication] delegate];    
@@ -85,10 +90,7 @@ NSString* GlobalGetPlaceAppId()
     return @"FRIEND";
 }
 
-NSString* GlobalGetServerURL()
-{
-    return @"http://192.168.1.188:8000/api/i?";
-}
+
 
 @implementation DipanAppDelegate
 
@@ -105,6 +107,7 @@ NSString* GlobalGetServerURL()
 @synthesize messageService;
 @synthesize postService;
 @synthesize appService;
+@synthesize reviewRequest;
 
 #pragma mark -
 #pragma mark Application lifecycle
@@ -244,7 +247,7 @@ void uncaughtExceptionHandler(NSException *exception) {
     [appService startAppUpdate];
 
 	// Ask For Review
-	[ReviewRequest startReviewRequest:kAppId appName:GlobalGetAppName() isTest:NO];
+	self.reviewRequest = [ReviewRequest startReviewRequest:kAppId appName:GlobalGetAppName() isTest:NO];
 
     return YES;
 }
@@ -504,6 +507,7 @@ void uncaughtExceptionHandler(NSException *exception) {
     [dataForRegistration release];
     [messageService release];
     [appService release];
+    [reviewRequest release];
 	
     [super dealloc];
 }
