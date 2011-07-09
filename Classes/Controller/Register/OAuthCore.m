@@ -88,11 +88,14 @@ NSInteger SortParameter(NSString *key1, NSString *key2, void *context) {
                                      method,
                                      [[url description] urlencodeWithUTF8],
                                      [normalizedParameterString urlencodeWithUTF8]];
+    NSLog(@"signatureBaseString=%@", signatureBaseString);
 	
 	NSString *key = [NSString stringWithFormat:@"%@&%@", consumerSecret, nil == tokenSecret ? @"" : tokenSecret];
+    NSLog(@"key=%@", key);
     
 	NSData *signature = [OAuthCore hmacSHA1WithString:signatureBaseString key:key];
 	NSString *base64Signature = [GTMBase64 stringByEncodingData:signature];
+    NSLog(@"base64Signature=%@", base64Signature);
 	[authParameters setObject:[base64Signature urlencodeWithUTF8] forKey:@"oauth_signature"];
 	
 	NSMutableArray *queryItems = [NSMutableArray array];

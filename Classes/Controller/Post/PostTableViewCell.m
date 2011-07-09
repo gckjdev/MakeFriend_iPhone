@@ -168,9 +168,13 @@
 
     [self.contentImage clear];
     if ([self exist:imageURL]){
-        NSString* thumbImageURL = [imageURL stringByReplacingOccurrencesOfString:@".png" withString:@"_s.png"]; // hard code ,no good here
-        thumbImageURL = [imageURL stringByReplacingOccurrencesOfString:@".jpg" withString:@"_s.jpg"];
+        NSString* thumbImageURL = [imageURL stringByReplacingOccurrencesOfString:@".png" 
+                                                                      withString:@"_s.png"]; 
+        
+        thumbImageURL = [thumbImageURL stringByReplacingOccurrencesOfString:@".jpg" 
+                                                                 withString:@"_s.jpg"];
         self.contentImage.url = [NSURL URLWithString:thumbImageURL];
+//        NSLog(@"<debug> imageURL=%@, thumbImageURL=%@", imageURL, thumbImageURL);
         self.contentImage.callbackOnSetImage = self;
         [GlobalGetImageCache() manage:self.contentImage];
     }
