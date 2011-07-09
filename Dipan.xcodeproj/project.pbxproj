@@ -152,6 +152,8 @@
 		CA9E093E139CB7E2000B6FEE /* SNSServiceHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = CA9E093D139CB7E2000B6FEE /* SNSServiceHandler.m */; };
 		CA9E0941139CB803000B6FEE /* QQWeiboRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = CA9E0940139CB803000B6FEE /* QQWeiboRequest.m */; };
 		CA9E0944139CB817000B6FEE /* SINAWeiboRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = CA9E0943139CB817000B6FEE /* SINAWeiboRequest.m */; };
+		CA9F771413C802310006146D /* ImageController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA9F771213C802310006146D /* ImageController.m */; };
+		CA9F771513C802310006146D /* ImageController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA9F771313C802310006146D /* ImageController.xib */; };
 		CAA54D3413BAD19F008D8D6B /* PPTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CAA54D3313BAD19F008D8D6B /* PPTableViewCell.m */; };
 		CAA5F69D13BAF32C00F3F2D2 /* girl1.png in Resources */ = {isa = PBXBuildFile; fileRef = CAA5F69B13BAF32C00F3F2D2 /* girl1.png */; };
 		CAA5F69E13BAF32C00F3F2D2 /* boy1.png in Resources */ = {isa = PBXBuildFile; fileRef = CAA5F69C13BAF32C00F3F2D2 /* boy1.png */; };
@@ -738,6 +740,9 @@
 		CA9E0940139CB803000B6FEE /* QQWeiboRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QQWeiboRequest.m; sourceTree = "<group>"; };
 		CA9E0942139CB817000B6FEE /* SINAWeiboRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SINAWeiboRequest.h; sourceTree = "<group>"; };
 		CA9E0943139CB817000B6FEE /* SINAWeiboRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SINAWeiboRequest.m; sourceTree = "<group>"; };
+		CA9F771113C802310006146D /* ImageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageController.h; sourceTree = "<group>"; };
+		CA9F771213C802310006146D /* ImageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageController.m; sourceTree = "<group>"; };
+		CA9F771313C802310006146D /* ImageController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageController.xib; sourceTree = "<group>"; };
 		CAA54D3213BAD19F008D8D6B /* PPTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPTableViewCell.h; sourceTree = "<group>"; };
 		CAA54D3313BAD19F008D8D6B /* PPTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPTableViewCell.m; sourceTree = "<group>"; };
 		CAA5F69B13BAF32C00F3F2D2 /* girl1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = girl1.png; sourceTree = "<group>"; };
@@ -1707,6 +1712,16 @@
 			path = SINA;
 			sourceTree = "<group>";
 		};
+		CA9F771013C8020D0006146D /* ImageController */ = {
+			isa = PBXGroup;
+			children = (
+				CA9F771113C802310006146D /* ImageController.h */,
+				CA9F771213C802310006146D /* ImageController.m */,
+				CA9F771313C802310006146D /* ImageController.xib */,
+			);
+			path = ImageController;
+			sourceTree = "<group>";
+		};
 		CAA6AB1B13988A2A009F26E3 /* HJCacheClasses */ = {
 			isa = PBXGroup;
 			children = (
@@ -2051,6 +2066,7 @@
 		CAAFFF2C137FE03000E56503 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				CA9F771013C8020D0006146D /* ImageController */,
 				CAD8EBD113A9E33F0092C2EC /* MoreTableViewCell */,
 				CAA6AB1B13988A2A009F26E3 /* HJCacheClasses */,
 				FB52F3E11388FA3100710F0C /* EGOTableViewPullRefresh */,
@@ -2661,6 +2677,7 @@
 				CA76FAB013BD60EA008B0CA5 /* SeeExamplePostController.xib in Resources */,
 				CA87F91A13BD787200F34CCB /* HelpWritePostCell.xib in Resources */,
 				CA3F00FC13BEDF24000B456F /* PublicTimelinePostController.xib in Resources */,
+				CA9F771513C802310006146D /* ImageController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2880,6 +2897,7 @@
 				CA3F00FF13BEEF06000B456F /* ActionOnPostRequest.m in Sources */,
 				CAB3D34313C0365500F9DC02 /* GetAppUpdateRequest.m in Sources */,
 				CAB3D34613C03A9800F9DC02 /* AppService.m in Sources */,
+				CA9F771413C802310006146D /* ImageController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
