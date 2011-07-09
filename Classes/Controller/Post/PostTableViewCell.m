@@ -169,9 +169,10 @@
     [GlobalGetImageCache() manage:self.userAvatarImage];
 
     [self.contentImage clear];
+ 
     if ([self exist:imageURL]){
         NSString* thumbImageURL = [imageURL stringByReplacingOccurrencesOfString:@".png" withString:@"_s.png"]; // hard code ,no good here
-        thumbImageURL = [imageURL stringByReplacingOccurrencesOfString:@".jpg" withString:@"_s.jpg"];
+        thumbImageURL = [thumbImageURL stringByReplacingOccurrencesOfString:@".jpg" withString:@"_s.jpg"];
         self.contentImage.url = [NSURL URLWithString:thumbImageURL];
         self.contentImage.callbackOnSetImage = self;
         [GlobalGetImageCache() manage:self.contentImage];

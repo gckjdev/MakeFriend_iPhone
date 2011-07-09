@@ -273,7 +273,7 @@
     [self deleteControlRow];
     NSString *imageURL = [post imageURL];
     if ([imageURL length] > 0) {
-        [ImageController showImageController:self imageURL:imageURL];
+        [ImageController showImageController:self.superController imageURL:imageURL];
     }
 }
 - (void)clickLikeButton:(id)sender atIndexPath:(NSIndexPath*)indexPath
