@@ -60,7 +60,7 @@
 
 - (void)viewDidLoad
 {        
-    [self setNavigationRightButton:NSLS(@"Next") action:@selector(clickNext:)];
+//    [self setNavigationRightButton:NSLS(@"Next") action:@selector(clickNext:)];
     [self updateTitle];
     [super viewDidLoad];
 
