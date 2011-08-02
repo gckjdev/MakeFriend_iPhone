@@ -80,6 +80,11 @@
 		CA13B6D913B860CC0016FE54 /* UserService.m in Sources */ = {isa = PBXBuildFile; fileRef = CA13B6AF13B860CC0016FE54 /* UserService.m */; };
 		CA13B6DD13B875780016FE54 /* NewMakeFriendPostMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA13B6DB13B875780016FE54 /* NewMakeFriendPostMainController.m */; };
 		CA13B6DE13B875780016FE54 /* NewMakeFriendPostMainController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA13B6DC13B875780016FE54 /* NewMakeFriendPostMainController.xib */; };
+		CA24A24413E7EC2400329554 /* city.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA24A23D13E7EC2400329554 /* city.plist */; };
+		CA24A24513E7EC2400329554 /* CityPickerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CA24A23F13E7EC2400329554 /* CityPickerManager.m */; };
+		CA24A24613E7EC2400329554 /* CityPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA24A24113E7EC2400329554 /* CityPickerViewController.m */; };
+		CA24A24713E7EC2400329554 /* CityPickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA24A24213E7EC2400329554 /* CityPickerViewController.xib */; };
+		CA24A24813E7EC2400329554 /* province.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA24A24313E7EC2400329554 /* province.plist */; };
 		CA2A016E138E2F87007EBEA9 /* NearbyPostController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA2A016C138E2F86007EBEA9 /* NearbyPostController.m */; };
 		CA2A016F138E2F87007EBEA9 /* NearbyPostController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA2A016D138E2F86007EBEA9 /* NearbyPostController.xib */; };
 		CA2A0173138E2FD3007EBEA9 /* FollowPostController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA2A0171138E2FD2007EBEA9 /* FollowPostController.m */; };
@@ -617,6 +622,13 @@
 		CA13B6DA13B875780016FE54 /* NewMakeFriendPostMainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewMakeFriendPostMainController.h; sourceTree = "<group>"; };
 		CA13B6DB13B875780016FE54 /* NewMakeFriendPostMainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewMakeFriendPostMainController.m; sourceTree = "<group>"; };
 		CA13B6DC13B875780016FE54 /* NewMakeFriendPostMainController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewMakeFriendPostMainController.xib; sourceTree = "<group>"; };
+		CA24A23D13E7EC2400329554 /* city.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = city.plist; sourceTree = "<group>"; };
+		CA24A23E13E7EC2400329554 /* CityPickerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityPickerManager.h; sourceTree = "<group>"; };
+		CA24A23F13E7EC2400329554 /* CityPickerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityPickerManager.m; sourceTree = "<group>"; };
+		CA24A24013E7EC2400329554 /* CityPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityPickerViewController.h; sourceTree = "<group>"; };
+		CA24A24113E7EC2400329554 /* CityPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityPickerViewController.m; sourceTree = "<group>"; };
+		CA24A24213E7EC2400329554 /* CityPickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CityPickerViewController.xib; sourceTree = "<group>"; };
+		CA24A24313E7EC2400329554 /* province.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = province.plist; sourceTree = "<group>"; };
 		CA2A016B138E2F86007EBEA9 /* NearbyPostController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NearbyPostController.h; sourceTree = "<group>"; };
 		CA2A016C138E2F86007EBEA9 /* NearbyPostController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NearbyPostController.m; sourceTree = "<group>"; };
 		CA2A016D138E2F86007EBEA9 /* NearbyPostController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NearbyPostController.xib; sourceTree = "<group>"; };
@@ -1496,6 +1508,20 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
+		CA24A23C13E7EC2400329554 /* CityPicker */ = {
+			isa = PBXGroup;
+			children = (
+				CA24A23D13E7EC2400329554 /* city.plist */,
+				CA24A23E13E7EC2400329554 /* CityPickerManager.h */,
+				CA24A23F13E7EC2400329554 /* CityPickerManager.m */,
+				CA24A24013E7EC2400329554 /* CityPickerViewController.h */,
+				CA24A24113E7EC2400329554 /* CityPickerViewController.m */,
+				CA24A24213E7EC2400329554 /* CityPickerViewController.xib */,
+				CA24A24313E7EC2400329554 /* province.plist */,
+			);
+			path = CityPicker;
+			sourceTree = "<group>";
+		};
 		CA5D44A9136A63A200B9ECF2 /* 3PP */ = {
 			isa = PBXGroup;
 			children = (
@@ -2066,6 +2092,7 @@
 		CAAFFF2C137FE03000E56503 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				CA24A23C13E7EC2400329554 /* CityPicker */,
 				CA9F771013C8020D0006146D /* ImageController */,
 				CAD8EBD113A9E33F0092C2EC /* MoreTableViewCell */,
 				CAA6AB1B13988A2A009F26E3 /* HJCacheClasses */,
@@ -2678,6 +2705,9 @@
 				CA87F91A13BD787200F34CCB /* HelpWritePostCell.xib in Resources */,
 				CA3F00FC13BEDF24000B456F /* PublicTimelinePostController.xib in Resources */,
 				CA9F771513C802310006146D /* ImageController.xib in Resources */,
+				CA24A24413E7EC2400329554 /* city.plist in Resources */,
+				CA24A24713E7EC2400329554 /* CityPickerViewController.xib in Resources */,
+				CA24A24813E7EC2400329554 /* province.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2898,6 +2928,8 @@
 				CAB3D34313C0365500F9DC02 /* GetAppUpdateRequest.m in Sources */,
 				CAB3D34613C03A9800F9DC02 /* AppService.m in Sources */,
 				CA9F771413C802310006146D /* ImageController.m in Sources */,
+				CA24A24513E7EC2400329554 /* CityPickerManager.m in Sources */,
+				CA24A24613E7EC2400329554 /* CityPickerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -216,6 +216,9 @@ void uncaughtExceptionHandler(NSException *exception) {
 
 - (void)showViewByUserStatus
 {
+    // for test
+//    [PPNetworkRequest  deviceLogin:SERVER_URL appId:GlobalGetPlaceAppId() needReturnUser:YES];
+    
     [userService checkDevice];    
 }
 
