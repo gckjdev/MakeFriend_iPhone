@@ -9,7 +9,7 @@
 #import "PostControllerUtils.h"
 #import "ResultUtils.h"
 #import "Post.h"
-#import "PostController.h"
+//#import "PostController.h"
 #import "PlaceManager.h"
 #import "LocalDataService.h"
 
@@ -80,16 +80,6 @@ PostControllerUtils* shareUtil;
                         userNickName:[ResultUtils nickName:dict]
                           createDate:[ResultUtils createDate:dict]
                           totalReply:[ResultUtils totalReply:dict]];
-}
-
-+ (void)gotoPostController:(UIViewController*)superController post:(Post*)post
-{
-    PostController *vc = [[PostController alloc] init];
-    vc.post = post;
-    superController.hidesBottomBarWhenPushed = YES;
-    [superController.navigationController pushViewController:vc animated:YES];
-    [vc release];
-
 }
 
 + (CGFloat)getCellHeight

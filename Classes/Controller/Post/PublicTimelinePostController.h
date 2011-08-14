@@ -15,14 +15,14 @@
 
 @class CreatePrivateMessageController;
 
-@interface PublicTimelinePostController : PPTableViewController <LocalDataServiceDelegate, PostActionCellDelegate, PostTableViewCellDelegate, PostServiceDelegate> {
-    
-    
+@interface PublicTimelinePostController : PPTableViewController <LocalDataServiceDelegate,PostTableViewCellDelegate, PostServiceDelegate> {
     UIViewController                *superController;    
     CreatePrivateMessageController  *privateMssageController;
+    NSIndexPath                     *selectedIndexPath;
 }
 
-@property (nonatomic, retain) UIViewController                *superController;
-@property (nonatomic, retain) CreatePrivateMessageController  *privateMssageController;
+@property (nonatomic, retain) UIViewController                  *superController;
+@property (nonatomic, retain) CreatePrivateMessageController    *privateMssageController;
+@property (nonatomic, retain) NSIndexPath                       *selectedIndexPath;
 
 @end

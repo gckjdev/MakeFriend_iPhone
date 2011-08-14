@@ -23,11 +23,13 @@
 #import "ImageController.h"
 #import "PostService.h"
 #import "DipanAppDelegate.h"
+#import "NewMakeFriendPostMainController.h"
 
 @implementation PublicTimelinePostController
 
 @synthesize superController;
 @synthesize privateMssageController;
+@synthesize selectedIndexPath;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -42,6 +44,7 @@
 {    
     [privateMssageController release];
     [superController release];
+    [selectedIndexPath release];
     [super dealloc];
 }
 
@@ -98,8 +101,6 @@
     }        
 }
 
-
-
 - (void)initDataList
 {
     [self loadDataList];
@@ -115,9 +116,22 @@
     
     [super viewDidLoad];
     
+    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCompose target:self action:@selector(presentNewMakeFriendPostMainController)];
+    self.navigationItem.title = @"最新";
+    self.navigationItem.rightBarButtonItem = rightItem;
+    [rightItem release];
+    
     // Do any additional setup after loading the view from its nib.
     self.view.backgroundColor = [UIColor whiteColor];
-    
+}
+
+- (void)presentNewMakeFriendPostMainController
+{
+    NewMakeFriendPostMainController *viewController = [[NewMakeFriendPostMainController alloc] init];
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:viewController];
+    [viewController release];
+    [self presentModalViewController:navController animated:YES];
+    [navController release];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -131,6 +145,8 @@
     [super viewDidUnload];
     
     self.privateMssageController = nil;
+    self.superController = nil;
+    self.selectedIndexPath = nil;
     
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -185,7 +201,13 @@
         return [MoreTableViewCell getRowHeight];
     }
     
-	return [PostTableViewCell getCellHeight];
+    PostTableViewCell *cell = [PostTableViewCell createCell:self];      		
+    Post *post = [self postByIndexPath:indexPath];
+    if (post == nil)
+        return tableView.rowHeight;
+    [cell setCellInfoWithPost:post indexPath:indexPath];
+	
+	return cell.frame.size.height;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -207,17 +229,6 @@
         return moreCell;
     }
     
-    if ([self isControlRowIndexPath:indexPath]){
-        NSString *CellIdentifier = [PostActionCell getCellIdentifier];
-        PostActionCell *cell = (PostActionCell*)[theTableView dequeueReusableCellWithIdentifier:CellIdentifier];
-        if (cell == nil) {
-            cell = [PostActionCell createCell:self];
-        }        
-        
-        cell.indexPath = [NSIndexPath indexPathForRow:indexPath.row inSection:indexPath.section];
-        return cell;
-    }
-    
     NSString *CellIdentifier = [PostTableViewCell getCellIdentifier];
 	PostTableViewCell *cell = (PostTableViewCell*)[theTableView dequeueReusableCellWithIdentifier:CellIdentifier];
 	if (cell == nil) {
@@ -226,7 +237,8 @@
 	
     indexPath = [self modelIndexPathForIndexPath:indexPath];
     
-	cell.accessoryView = accessoryView;
+    cell.accessoryType = UITableViewCellAccessoryNone;
+	//cell.accessoryView = accessoryView;
     //	[self setCellBackground:cell row:row count:count];        		
 	
     Post* post = [self postByIndexPath:indexPath];
@@ -241,8 +253,6 @@
 
 - (void)clickPlaceNameButton:(id)sender atIndexPath:(NSIndexPath *)indexPath
 {
-
-    
     Post* post = [self postByIndexPath:indexPath];
     if (post == nil)
         return;
@@ -264,6 +274,7 @@
                                                      userAvatar:post.userAvatar
                                                  viewController:self.superController];      
 }
+
 -(void)clickPostImageButton:(id)sender atIndexPath:(NSIndexPath *)indexPath
 {
     Post *post = [self postByIndexPath:indexPath];
@@ -276,10 +287,11 @@
         [ImageController showImageController:self.superController imageURL:imageURL];
     }
 }
+
 - (void)clickLikeButton:(id)sender atIndexPath:(NSIndexPath*)indexPath
 {
-
-    Post* post = [self postByControlRowIndexPath:indexPath];
+    self.selectedIndexPath = indexPath;
+    Post* post = [self postByIndexPath:indexPath];
     if (post == nil)
         return;
     
@@ -292,31 +304,47 @@
                viewController:self];
 }
 
-- (void)clickSendMessageButton:(id)sender atIndexPath:(NSIndexPath*)indexPath
+- (void)actionOnPostFinish:(int)result count:(long)count
 {
-    
-    Post* post = [self postByControlRowIndexPath:indexPath];
+    Post* post = [self postByIndexPath:self.selectedIndexPath];
+    post.totalRelated = [NSNumber numberWithLong:count];
+    PostTableViewCell *cell = (PostTableViewCell *)[self.dataTableView cellForRowAtIndexPath:self.selectedIndexPath];
+    cell.totalReplyLabel.text = [NSString stringWithFormat:@"%i人感兴趣", count];
+}
+
+- (void)clickMessageButton:(id)sender atIndexPath:(NSIndexPath*)indexPath
+{
+    Post* post = [self postByIndexPath:indexPath];
     if (post == nil)
         return;
-    
+
     [self deleteControlRow];
 
     if (self.privateMssageController == nil){
         self.privateMssageController = [PrivateMessageControllerUtils showPrivateMessageController:post.userId 
                                                                                       userNickName:post.userNickName
                                                                                         userAvatar:post.userAvatar
-                                                                                    viewController:self.superController];      
+                                                                                    viewController:self];      
     }
     else{
-        [self.superController.navigationController pushViewController:self.privateMssageController animated:YES];
+        [self.navigationController pushViewController:self.privateMssageController animated:YES];
     }
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if ([self isMoreRowIndexPath:indexPath]){
+        [self.moreLoadingView startAnimating];
+        if ([self respondsToSelector:@selector(didSelectMoreRow)]){
+            [self performSelector:@selector(didSelectMoreRow)];
+        }
+        return;
+    }
+}
 
 - (void)didSelectMoreRow
 {
-    [self deleteControlRow];
-    [self requestPostListFromServer:YES];
+    [self requestPostListFromServer:NO];
 }
 
 #pragma Pull Refresh Delegate

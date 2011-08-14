@@ -21,6 +21,7 @@
 #import "PrivateMessageControllerUtils.h"
 #import "CreatePrivateMessageController.h"
 #import "PostService.h"
+#import "NewMakeFriendPostMainController.h"
 
 @implementation NearbyPostController
 
@@ -116,7 +117,21 @@
 
     // Do any additional setup after loading the view from its nib.
     self.view.backgroundColor = [UIColor whiteColor];
+    
+    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCompose target:self action:@selector(presentNewMakeFriendPostMainController)];
+    self.navigationItem.title = @"附近";
+    self.navigationItem.rightBarButtonItem = rightItem;
+    [rightItem release];
 
+}
+
+- (void)presentNewMakeFriendPostMainController
+{
+    NewMakeFriendPostMainController *viewController = [[NewMakeFriendPostMainController alloc] init];
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:viewController];
+    [viewController release];
+    [self presentModalViewController:navController animated:YES];
+    [navController release];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -184,7 +199,8 @@
         return [MoreTableViewCell getRowHeight];
     }
 
-	return [PostTableViewCell getCellHeight];
+	UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+	return cell.frame.size.height;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {

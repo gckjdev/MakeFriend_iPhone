@@ -26,7 +26,6 @@
 + (void)setCellStyle:(UITableViewCell*)cell;
 + (void)setCellInfoWithDict:(NSDictionary*)dict cell:(UITableViewCell*)cell;
 + (void)setCellInfoWithPost:(Post*)post cell:(UITableViewCell*)cell;
-+ (void)gotoPostController:(UIViewController*)superController post:(Post*)post;
 + (CGFloat)getCellHeight;
    
 + (void)askFollowPlace:(NSString*)placeId placeName:(NSString*)placeName viewController:(PPViewController*)viewController;

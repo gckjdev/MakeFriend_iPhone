@@ -21,11 +21,11 @@
 #import "VariableConstants.h"
 
 enum{
-    
+    SECTION_AVATAR,
     SECTION_INFO,
     SECTION_SNS,
+    SECTION_ACTION,
     SECTION_NUM
-    
 };
 
 enum{
@@ -39,10 +39,17 @@ enum{
     ROW_SINA,
     ROW_QQ,
     ROW_SNS_NUM,
-    ROW_RENREN,
+    ROW_RENREN
+};
+
+enum{
+    ROW_FEEDBACK,
+    ROW_LOGOUT,
+    ROW_ACTION_NUM
 };
 
 @implementation MyInfoController
+
 @synthesize avatarImageView;
 @synthesize logoutButton;
 
@@ -138,7 +145,9 @@ enum{
     [self updateImageView];
     [self initLogoutButton];
     
-    [self setNavigationRightButton:NSLS(@"Save") action:@selector(clickSave:)];
+    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:NSLS(@"Save") style:UIBarButtonItemStyleDone target:self action:@selector(clickSave)];
+    self.navigationItem.rightBarButtonItem = rightItem;
+    [rightItem release];
     
     self.dataTableView.backgroundColor = [UIColor whiteColor];
     self.view.backgroundColor = [UIColor whiteColor];
@@ -201,14 +210,20 @@ enum{
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     
     switch (section) {
+        case SECTION_AVATAR:
+            return @"";
+            
         case SECTION_INFO:
             return @"";
             
         case SECTION_SNS:
             return @"";
+        
+        case SECTION_ACTION:
+            return @"";
             
         default:            
-            return 0;
+            return @"";
     }
     
 }
@@ -236,11 +251,17 @@ enum{
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {    
     switch (indexPath.section) {
+        case SECTION_AVATAR:
+            return tableView.rowHeight;
+            
         case SECTION_INFO:
-            return 60;
+            return 60;  
             
         case SECTION_SNS:
             return 60;
+        
+        case SECTION_ACTION:
+            return tableView.rowHeight;
             
         default:            
             return 0;
@@ -257,13 +278,17 @@ enum{
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
     switch (section) {
+        case SECTION_AVATAR:
+            return 1;
+            
         case SECTION_INFO:
             return ROW_INFO_NUM;
-            break;
             
         case SECTION_SNS:
             return ROW_SNS_NUM;
-            break;
+        
+        case SECTION_ACTION:
+            return ROW_ACTION_NUM;
             
         default:            
             return 0;
@@ -357,13 +382,21 @@ enum{
     NSString *CellIdentifier = @"InfoCell";
 	UITableViewCell *cell = [theTableView dequeueReusableCellWithIdentifier:CellIdentifier];
 	if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier];
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier] autorelease];
 	}
 	
     switch (indexPath.section) {
+        case SECTION_AVATAR:
+        {
+            cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil] autorelease];
+            cell.textLabel.text = @"设置头像";
+            cell.textLabel.textAlignment = UITextAlignmentCenter;
+        }
+            break;
+            
         case SECTION_INFO:
         {
-            switch (indexPath.row) {
+            switch (indexPath.row) {                    
                 case ROW_NICKNAME:
                     [self setNickNameCell:cell];
                     break;
@@ -402,6 +435,26 @@ enum{
             }
         }
             break;
+            
+        case SECTION_ACTION:
+        {
+            switch (indexPath.row) {
+                case ROW_FEEDBACK:
+                    cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil] autorelease];
+                    cell.textLabel.text = @"反馈";
+                    cell.textLabel.textAlignment = UITextAlignmentCenter;
+                    break;
+                    
+                case ROW_LOGOUT:
+                    cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil] autorelease];
+                    cell.textLabel.text = @"注销";
+                    cell.textLabel.textAlignment = UITextAlignmentCenter;
+                    break;
+                    
+                default:
+                    break;
+            }
+        }
             
         default:            
             break;
@@ -481,6 +534,14 @@ enum{
     [self updateSelectSectionAndRow:indexPath];
     
     switch (indexPath.section) {
+        case SECTION_AVATAR:
+        {
+            UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"" delegate:self cancelButtonTitle:NSLS(@"Cancel") destructiveButtonTitle:nil otherButtonTitles:NSLS(@"kSelectFromAlbum"), NSLS(@"kTakePhoto"), nil];
+            [actionSheet showInView:self.tabBarController.view];
+            [actionSheet release];
+        }
+            break;
+            
         case SECTION_INFO:
         {
             switch (indexPath.row) {
@@ -561,6 +622,33 @@ enum{
         }
             break;
             
+        case SECTION_ACTION:
+        {
+            switch (indexPath.row) {
+                case ROW_FEEDBACK:
+                {
+                    [self sendEmailTo:[NSArray arrayWithObject:@"zz2010.support@gmail.com"] 
+                         ccRecipients:nil 
+                        bccRecipients:nil 
+                              subject:NSLS(@"kFeedbackSubject")
+                                 body:NSLS(@"") 
+                               isHTML:NO 
+                             delegate:self];
+                }
+                    break;
+                case ROW_LOGOUT:
+                {
+                    UserService* userService = GlobalGetUserService();
+                    [userService logoutUser];
+                    
+                    DipanAppDelegate *delegate = (DipanAppDelegate *)[UIApplication sharedApplication].delegate;
+                    [delegate removeMainView];
+                    [delegate addRegisterView];
+                }
+                    break;
+            }
+        }
+            
         default:            
             break;
     }        
@@ -572,7 +660,6 @@ enum{
 #pragma mark - Button Action
 
 - (IBAction)clickLogout:(id)sender {
-
     
     UserService* userService = GlobalGetUserService();
     [userService logoutUser];

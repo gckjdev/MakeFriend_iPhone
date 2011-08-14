@@ -20,8 +20,11 @@
 #import "MyInfoController.h"
 #import "InviteController.h"
 #import "FeedbackController.h"
+#import "NearbyPostController.h"
 #import "NewMakeFriendPostMainController.h"
-#import "PostMainController.h"
+#import "CreatePrivateMessageController.h"
+#import "PublicTimelinePostController.h"
+#import "PrivateMessageUserController.h"
 
 #import "CommonManager.h"
 #import "UserManager.h"
@@ -38,7 +41,7 @@
 
 NSString* GlobalGetServerURL()
 {
-    return @"http://192.168.1.188:8000/api/i?";
+    return @"http://localhost:8000/api/i?";
 }
 
 AppService* GlobalGetAppService()
@@ -53,7 +56,7 @@ PostService* GlobalGetPostService()
     return [delegate postService];        
 }
 
-MessageService*   GlobalGetMessageService()
+MessageService* GlobalGetMessageService()
 {
     DipanAppDelegate* delegate = (DipanAppDelegate*)[[UIApplication sharedApplication] delegate];    
     return [delegate messageService];    
@@ -65,7 +68,7 @@ LocalDataService* GlobalGetLocalDataService()
     return [delegate localDataService];
 }
 
-LocationService*   GlobalGetLocationService()
+LocationService* GlobalGetLocationService()
 {
     DipanAppDelegate* delegate = (DipanAppDelegate*)[[UIApplication sharedApplication] delegate];
     
@@ -113,38 +116,44 @@ NSString* GlobalGetPlaceAppId()
 #pragma mark Application lifecycle
 
 - (void)initTabViewControllers
-{
-	NSMutableArray* controllers = [[NSMutableArray alloc] init];
-
-	[UIUtils addViewController:[NewMakeFriendPostMainController alloc]
-					 viewTitle:NSLS(@"kNewPost")
-					 viewImage:@"app_globe_24.png"
-			  hasNavController:YES			
-			   viewControllers:controllers];	
-	
-	[UIUtils addViewController:[PostMainController alloc]
-					 viewTitle:NSLS(@"Follow")				 
+{    
+	NSMutableArray *controllers = [[NSMutableArray alloc] init];
+    
+    [UIUtils addViewController:[PublicTimelinePostController alloc]
+					 viewTitle:@"最新"
 					 viewImage:@"comment_24.png"
 			  hasNavController:YES			
-			   viewControllers:controllers];	
+			   viewControllers:controllers];
+    
+	[UIUtils addViewController:[NearbyPostController alloc]
+					 viewTitle:@"附近"
+					 viewImage:@"app_globe_24.png"
+			  hasNavController:YES			
+			   viewControllers:controllers];
 
+    [UIUtils addViewController:[PrivateMessageUserController alloc]
+					 viewTitle:@"私信"
+					 viewImage:@"mail_24.png"
+			  hasNavController:YES			
+			   viewControllers:controllers];	
+    
 	[UIUtils addViewController:[MyInfoController alloc]
-					 viewTitle:NSLS(@"Setting")				 
+					 viewTitle:@"设置"
 					 viewImage:@"man_24.png"
 			  hasNavController:YES			
 			   viewControllers:controllers];	
 
-	[UIUtils addViewController:[InviteController alloc]
-					 viewTitle:NSLS(@"Invite")				 
+	/*UIUtils addViewController:[InviteController alloc]
+					 viewTitle:NSLS(@"Invite")
 					 viewImage:@"mail_24.png"
 			  hasNavController:YES			
-			   viewControllers:controllers];	
+			   viewControllers:controllers];*/	
 
-	[UIUtils addViewController:[FeedbackController alloc]
-					 viewTitle:NSLS(@"Feedback")				 
+	/*[UIUtils addViewController:[FeedbackController alloc]
+					 viewTitle:@"反馈"
 					 viewImage:@"help_24.png"
 			  hasNavController:YES			
-			   viewControllers:controllers];	
+			   viewControllers:controllers];*/	
 	
 	tabBarController.viewControllers = controllers;
 	
@@ -219,11 +228,13 @@ void uncaughtExceptionHandler(NSException *exception) {
     // for test
 //    [PPNetworkRequest  deviceLogin:SERVER_URL appId:GlobalGetPlaceAppId() needReturnUser:YES];
     
-    [userService checkDevice];    
+    [userService checkDevice];
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
-    	
+    
+    [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationNone];
+    
 	NSLog(@"Application starts, launch option = %@", [launchOptions description]);	
 	NSSetUncaughtExceptionHandler(&uncaughtExceptionHandler);	
 	
@@ -365,7 +376,7 @@ void uncaughtExceptionHandler(NSException *exception) {
         case USER_EXIST_LOCAL_STATUS_LOGOUT:
         case USER_NOT_EXIST_LOCAL:
         default:
-            [self addEnterAppView];
+            [self addRegisterView];
             break;            
     }
 }
@@ -424,7 +435,9 @@ void uncaughtExceptionHandler(NSException *exception) {
 }
 
 - (void)addRegisterView {
-    self.registerController = [[RegisterController alloc] init];
+    RegisterController *controller = [[RegisterController alloc] init];
+    self.registerController = controller;
+    [controller release];
     [window addSubview:registerController.view];
 }
 

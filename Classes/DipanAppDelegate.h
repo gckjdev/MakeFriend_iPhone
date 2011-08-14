@@ -31,8 +31,7 @@
 
 #define MAKE_FRIEND_PLACEID @"MakeFriendPlaceID"
 
-@interface DipanAppDelegate : PPApplication <UIApplicationDelegate, UITabBarControllerDelegate, MobClickDelegate, EnterPlaceAppDelegate,
-LocalDataServiceDelegate, UserServiceDelegate> {
+@interface DipanAppDelegate : PPApplication <UIApplicationDelegate, UITabBarControllerDelegate, MobClickDelegate, EnterPlaceAppDelegate, LocalDataServiceDelegate, UserServiceDelegate> {
 
     UIWindow			*window;
     UITabBarController	*tabBarController;

@@ -30,4 +30,7 @@
 - (IBAction)clickSubmitButton:(id)sender;
 - (IBAction)clickImageButton:(id)sender;
 
+- (IBAction)selectPhoto:(id)sender;
+- (IBAction)tackPhoto:(id)sender;
+
 @end

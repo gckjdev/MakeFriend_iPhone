@@ -85,20 +85,10 @@
 		CA24A24613E7EC2400329554 /* CityPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA24A24113E7EC2400329554 /* CityPickerViewController.m */; };
 		CA24A24713E7EC2400329554 /* CityPickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA24A24213E7EC2400329554 /* CityPickerViewController.xib */; };
 		CA24A24813E7EC2400329554 /* province.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA24A24313E7EC2400329554 /* province.plist */; };
-		CA2A016E138E2F87007EBEA9 /* NearbyPostController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA2A016C138E2F86007EBEA9 /* NearbyPostController.m */; };
-		CA2A016F138E2F87007EBEA9 /* NearbyPostController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA2A016D138E2F86007EBEA9 /* NearbyPostController.xib */; };
-		CA2A0173138E2FD3007EBEA9 /* FollowPostController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA2A0171138E2FD2007EBEA9 /* FollowPostController.m */; };
-		CA2A0174138E2FD3007EBEA9 /* FollowPostController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA2A0172138E2FD3007EBEA9 /* FollowPostController.xib */; };
 		CA3F00F713BED06A000B456F /* GetPublicTimelinePostRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = CA3F00F613BED06A000B456F /* GetPublicTimelinePostRequest.m */; };
 		CA3F00FB13BEDF24000B456F /* PublicTimelinePostController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA3F00F913BEDF23000B456F /* PublicTimelinePostController.m */; };
 		CA3F00FC13BEDF24000B456F /* PublicTimelinePostController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA3F00FA13BEDF23000B456F /* PublicTimelinePostController.xib */; };
 		CA3F00FF13BEEF06000B456F /* ActionOnPostRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = CA3F00FE13BEEF05000B456F /* ActionOnPostRequest.m */; };
-		CA4005AB138F5852009B5BF9 /* PostController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA4005A9138F5850009B5BF9 /* PostController.m */; };
-		CA4005AC138F5852009B5BF9 /* PostController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA4005AA138F5851009B5BF9 /* PostController.xib */; };
-		CA4921DD13AAF55300744CCC /* SelectPlaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA4921DB13AAF55300744CCC /* SelectPlaceController.m */; };
-		CA4921DE13AAF55300744CCC /* SelectPlaceController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA4921DC13AAF55300744CCC /* SelectPlaceController.xib */; };
-		CA5C848213A9948200A22BB5 /* AtMePostController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA5C848013A9948200A22BB5 /* AtMePostController.m */; };
-		CA5C848313A9948200A22BB5 /* AtMePostController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA5C848113A9948200A22BB5 /* AtMePostController.xib */; };
 		CA5C848A13A9AB6400A22BB5 /* EnterPlaceAppController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA5C848813A9AB6400A22BB5 /* EnterPlaceAppController.m */; };
 		CA5C848B13A9AB6400A22BB5 /* EnterPlaceAppController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA5C848913A9AB6400A22BB5 /* EnterPlaceAppController.xib */; };
 		CA5D43C8136A561E00B9ECF2 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA5D43C7136A561E00B9ECF2 /* AVFoundation.framework */; };
@@ -121,18 +111,10 @@
 		CA5D44EC136A63A300B9ECF2 /* ProjectApiKey.txt in Resources */ = {isa = PBXBuildFile; fileRef = CA5D44D9136A63A200B9ECF2 /* ProjectApiKey.txt */; };
 		CA5D44ED136A63A300B9ECF2 /* RELEASE_NOTES.txt in Resources */ = {isa = PBXBuildFile; fileRef = CA5D44DA136A63A200B9ECF2 /* RELEASE_NOTES.txt */; };
 		CA5D45DE136A87EB00B9ECF2 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA5D45DD136A87EB00B9ECF2 /* iAd.framework */; };
-		CA6046711395C41A006C1D9F /* PostControllerUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = CA6046701395C41A006C1D9F /* PostControllerUtils.m */; };
-		CA6046751395D89B006C1D9F /* NearbyPlaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA6046731395D89B006C1D9F /* NearbyPlaceController.m */; };
-		CA6046761395D89B006C1D9F /* NearbyPlaceController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA6046741395D89B006C1D9F /* NearbyPlaceController.xib */; };
-		CA60467A1395D8AE006C1D9F /* FollowPlaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA6046781395D8AE006C1D9F /* FollowPlaceController.m */; };
-		CA60467B1395D8AE006C1D9F /* FollowPlaceController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA6046791395D8AE006C1D9F /* FollowPlaceController.xib */; };
-		CA60467E1395D8C0006C1D9F /* PlaceControllerUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = CA60467D1395D8C0006C1D9F /* PlaceControllerUtils.m */; };
 		CA76FAAA13BD60AA008B0CA5 /* HelpWritePostController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA76FAA813BD60AA008B0CA5 /* HelpWritePostController.m */; };
 		CA76FAAB13BD60AA008B0CA5 /* HelpWritePostController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA76FAA913BD60AA008B0CA5 /* HelpWritePostController.xib */; };
 		CA76FAAF13BD60EA008B0CA5 /* SeeExamplePostController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA76FAAD13BD60EA008B0CA5 /* SeeExamplePostController.m */; };
 		CA76FAB013BD60EA008B0CA5 /* SeeExamplePostController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA76FAAE13BD60EA008B0CA5 /* SeeExamplePostController.xib */; };
-		CA7F9CD6137D5B530033FE12 /* PlaceLocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA7F9CD4137D5B530033FE12 /* PlaceLocationController.m */; };
-		CA7F9CD7137D5B530033FE12 /* PlaceLocationController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA7F9CD5137D5B530033FE12 /* PlaceLocationController.xib */; };
 		CA87F91413BD653900F34CCB /* FriendPostExampleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CA87F91013BD653900F34CCB /* FriendPostExampleManager.m */; };
 		CA87F91513BD653900F34CCB /* PostHelpQuestionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CA87F91213BD653900F34CCB /* PostHelpQuestionManager.m */; };
 		CA87F91813BD785E00F34CCB /* HelpWritePostCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CA87F91713BD785E00F34CCB /* HelpWritePostCell.m */; };
@@ -149,8 +131,6 @@
 		CA8900E513B70480005ED51A /* CreatePrivateMessageController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA8900E313B7047E005ED51A /* CreatePrivateMessageController.m */; };
 		CA8900E613B70480005ED51A /* CreatePrivateMessageController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA8900E413B7047F005ED51A /* CreatePrivateMessageController.xib */; };
 		CA933E9D137FE66C001E0D1E /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA933E9C137FE66C001E0D1E /* CFNetwork.framework */; };
-		CA967316137E4DF00038CC44 /* PostListController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA967314137E4DEF0038CC44 /* PostListController.m */; };
-		CA967317137E4DF00038CC44 /* PostListController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA967315137E4DF00038CC44 /* PostListController.xib */; };
 		CA9B40C413978E4000F16EA4 /* PostTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CA9B40C313978E3F00F16EA4 /* PostTableViewCell.m */; };
 		CA9B40C61397D63700F16EA4 /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA9B40C51397D63300F16EA4 /* PostTableViewCell.xib */; };
 		CA9E093B139CB7CB000B6FEE /* CommonSNSRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = CA9E093A139CB7CB000B6FEE /* CommonSNSRequest.m */; };
@@ -182,12 +162,6 @@
 		CAA6AB4A1398C5AF009F26E3 /* mail_24@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CAA6AB401398C5AF009F26E3 /* mail_24@2x.png */; };
 		CAA6AB4B1398C5AF009F26E3 /* man_24.png in Resources */ = {isa = PBXBuildFile; fileRef = CAA6AB411398C5AF009F26E3 /* man_24.png */; };
 		CAA6AB4C1398C5AF009F26E3 /* man_24@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CAA6AB421398C5AF009F26E3 /* man_24@2x.png */; };
-		CAAA41E4137CDBAA00FB7C25 /* CreatePlaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAA41E2137CDBAA00FB7C25 /* CreatePlaceController.m */; };
-		CAAA41E5137CDBAA00FB7C25 /* CreatePlaceController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAAA41E3137CDBAA00FB7C25 /* CreatePlaceController.xib */; };
-		CAAA41EA137CDC6F00FB7C25 /* CreatePostController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAA41E8137CDC6F00FB7C25 /* CreatePostController.m */; };
-		CAAA41EB137CDC6F00FB7C25 /* CreatePostController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAAA41E9137CDC6F00FB7C25 /* CreatePostController.xib */; };
-		CAAA41EF137CDE1800FB7C25 /* PostMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAA41ED137CDE1200FB7C25 /* PostMainController.m */; };
-		CAAA41F0137CDE1900FB7C25 /* PostMainController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAAA41EE137CDE1200FB7C25 /* PostMainController.xib */; };
 		CAAC17BF13B88A3F007978E5 /* SelectPostPhotoController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAC17BD13B88A3F007978E5 /* SelectPostPhotoController.m */; };
 		CAAC17C013B88A3F007978E5 /* SelectPostPhotoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAAC17BE13B88A3F007978E5 /* SelectPostPhotoController.xib */; };
 		CAAC17C313B8B367007978E5 /* PostService.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAC17C213B8B367007978E5 /* PostService.m */; };
@@ -323,14 +297,8 @@
 		CAD19B23137A6A3500A8817B /* InviteController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAD19B13137A6A3500A8817B /* InviteController.xib */; };
 		CAD19B24137A6A3500A8817B /* MyInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAD19B15137A6A3500A8817B /* MyInfoController.m */; };
 		CAD19B25137A6A3500A8817B /* MyInfoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAD19B16137A6A3500A8817B /* MyInfoController.xib */; };
-		CAD19B26137A6A3500A8817B /* PlaceMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAD19B18137A6A3500A8817B /* PlaceMainController.m */; };
-		CAD19B27137A6A3500A8817B /* PlaceMainController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAD19B19137A6A3500A8817B /* PlaceMainController.xib */; };
 		CAD8EBD513A9E3A00092C2EC /* MoreTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CAD8EBD313A9E3A00092C2EC /* MoreTableViewCell.m */; };
 		CAD8EBD613A9E3A00092C2EC /* MoreTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAD8EBD413A9E3A00092C2EC /* MoreTableViewCell.xib */; };
-		CAE4D0EF1397409A00D4B6BE /* PlaceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CAE4D0EE1397409A00D4B6BE /* PlaceTableViewCell.m */; };
-		CAE4D0F1139740C200D4B6BE /* PlaceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAE4D0F0139740C200D4B6BE /* PlaceTableViewCell.xib */; };
-		FB091A73139F4FF700C94292 /* PPImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB091A72139F4FF600C94292 /* PPImageView.m */; };
-		FB51D2B81380D3D2001D5AC5 /* OAuthCore.m in Sources */ = {isa = PBXBuildFile; fileRef = FB51D2B71380D3D2001D5AC5 /* OAuthCore.m */; };
 		FB51D2CE13810DA9001D5AC5 /* RegisterController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB51D2CC13810DA8001D5AC5 /* RegisterController.m */; };
 		FB51D2CF13810DA9001D5AC5 /* RegisterController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB51D2CD13810DA8001D5AC5 /* RegisterController.xib */; };
 		FB51D2D21381106F001D5AC5 /* DipanAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FB51D2D11381106E001D5AC5 /* DipanAppDelegate.m */; };
@@ -342,6 +310,13 @@
 		FB52F3FA1388FA3100710F0C /* blueArrow_new.png in Resources */ = {isa = PBXBuildFile; fileRef = FB52F3EE1388FA3100710F0C /* blueArrow_new.png */; };
 		FB52F3FB1388FA3100710F0C /* EGORefresh.strings in Resources */ = {isa = PBXBuildFile; fileRef = FB52F3F01388FA3100710F0C /* EGORefresh.strings */; };
 		FB52F3FC1388FA3100710F0C /* whiteArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = FB52F3F21388FA3100710F0C /* whiteArrow.png */; };
+		FB8D1CA213F76A0E002695FE /* sina.png in Resources */ = {isa = PBXBuildFile; fileRef = FB8D1CA013F76A0E002695FE /* sina.png */; };
+		FB8D1CA313F76A0E002695FE /* tencent.png in Resources */ = {isa = PBXBuildFile; fileRef = FB8D1CA113F76A0E002695FE /* tencent.png */; };
+		FB8D1CA513F76BD8002695FE /* sina240x48.png in Resources */ = {isa = PBXBuildFile; fileRef = FB8D1CA413F76BD8002695FE /* sina240x48.png */; };
+		FB8D1CB913F77C38002695FE /* OAuthCore.m in Sources */ = {isa = PBXBuildFile; fileRef = FB8D1CB813F77C37002695FE /* OAuthCore.m */; };
+		FBC5BCF013F3B58600636178 /* NearbyPostController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBC5BCEE13F3B58400636178 /* NearbyPostController.m */; };
+		FBC5BCF113F3B58600636178 /* NearbyPostController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBC5BCEF13F3B58500636178 /* NearbyPostController.xib */; };
+		FBC5BCF413F3B69100636178 /* PostControllerUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = FBC5BCF313F3B69000636178 /* PostControllerUtils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -619,9 +594,9 @@
 		CA13B6AD13B860CC0016FE54 /* QQService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QQService.m; sourceTree = "<group>"; };
 		CA13B6AE13B860CC0016FE54 /* UserService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserService.h; sourceTree = "<group>"; };
 		CA13B6AF13B860CC0016FE54 /* UserService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserService.m; sourceTree = "<group>"; };
-		CA13B6DA13B875780016FE54 /* NewMakeFriendPostMainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewMakeFriendPostMainController.h; sourceTree = "<group>"; };
-		CA13B6DB13B875780016FE54 /* NewMakeFriendPostMainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewMakeFriendPostMainController.m; sourceTree = "<group>"; };
-		CA13B6DC13B875780016FE54 /* NewMakeFriendPostMainController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewMakeFriendPostMainController.xib; sourceTree = "<group>"; };
+		CA13B6DA13B875780016FE54 /* NewMakeFriendPostMainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewMakeFriendPostMainController.h; path = ../Entry/NewMakeFriendPostMainController.h; sourceTree = "<group>"; };
+		CA13B6DB13B875780016FE54 /* NewMakeFriendPostMainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewMakeFriendPostMainController.m; path = ../Entry/NewMakeFriendPostMainController.m; sourceTree = "<group>"; };
+		CA13B6DC13B875780016FE54 /* NewMakeFriendPostMainController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NewMakeFriendPostMainController.xib; path = ../Entry/NewMakeFriendPostMainController.xib; sourceTree = "<group>"; };
 		CA24A23D13E7EC2400329554 /* city.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = city.plist; sourceTree = "<group>"; };
 		CA24A23E13E7EC2400329554 /* CityPickerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityPickerManager.h; sourceTree = "<group>"; };
 		CA24A23F13E7EC2400329554 /* CityPickerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityPickerManager.m; sourceTree = "<group>"; };
@@ -629,12 +604,6 @@
 		CA24A24113E7EC2400329554 /* CityPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityPickerViewController.m; sourceTree = "<group>"; };
 		CA24A24213E7EC2400329554 /* CityPickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CityPickerViewController.xib; sourceTree = "<group>"; };
 		CA24A24313E7EC2400329554 /* province.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = province.plist; sourceTree = "<group>"; };
-		CA2A016B138E2F86007EBEA9 /* NearbyPostController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NearbyPostController.h; sourceTree = "<group>"; };
-		CA2A016C138E2F86007EBEA9 /* NearbyPostController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NearbyPostController.m; sourceTree = "<group>"; };
-		CA2A016D138E2F86007EBEA9 /* NearbyPostController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NearbyPostController.xib; sourceTree = "<group>"; };
-		CA2A0170138E2FD2007EBEA9 /* FollowPostController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FollowPostController.h; sourceTree = "<group>"; };
-		CA2A0171138E2FD2007EBEA9 /* FollowPostController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FollowPostController.m; sourceTree = "<group>"; };
-		CA2A0172138E2FD3007EBEA9 /* FollowPostController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FollowPostController.xib; sourceTree = "<group>"; };
 		CA3F00F513BED06A000B456F /* GetPublicTimelinePostRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetPublicTimelinePostRequest.h; sourceTree = "<group>"; };
 		CA3F00F613BED06A000B456F /* GetPublicTimelinePostRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetPublicTimelinePostRequest.m; sourceTree = "<group>"; };
 		CA3F00F813BEDF22000B456F /* PublicTimelinePostController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicTimelinePostController.h; sourceTree = "<group>"; };
@@ -642,15 +611,6 @@
 		CA3F00FA13BEDF23000B456F /* PublicTimelinePostController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PublicTimelinePostController.xib; sourceTree = "<group>"; };
 		CA3F00FD13BEEF04000B456F /* ActionOnPostRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionOnPostRequest.h; sourceTree = "<group>"; };
 		CA3F00FE13BEEF05000B456F /* ActionOnPostRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionOnPostRequest.m; sourceTree = "<group>"; };
-		CA4005A8138F584E009B5BF9 /* PostController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostController.h; sourceTree = "<group>"; };
-		CA4005A9138F5850009B5BF9 /* PostController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostController.m; sourceTree = "<group>"; };
-		CA4005AA138F5851009B5BF9 /* PostController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostController.xib; sourceTree = "<group>"; };
-		CA4921DA13AAF55300744CCC /* SelectPlaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectPlaceController.h; sourceTree = "<group>"; };
-		CA4921DB13AAF55300744CCC /* SelectPlaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectPlaceController.m; sourceTree = "<group>"; };
-		CA4921DC13AAF55300744CCC /* SelectPlaceController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectPlaceController.xib; sourceTree = "<group>"; };
-		CA5C847F13A9948200A22BB5 /* AtMePostController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AtMePostController.h; sourceTree = "<group>"; };
-		CA5C848013A9948200A22BB5 /* AtMePostController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AtMePostController.m; sourceTree = "<group>"; };
-		CA5C848113A9948200A22BB5 /* AtMePostController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AtMePostController.xib; sourceTree = "<group>"; };
 		CA5C848713A9AB6400A22BB5 /* EnterPlaceAppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnterPlaceAppController.h; sourceTree = "<group>"; };
 		CA5C848813A9AB6400A22BB5 /* EnterPlaceAppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnterPlaceAppController.m; sourceTree = "<group>"; };
 		CA5C848913A9AB6400A22BB5 /* EnterPlaceAppController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EnterPlaceAppController.xib; sourceTree = "<group>"; };
@@ -694,25 +654,12 @@
 		CA5D4516136A6DD100B9ECF2 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CA5D4517136A6DE300B9ECF2 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CA5D45DD136A87EB00B9ECF2 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
-		CA60466F1395C41A006C1D9F /* PostControllerUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostControllerUtils.h; sourceTree = "<group>"; };
-		CA6046701395C41A006C1D9F /* PostControllerUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostControllerUtils.m; sourceTree = "<group>"; };
-		CA6046721395D89B006C1D9F /* NearbyPlaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NearbyPlaceController.h; sourceTree = "<group>"; };
-		CA6046731395D89B006C1D9F /* NearbyPlaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NearbyPlaceController.m; sourceTree = "<group>"; };
-		CA6046741395D89B006C1D9F /* NearbyPlaceController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NearbyPlaceController.xib; sourceTree = "<group>"; };
-		CA6046771395D8AE006C1D9F /* FollowPlaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FollowPlaceController.h; sourceTree = "<group>"; };
-		CA6046781395D8AE006C1D9F /* FollowPlaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FollowPlaceController.m; sourceTree = "<group>"; };
-		CA6046791395D8AE006C1D9F /* FollowPlaceController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FollowPlaceController.xib; sourceTree = "<group>"; };
-		CA60467C1395D8C0006C1D9F /* PlaceControllerUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceControllerUtils.h; sourceTree = "<group>"; };
-		CA60467D1395D8C0006C1D9F /* PlaceControllerUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceControllerUtils.m; sourceTree = "<group>"; };
 		CA76FAA713BD60AA008B0CA5 /* HelpWritePostController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpWritePostController.h; sourceTree = "<group>"; };
 		CA76FAA813BD60AA008B0CA5 /* HelpWritePostController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpWritePostController.m; sourceTree = "<group>"; };
 		CA76FAA913BD60AA008B0CA5 /* HelpWritePostController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HelpWritePostController.xib; sourceTree = "<group>"; };
 		CA76FAAC13BD60EA008B0CA5 /* SeeExamplePostController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeeExamplePostController.h; sourceTree = "<group>"; };
 		CA76FAAD13BD60EA008B0CA5 /* SeeExamplePostController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeeExamplePostController.m; sourceTree = "<group>"; };
 		CA76FAAE13BD60EA008B0CA5 /* SeeExamplePostController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SeeExamplePostController.xib; sourceTree = "<group>"; };
-		CA7F9CD3137D5B530033FE12 /* PlaceLocationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceLocationController.h; sourceTree = "<group>"; };
-		CA7F9CD4137D5B530033FE12 /* PlaceLocationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceLocationController.m; sourceTree = "<group>"; };
-		CA7F9CD5137D5B530033FE12 /* PlaceLocationController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlaceLocationController.xib; sourceTree = "<group>"; };
 		CA87F91013BD653900F34CCB /* FriendPostExampleManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendPostExampleManager.m; sourceTree = "<group>"; };
 		CA87F91113BD653900F34CCB /* FriendPostExampleManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendPostExampleManager.h; sourceTree = "<group>"; };
 		CA87F91213BD653900F34CCB /* PostHelpQuestionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostHelpQuestionManager.m; sourceTree = "<group>"; };
@@ -738,9 +685,6 @@
 		CA8900E313B7047E005ED51A /* CreatePrivateMessageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreatePrivateMessageController.m; sourceTree = "<group>"; };
 		CA8900E413B7047F005ED51A /* CreatePrivateMessageController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreatePrivateMessageController.xib; sourceTree = "<group>"; };
 		CA933E9C137FE66C001E0D1E /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
-		CA967313137E4DEF0038CC44 /* PostListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostListController.h; sourceTree = "<group>"; };
-		CA967314137E4DEF0038CC44 /* PostListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostListController.m; sourceTree = "<group>"; };
-		CA967315137E4DF00038CC44 /* PostListController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostListController.xib; sourceTree = "<group>"; };
 		CA9B40C213978E3E00F16EA4 /* PostTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostTableViewCell.h; sourceTree = "<group>"; };
 		CA9B40C313978E3F00F16EA4 /* PostTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostTableViewCell.m; sourceTree = "<group>"; };
 		CA9B40C51397D63300F16EA4 /* PostTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
@@ -790,15 +734,6 @@
 		CAA6AB401398C5AF009F26E3 /* mail_24@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mail_24@2x.png"; sourceTree = "<group>"; };
 		CAA6AB411398C5AF009F26E3 /* man_24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = man_24.png; sourceTree = "<group>"; };
 		CAA6AB421398C5AF009F26E3 /* man_24@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "man_24@2x.png"; sourceTree = "<group>"; };
-		CAAA41E1137CDBAA00FB7C25 /* CreatePlaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreatePlaceController.h; sourceTree = "<group>"; };
-		CAAA41E2137CDBAA00FB7C25 /* CreatePlaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreatePlaceController.m; sourceTree = "<group>"; };
-		CAAA41E3137CDBAA00FB7C25 /* CreatePlaceController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreatePlaceController.xib; sourceTree = "<group>"; };
-		CAAA41E7137CDC6F00FB7C25 /* CreatePostController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreatePostController.h; sourceTree = "<group>"; };
-		CAAA41E8137CDC6F00FB7C25 /* CreatePostController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreatePostController.m; sourceTree = "<group>"; };
-		CAAA41E9137CDC6F00FB7C25 /* CreatePostController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreatePostController.xib; sourceTree = "<group>"; };
-		CAAA41EC137CDE1000FB7C25 /* PostMainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostMainController.h; sourceTree = "<group>"; };
-		CAAA41ED137CDE1200FB7C25 /* PostMainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostMainController.m; sourceTree = "<group>"; };
-		CAAA41EE137CDE1200FB7C25 /* PostMainController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostMainController.xib; sourceTree = "<group>"; };
 		CAAC17BC13B88A3F007978E5 /* SelectPostPhotoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectPostPhotoController.h; sourceTree = "<group>"; };
 		CAAC17BD13B88A3F007978E5 /* SelectPostPhotoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectPostPhotoController.m; sourceTree = "<group>"; };
 		CAAC17BE13B88A3F007978E5 /* SelectPostPhotoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectPostPhotoController.xib; sourceTree = "<group>"; };
@@ -1044,19 +979,9 @@
 		CAD19B14137A6A3500A8817B /* MyInfoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyInfoController.h; sourceTree = "<group>"; };
 		CAD19B15137A6A3500A8817B /* MyInfoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyInfoController.m; sourceTree = "<group>"; };
 		CAD19B16137A6A3500A8817B /* MyInfoController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyInfoController.xib; sourceTree = "<group>"; };
-		CAD19B17137A6A3500A8817B /* PlaceMainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceMainController.h; sourceTree = "<group>"; };
-		CAD19B18137A6A3500A8817B /* PlaceMainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceMainController.m; sourceTree = "<group>"; };
-		CAD19B19137A6A3500A8817B /* PlaceMainController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaceMainController.xib; sourceTree = "<group>"; };
 		CAD8EBD213A9E3A00092C2EC /* MoreTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreTableViewCell.h; sourceTree = "<group>"; };
 		CAD8EBD313A9E3A00092C2EC /* MoreTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreTableViewCell.m; sourceTree = "<group>"; };
 		CAD8EBD413A9E3A00092C2EC /* MoreTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MoreTableViewCell.xib; sourceTree = "<group>"; };
-		CAE4D0ED1397409A00D4B6BE /* PlaceTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceTableViewCell.h; sourceTree = "<group>"; };
-		CAE4D0EE1397409A00D4B6BE /* PlaceTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceTableViewCell.m; sourceTree = "<group>"; };
-		CAE4D0F0139740C200D4B6BE /* PlaceTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlaceTableViewCell.xib; sourceTree = "<group>"; };
-		FB091A71139F4FF600C94292 /* PPImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPImageView.h; sourceTree = "<group>"; };
-		FB091A72139F4FF600C94292 /* PPImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPImageView.m; sourceTree = "<group>"; };
-		FB51D2B61380D3D2001D5AC5 /* OAuthCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthCore.h; sourceTree = "<group>"; };
-		FB51D2B71380D3D2001D5AC5 /* OAuthCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuthCore.m; sourceTree = "<group>"; };
 		FB51D2CB13810DA8001D5AC5 /* RegisterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterController.h; sourceTree = "<group>"; };
 		FB51D2CC13810DA8001D5AC5 /* RegisterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterController.m; sourceTree = "<group>"; };
 		FB51D2CD13810DA8001D5AC5 /* RegisterController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterController.xib; sourceTree = "<group>"; };
@@ -1075,6 +1000,16 @@
 		FB52F3F21388FA3100710F0C /* whiteArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whiteArrow.png; sourceTree = "<group>"; };
 		FB52F3F31388FA3100710F0C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/EGORefresh.strings"; sourceTree = "<group>"; };
 		FB52F3F41388FA3100710F0C /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/EGORefresh.strings"; sourceTree = "<group>"; };
+		FB8D1CA013F76A0E002695FE /* sina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sina.png; sourceTree = "<group>"; };
+		FB8D1CA113F76A0E002695FE /* tencent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tencent.png; sourceTree = "<group>"; };
+		FB8D1CA413F76BD8002695FE /* sina240x48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sina240x48.png; sourceTree = "<group>"; };
+		FB8D1CB713F77C37002695FE /* OAuthCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthCore.h; sourceTree = "<group>"; };
+		FB8D1CB813F77C37002695FE /* OAuthCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuthCore.m; sourceTree = "<group>"; };
+		FBC5BCED13F3B58400636178 /* NearbyPostController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NearbyPostController.h; sourceTree = "<group>"; };
+		FBC5BCEE13F3B58400636178 /* NearbyPostController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NearbyPostController.m; sourceTree = "<group>"; };
+		FBC5BCEF13F3B58500636178 /* NearbyPostController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NearbyPostController.xib; sourceTree = "<group>"; };
+		FBC5BCF213F3B68F00636178 /* PostControllerUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostControllerUtils.h; sourceTree = "<group>"; };
+		FBC5BCF313F3B69000636178 /* PostControllerUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostControllerUtils.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1296,7 +1231,6 @@
 				CAD19B0A137A6A3500A8817B /* Entry */,
 				CAD19B1A137A6A3500A8817B /* Register */,
 				CAAA41E6137CDC3B00FB7C25 /* Post */,
-				CAD19B08137A69B600A8817B /* Place */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1711,6 +1645,8 @@
 		CA9E0936139CB7AF000B6FEE /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				FB8D1CB713F77C37002695FE /* OAuthCore.h */,
+				FB8D1CB813F77C37002695FE /* OAuthCore.m */,
 				CA9E0939139CB7CB000B6FEE /* CommonSNSRequest.h */,
 				CA9E093A139CB7CB000B6FEE /* CommonSNSRequest.m */,
 				CA9E093C139CB7E2000B6FEE /* SNSServiceHandler.h */,
@@ -1778,38 +1714,23 @@
 		CAAA41E6137CDC3B00FB7C25 /* Post */ = {
 			isa = PBXGroup;
 			children = (
-				CAAA41E7137CDC6F00FB7C25 /* CreatePostController.h */,
-				CAAA41E8137CDC6F00FB7C25 /* CreatePostController.m */,
-				CAAA41E9137CDC6F00FB7C25 /* CreatePostController.xib */,
-				CA967313137E4DEF0038CC44 /* PostListController.h */,
-				CA967314137E4DEF0038CC44 /* PostListController.m */,
-				CA967315137E4DF00038CC44 /* PostListController.xib */,
-				CA2A016B138E2F86007EBEA9 /* NearbyPostController.h */,
-				CA2A016C138E2F86007EBEA9 /* NearbyPostController.m */,
-				CA2A016D138E2F86007EBEA9 /* NearbyPostController.xib */,
-				CA2A0170138E2FD2007EBEA9 /* FollowPostController.h */,
-				CA2A0171138E2FD2007EBEA9 /* FollowPostController.m */,
-				CA2A0172138E2FD3007EBEA9 /* FollowPostController.xib */,
-				CA4005A8138F584E009B5BF9 /* PostController.h */,
-				CA4005A9138F5850009B5BF9 /* PostController.m */,
-				CA4005AA138F5851009B5BF9 /* PostController.xib */,
-				CA60466F1395C41A006C1D9F /* PostControllerUtils.h */,
-				CA6046701395C41A006C1D9F /* PostControllerUtils.m */,
-				CAE4D0ED1397409A00D4B6BE /* PlaceTableViewCell.h */,
-				CAE4D0EE1397409A00D4B6BE /* PlaceTableViewCell.m */,
-				CAE4D0F0139740C200D4B6BE /* PlaceTableViewCell.xib */,
+				CA13B6DA13B875780016FE54 /* NewMakeFriendPostMainController.h */,
+				CA13B6DB13B875780016FE54 /* NewMakeFriendPostMainController.m */,
+				CA13B6DC13B875780016FE54 /* NewMakeFriendPostMainController.xib */,
+				FBC5BCF213F3B68F00636178 /* PostControllerUtils.h */,
+				FBC5BCF313F3B69000636178 /* PostControllerUtils.m */,
+				FBC5BCED13F3B58400636178 /* NearbyPostController.h */,
+				FBC5BCEE13F3B58400636178 /* NearbyPostController.m */,
+				FBC5BCEF13F3B58500636178 /* NearbyPostController.xib */,
 				CA9B40C213978E3E00F16EA4 /* PostTableViewCell.h */,
 				CA9B40C313978E3F00F16EA4 /* PostTableViewCell.m */,
 				CA9B40C51397D63300F16EA4 /* PostTableViewCell.xib */,
-				CA5C847F13A9948200A22BB5 /* AtMePostController.h */,
-				CA5C848013A9948200A22BB5 /* AtMePostController.m */,
-				CA5C848113A9948200A22BB5 /* AtMePostController.xib */,
 				CAAC17BC13B88A3F007978E5 /* SelectPostPhotoController.h */,
 				CAAC17BD13B88A3F007978E5 /* SelectPostPhotoController.m */,
 				CAAC17BE13B88A3F007978E5 /* SelectPostPhotoController.xib */,
-				CAC4198313B9AA96007542BD /* PostActionCell.xib */,
 				CAC4198513B9AAC2007542BD /* PostActionCell.h */,
 				CAC4198613B9AAC2007542BD /* PostActionCell.m */,
+				CAC4198313B9AA96007542BD /* PostActionCell.xib */,
 				CA3F00F813BEDF22000B456F /* PublicTimelinePostController.h */,
 				CA3F00F913BEDF23000B456F /* PublicTimelinePostController.m */,
 				CA3F00FA13BEDF23000B456F /* PublicTimelinePostController.xib */,
@@ -2242,6 +2163,9 @@
 		CAB2F04D125F4A8400593157 /* Icon */ = {
 			isa = PBXGroup;
 			children = (
+				FB8D1CA413F76BD8002695FE /* sina240x48.png */,
+				FB8D1CA013F76A0E002695FE /* sina.png */,
+				FB8D1CA113F76A0E002695FE /* tencent.png */,
 				CAA6AB391398C5AF009F26E3 /* app_globe_24.png */,
 				CAA6AB3A1398C5AF009F26E3 /* app_globe_24@2x.png */,
 				CAA6AB3B1398C5AF009F26E3 /* comment_24.png */,
@@ -2292,32 +2216,6 @@
 			path = UIBadgeView;
 			sourceTree = "<group>";
 		};
-		CAD19B08137A69B600A8817B /* Place */ = {
-			isa = PBXGroup;
-			children = (
-				CAAA41E1137CDBAA00FB7C25 /* CreatePlaceController.h */,
-				CAAA41E2137CDBAA00FB7C25 /* CreatePlaceController.m */,
-				CAAA41E3137CDBAA00FB7C25 /* CreatePlaceController.xib */,
-				CA7F9CD3137D5B530033FE12 /* PlaceLocationController.h */,
-				CA7F9CD4137D5B530033FE12 /* PlaceLocationController.m */,
-				CA7F9CD5137D5B530033FE12 /* PlaceLocationController.xib */,
-				CA6046721395D89B006C1D9F /* NearbyPlaceController.h */,
-				CA6046731395D89B006C1D9F /* NearbyPlaceController.m */,
-				CA6046741395D89B006C1D9F /* NearbyPlaceController.xib */,
-				CA6046771395D8AE006C1D9F /* FollowPlaceController.h */,
-				CA6046781395D8AE006C1D9F /* FollowPlaceController.m */,
-				CA6046791395D8AE006C1D9F /* FollowPlaceController.xib */,
-				CA60467C1395D8C0006C1D9F /* PlaceControllerUtils.h */,
-				CA60467D1395D8C0006C1D9F /* PlaceControllerUtils.m */,
-				FB091A71139F4FF600C94292 /* PPImageView.h */,
-				FB091A72139F4FF600C94292 /* PPImageView.m */,
-				CA4921DA13AAF55300744CCC /* SelectPlaceController.h */,
-				CA4921DB13AAF55300744CCC /* SelectPlaceController.m */,
-				CA4921DC13AAF55300744CCC /* SelectPlaceController.xib */,
-			);
-			path = Place;
-			sourceTree = "<group>";
-		};
 		CAD19B0A137A6A3500A8817B /* Entry */ = {
 			isa = PBXGroup;
 			children = (
@@ -2333,15 +2231,6 @@
 				CAD19B14137A6A3500A8817B /* MyInfoController.h */,
 				CAD19B15137A6A3500A8817B /* MyInfoController.m */,
 				CAD19B16137A6A3500A8817B /* MyInfoController.xib */,
-				CAD19B17137A6A3500A8817B /* PlaceMainController.h */,
-				CAD19B18137A6A3500A8817B /* PlaceMainController.m */,
-				CAD19B19137A6A3500A8817B /* PlaceMainController.xib */,
-				CAAA41EC137CDE1000FB7C25 /* PostMainController.h */,
-				CAAA41ED137CDE1200FB7C25 /* PostMainController.m */,
-				CAAA41EE137CDE1200FB7C25 /* PostMainController.xib */,
-				CA13B6DA13B875780016FE54 /* NewMakeFriendPostMainController.h */,
-				CA13B6DB13B875780016FE54 /* NewMakeFriendPostMainController.m */,
-				CA13B6DC13B875780016FE54 /* NewMakeFriendPostMainController.xib */,
 			);
 			path = Entry;
 			sourceTree = "<group>";
@@ -2352,8 +2241,6 @@
 				FB51D2CB13810DA8001D5AC5 /* RegisterController.h */,
 				FB51D2CC13810DA8001D5AC5 /* RegisterController.m */,
 				FB51D2CD13810DA8001D5AC5 /* RegisterController.xib */,
-				FB51D2B61380D3D2001D5AC5 /* OAuthCore.h */,
-				FB51D2B71380D3D2001D5AC5 /* OAuthCore.m */,
 				CA5C848713A9AB6400A22BB5 /* EnterPlaceAppController.h */,
 				CA5C848813A9AB6400A22BB5 /* EnterPlaceAppController.m */,
 				CA5C848913A9AB6400A22BB5 /* EnterPlaceAppController.xib */,
@@ -2628,12 +2515,6 @@
 				CAD19B21137A6A3500A8817B /* InfoMainController.xib in Resources */,
 				CAD19B23137A6A3500A8817B /* InviteController.xib in Resources */,
 				CAD19B25137A6A3500A8817B /* MyInfoController.xib in Resources */,
-				CAD19B27137A6A3500A8817B /* PlaceMainController.xib in Resources */,
-				CAAA41E5137CDBAA00FB7C25 /* CreatePlaceController.xib in Resources */,
-				CAAA41EB137CDC6F00FB7C25 /* CreatePostController.xib in Resources */,
-				CAAA41F0137CDE1900FB7C25 /* PostMainController.xib in Resources */,
-				CA7F9CD7137D5B530033FE12 /* PlaceLocationController.xib in Resources */,
-				CA967317137E4DF00038CC44 /* PostListController.xib in Resources */,
 				CAAF01CF137FE03200E56503 /* TestPPViewController.xib in Resources */,
 				CAAF01E1137FE03200E56503 /* AboutViewController.xib in Resources */,
 				CAAF01E9137FE03200E56503 /* appbox.png in Resources */,
@@ -2667,12 +2548,6 @@
 				FB52F3FA1388FA3100710F0C /* blueArrow_new.png in Resources */,
 				FB52F3FB1388FA3100710F0C /* EGORefresh.strings in Resources */,
 				FB52F3FC1388FA3100710F0C /* whiteArrow.png in Resources */,
-				CA2A016F138E2F87007EBEA9 /* NearbyPostController.xib in Resources */,
-				CA2A0174138E2FD3007EBEA9 /* FollowPostController.xib in Resources */,
-				CA4005AC138F5852009B5BF9 /* PostController.xib in Resources */,
-				CA6046761395D89B006C1D9F /* NearbyPlaceController.xib in Resources */,
-				CA60467B1395D8AE006C1D9F /* FollowPlaceController.xib in Resources */,
-				CAE4D0F1139740C200D4B6BE /* PlaceTableViewCell.xib in Resources */,
 				CA9B40C61397D63700F16EA4 /* PostTableViewCell.xib in Resources */,
 				CAA6AB1213987F52009F26E3 /* touxiang.png in Resources */,
 				CAA6AB431398C5AF009F26E3 /* app_globe_24.png in Resources */,
@@ -2685,10 +2560,8 @@
 				CAA6AB4A1398C5AF009F26E3 /* mail_24@2x.png in Resources */,
 				CAA6AB4B1398C5AF009F26E3 /* man_24.png in Resources */,
 				CAA6AB4C1398C5AF009F26E3 /* man_24@2x.png in Resources */,
-				CA5C848313A9948200A22BB5 /* AtMePostController.xib in Resources */,
 				CA5C848B13A9AB6400A22BB5 /* EnterPlaceAppController.xib in Resources */,
 				CAD8EBD613A9E3A00092C2EC /* MoreTableViewCell.xib in Resources */,
-				CA4921DE13AAF55300744CCC /* SelectPlaceController.xib in Resources */,
 				CA8900CB13B6DA6F005ED51A /* PrivateMessageListController.xib in Resources */,
 				CA8900D013B6DACB005ED51A /* PrivateMessgaeCell.xib in Resources */,
 				CA8900D513B6DB1F005ED51A /* PrivateMessageUserController.xib in Resources */,
@@ -2708,6 +2581,10 @@
 				CA24A24413E7EC2400329554 /* city.plist in Resources */,
 				CA24A24713E7EC2400329554 /* CityPickerViewController.xib in Resources */,
 				CA24A24813E7EC2400329554 /* province.plist in Resources */,
+				FBC5BCF113F3B58600636178 /* NearbyPostController.xib in Resources */,
+				FB8D1CA213F76A0E002695FE /* sina.png in Resources */,
+				FB8D1CA313F76A0E002695FE /* tencent.png in Resources */,
+				FB8D1CA513F76BD8002695FE /* sina240x48.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2734,12 +2611,6 @@
 				CAD19B20137A6A3500A8817B /* InfoMainController.m in Sources */,
 				CAD19B22137A6A3500A8817B /* InviteController.m in Sources */,
 				CAD19B24137A6A3500A8817B /* MyInfoController.m in Sources */,
-				CAD19B26137A6A3500A8817B /* PlaceMainController.m in Sources */,
-				CAAA41E4137CDBAA00FB7C25 /* CreatePlaceController.m in Sources */,
-				CAAA41EA137CDC6F00FB7C25 /* CreatePostController.m in Sources */,
-				CAAA41EF137CDE1800FB7C25 /* PostMainController.m in Sources */,
-				CA7F9CD6137D5B530033FE12 /* PlaceLocationController.m in Sources */,
-				CA967316137E4DF00038CC44 /* PostListController.m in Sources */,
 				CAAF01BF137FE03200E56503 /* AddressBookUtils.m in Sources */,
 				CAAF01C8137FE03200E56503 /* CustomIndexView.m in Sources */,
 				CAAF01C9137FE03200E56503 /* EnhanceUIApplication.m in Sources */,
@@ -2830,20 +2701,11 @@
 				CAAF030E137FE03200E56503 /* UITextTableViewCell.m in Sources */,
 				CAAF030F137FE03200E56503 /* UIToolBarCell.m in Sources */,
 				CAAF0310137FE03200E56503 /* UIWebViewUtil.m in Sources */,
-				FB51D2B81380D3D2001D5AC5 /* OAuthCore.m in Sources */,
 				FB51D2CE13810DA9001D5AC5 /* RegisterController.m in Sources */,
 				FB51D2D21381106F001D5AC5 /* DipanAppDelegate.m in Sources */,
 				FB52F3F51388FA3100710F0C /* PullToRefreshTableViewController.m in Sources */,
 				FB52F3F61388FA3100710F0C /* RootViewController.m in Sources */,
 				FB52F3F71388FA3100710F0C /* EGORefreshTableHeaderView.m in Sources */,
-				CA2A016E138E2F87007EBEA9 /* NearbyPostController.m in Sources */,
-				CA2A0173138E2FD3007EBEA9 /* FollowPostController.m in Sources */,
-				CA4005AB138F5852009B5BF9 /* PostController.m in Sources */,
-				CA6046711395C41A006C1D9F /* PostControllerUtils.m in Sources */,
-				CA6046751395D89B006C1D9F /* NearbyPlaceController.m in Sources */,
-				CA60467A1395D8AE006C1D9F /* FollowPlaceController.m in Sources */,
-				CA60467E1395D8C0006C1D9F /* PlaceControllerUtils.m in Sources */,
-				CAE4D0EF1397409A00D4B6BE /* PlaceTableViewCell.m in Sources */,
 				CA9B40C413978E4000F16EA4 /* PostTableViewCell.m in Sources */,
 				CAA6AB3013988A2A009F26E3 /* HJCircularBuffer.m in Sources */,
 				CAA6AB3113988A2A009F26E3 /* HJManagedImageV.m in Sources */,
@@ -2858,11 +2720,8 @@
 				CA9E093E139CB7E2000B6FEE /* SNSServiceHandler.m in Sources */,
 				CA9E0941139CB803000B6FEE /* QQWeiboRequest.m in Sources */,
 				CA9E0944139CB817000B6FEE /* SINAWeiboRequest.m in Sources */,
-				FB091A73139F4FF700C94292 /* PPImageView.m in Sources */,
-				CA5C848213A9948200A22BB5 /* AtMePostController.m in Sources */,
 				CA5C848A13A9AB6400A22BB5 /* EnterPlaceAppController.m in Sources */,
 				CAD8EBD513A9E3A00092C2EC /* MoreTableViewCell.m in Sources */,
-				CA4921DD13AAF55300744CCC /* SelectPlaceController.m in Sources */,
 				CA8900CA13B6DA6F005ED51A /* PrivateMessageListController.m in Sources */,
 				CA8900CE13B6DAAD005ED51A /* PrivateMessageTableViewCell.m in Sources */,
 				CA8900D413B6DB1F005ED51A /* PrivateMessageUserController.m in Sources */,
@@ -2930,6 +2789,9 @@
 				CA9F771413C802310006146D /* ImageController.m in Sources */,
 				CA24A24513E7EC2400329554 /* CityPickerManager.m in Sources */,
 				CA24A24613E7EC2400329554 /* CityPickerViewController.m in Sources */,
+				FBC5BCF013F3B58600636178 /* NearbyPostController.m in Sources */,
+				FBC5BCF413F3B69100636178 /* PostControllerUtils.m in Sources */,
+				FB8D1CB913F77C38002695FE /* OAuthCore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

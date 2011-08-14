@@ -108,7 +108,7 @@ enum{
 
 - (IBAction)textFieldDoneEditing:(id)sender {
 	[loginIdField resignFirstResponder];
-    CATransition *animation = [CATransition animation];
+    /*CATransition *animation = [CATransition animation];
     [animation setDuration:0.5f];
     [animation setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear]];
     [animation setType:kCATransitionPush];
@@ -116,12 +116,12 @@ enum{
     [self.view.layer addAnimation:animation forKey:@"Reveal"];
     CGRect frame = self.view.frame;
     frame.origin.y = 20;
-    self.view.frame = frame;
+    self.view.frame = frame;*/
 }
 
 - (IBAction)textFieldDidBeginEditing:(id)sender
 {
-    CATransition *animation = [CATransition animation];
+    /*CATransition *animation = [CATransition animation];
     [animation setDuration:0.5f];
     [animation setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear]];
     [animation setType:kCATransitionPush];
@@ -130,7 +130,7 @@ enum{
     [self.view.layer addAnimation:animation forKey:@"Reveal"];
     CGRect frame = self.view.frame;
     frame.origin.y = -195;
-    self.view.frame = frame;
+    self.view.frame = frame;*/
 }
 
 - (IBAction)textFieldDidEndEditing:(id)sender
@@ -144,7 +144,7 @@ enum{
 - (IBAction)clickRegister:(id)sender {
     
     UserService* userService = GlobalGetUserService();
-    [userService loginUserWithLoginId:loginIdField.text gender:gender viewController:self];     
+    [userService loginUserWithLoginId:loginIdField.text viewController:self];     
 }
 
 - (IBAction)clickSinaLogin:(id)sender

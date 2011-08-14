@@ -16,6 +16,8 @@
 - (void)clickPlaceNameButton:(id)sender atIndexPath:(NSIndexPath*)indexPath;
 - (void)clickUserAvatarButton:(id)sender atIndexPath:(NSIndexPath*)indexPath;
 - (void)clickPostImageButton:(id)sender atIndexPath:(NSIndexPath*)indexPath;
+- (void)clickLikeButton:(id)sender atIndexPath:(NSIndexPath*)indexPath;
+- (void)clickMessageButton:(id)sender atIndexPath:(NSIndexPath*)indexPath;
 
 @end
 
@@ -30,6 +32,8 @@
     UIButton *placeNameButton;
     UILabel *placeNameLabel;
     NSIndexPath *indexPath;
+    UIButton *likeButton;
+    UIButton *messageButton;
     
     id<PostTableViewCellDelegate> delegate;
 
@@ -46,6 +50,8 @@
 @property (nonatomic, retain) IBOutlet UILabel *placeNameLabel;
 @property (nonatomic, retain) IBOutlet UIButton *postImageButton;
 @property (nonatomic, retain) NSIndexPath *indexPath;
+@property (nonatomic, retain) IBOutlet UIButton *likeButton;
+@property (nonatomic, retain) IBOutlet UIButton *messageButton;
 @property (nonatomic, assign) id<PostTableViewCellDelegate> delegate;
 
 + (PostTableViewCell*)createCell:(id<PostTableViewCellDelegate>)delegate;
@@ -53,9 +59,11 @@
 
 - (void)setCellInfoWithDict:(NSDictionary*)dict indexPath:(NSIndexPath*)indexPath;
 - (void)setCellInfoWithPost:(Post*)post indexPath:(NSIndexPath*)indexPath;
-+ (CGFloat)getCellHeight;
 
 - (IBAction)clickPlaceNameButton:(id)sender;
 - (IBAction)clickUserAvatarButton:(id)sender;
 - (IBAction)clickPostImageButton:(id)sender;
+- (IBAction)clickLikeButton:(id)sender;
+- (IBAction)clickMessageButton:(id)sender;
+
 @end

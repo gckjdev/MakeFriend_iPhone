@@ -80,7 +80,11 @@
 {
     self.userNickNameLabel.text = user.userNickName;
     self.contentLable.text = user.latestMessageContent;
-    self.createDateLabel.text = [user.latestModifyDate description];
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"YYYY-MM-dd HH:mm"];
+    self.createDateLabel.text = [dateFormatter stringFromDate:user.latestModifyDate];
+    [dateFormatter release];
     
     [self.userAvatarView clear];
     if ([user.userAvatar length] > 0){

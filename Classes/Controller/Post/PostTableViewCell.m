@@ -31,6 +31,8 @@
 @synthesize indexPath;
 @synthesize delegate;
 @synthesize postImageButton;
+@synthesize likeButton;
+@synthesize messageButton;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -147,14 +149,28 @@
     
     [self.placeNameButton setTitle:placeName forState:UIControlStateNormal];
     
-    self.userNickNameLabel.text = userNickName;    
+    self.userNickNameLabel.text = userNickName;
+    CGRect fra = self.textContentLabel.frame;
+    CGSize size = fra.size;
+    size = CGSizeMake(size.width, 10000);
+    size = [textContent sizeWithFont:self.textContentLabel.font constrainedToSize:size];
+    CGFloat d = fra.size.height - size.height;
+    fra = CGRectMake(fra.origin.x, fra.origin.y, fra.size.width, fra.size.height - d);
+    self.textContentLabel.frame = fra;
     self.textContentLabel.text = textContent;
-    if (totalRelated > 1){
-        self.totalReplyLabel.text = [NSString stringWithFormat:NSLS(@"kTotalRelated"), totalRelated-1];
-    }
-    else{
-        self.totalReplyLabel.text = [NSString stringWithFormat:NSLS(@"kTotalRelated"), 0];
-    }
+    fra = self.totalReplyLabel.frame;
+    fra = CGRectMake(fra.origin.x, fra.origin.y - d, fra.size.width, fra.size.height);
+    self.totalReplyLabel.frame = fra;
+    fra = self.likeButton.frame;
+    fra = CGRectMake(fra.origin.x, fra.origin.y - d, fra.size.width, fra.size.height);
+    self.likeButton.frame = fra;
+    fra = self.messageButton.frame;
+    fra = CGRectMake(fra.origin.x, fra.origin.y - d, fra.size.width, fra.size.height);
+    self.messageButton.frame = fra;
+    fra = self.frame;
+    fra = CGRectMake(fra.origin.x, fra.origin.y, fra.size.width, fra.size.height - d);
+    self.frame = fra;
+    self.totalReplyLabel.text = [NSString stringWithFormat:@"%i人感兴趣", totalRelated];
     
     self.createDateLabel.text = [self getDateDisplayText:createDate];
     
@@ -171,13 +187,14 @@
     [self.contentImage clear];
  
     if ([self exist:imageURL]){
-        NSString* thumbImageURL = [imageURL stringByReplacingOccurrencesOfString:@".png" 
+        /*NSString* thumbImageURL = [imageURL stringByReplacingOccurrencesOfString:@".png" 
                                                                       withString:@"_s.png"]; 
         
         thumbImageURL = [thumbImageURL stringByReplacingOccurrencesOfString:@".jpg" 
                                                                  withString:@"_s.jpg"];
-        self.contentImage.url = [NSURL URLWithString:thumbImageURL];
+        self.contentImage.url = [NSURL URLWithString:thumbImageURL];*/
 //        NSLog(@"<debug> imageURL=%@, thumbImageURL=%@", imageURL, thumbImageURL);
+        self.contentImage.url = [NSURL URLWithString:imageURL];
         self.contentImage.callbackOnSetImage = self;
         [GlobalGetImageCache() manage:self.contentImage];
     }
@@ -187,13 +204,23 @@
 
 -(void) managedImageSet:(HJManagedImageV*)mi
 {
-    CGRect origRect = self.contentImage.frame;    
-    self.contentImage.frame = [UIImage shrinkFromOrigRect:origRect imageSize:mi.image.size];    
+    mi.imageView.backgroundColor = [UIColor blackColor];
+    /*CGSize imageSize = mi.image.size;
+    CGSize viewSize = self.contentImage.frame.size;
+    CGFloat x = 0, y = 0, width = viewSize.width, height = viewSize.height;
+    if (imageSize.height / imageSize.width < viewSize.height / viewSize.width) {
+        height = imageSize.height / imageSize.width * viewSize.width;
+        y = (viewSize.height - height) / 2;
+    } else {
+        width = viewSize.height * imageSize.width / imageSize.height;
+        x = (viewSize.width - width) / 2;
+    }
+    CGPoint viewOrgin = self.contentImage.frame.origin;
+    self.contentImage.frame = CGRectMake(viewOrgin.x + x, viewOrgin.y + y, width, height);*/
 }
 
 - (void)setCellInfoWithPost:(Post*)post indexPath:(NSIndexPath*)indexPathValue
 {
-    
     [self setCellInfoWithTextContent:post.textContent
                           userGender:post.userGender
                         userNickName:post.userNickName
@@ -221,11 +248,6 @@
      ];
 }
 
-+ (CGFloat)getCellHeight
-{
-    return 130.0f;
-}
-
 -(void) managedImageCancelled:(HJManagedImageV*)mi
 {
     
@@ -245,10 +267,25 @@
     }
     
 }
+
 - (IBAction)clickPostImageButton:(id)sender
 {
     if (delegate != nil && [delegate respondsToSelector:@selector(clickPostImageButton:atIndexPath:)]){
         [delegate clickPostImageButton:sender atIndexPath:indexPath];
+    }
+}
+
+- (IBAction)clickLikeButton:(id)sender
+{
+    if (delegate != nil && [delegate respondsToSelector:@selector(clickLikeButton:atIndexPath:)]){
+        [delegate clickLikeButton:sender atIndexPath:indexPath];
+    }
+}
+
+- (IBAction)clickMessageButton:(id)sender
+{
+    if (delegate != nil && [delegate respondsToSelector:@selector(clickMessageButton:atIndexPath:)]){
+        [delegate clickMessageButton:sender atIndexPath:indexPath];
     }
 }
 

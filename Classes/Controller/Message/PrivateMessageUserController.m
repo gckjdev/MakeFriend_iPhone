@@ -207,7 +207,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-	
+    
     // tag_more_rows
     if ([self isMoreRow:indexPath.row]){
         [self.moreLoadingView startAnimating];
@@ -222,7 +222,7 @@
     PrivateMessageListController* controller = [[PrivateMessageListController alloc] init];
     controller.messageUserId = user.userId;
     controller.messageUserNickName = user.userNickName;
-    [self.superController.navigationController pushViewController:controller animated:YES];
+    [self.navigationController pushViewController:controller animated:YES];
     [controller release];
 }
 

@@ -36,7 +36,12 @@
 - (void)updateTitle
 {
     int len = [self.postContentTextView.text length];
-    self.navigationItem.title = [NSString stringWithFormat:@"%@(%d/%d)", NSLS(@"kNewPostTitle"), len, MAX_CONTENT_LEN];
+    self.navigationItem.title = [NSString stringWithFormat:@"%@(%d)", NSLS(@"kNewPostTitle"), MAX_CONTENT_LEN - len];
+    if (len < 1 || len > MAX_CONTENT_LEN) {
+        self.navigationItem.rightBarButtonItem.enabled = NO;
+    } else {
+        self.navigationItem.rightBarButtonItem.enabled = YES;
+    }
 }
 
 - (void)dealloc
@@ -61,6 +66,13 @@
 - (void)viewDidLoad
 {        
 //    [self setNavigationRightButton:NSLS(@"Next") action:@selector(clickNext:)];
+    UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(dismissNewMakeFriendPostMainController)];
+    self.navigationItem.leftBarButtonItem = leftItem;
+    [leftItem release];
+    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:@"下一步" style:UIBarButtonItemStyleDone target:self action:@selector(clickNext)];
+    self.navigationItem.rightBarButtonItem = rightItem;
+    [rightItem release];
+    
     [self updateTitle];
     [super viewDidLoad];
 
@@ -69,7 +81,23 @@
     if ([appDelegate hasDataForRegistration]){        
         self.postContentTextView.text = [appDelegate dataForRegistration];
         [self popupHappyMessage:NSLS(@"kTipsNext") title:nil];
-    }    
+    }
+    
+    [self.postContentTextView becomeFirstResponder];
+}
+
+- (void)dismissNewMakeFriendPostMainController
+{
+    [self dismissModalViewControllerAnimated:YES];
+}
+                                  
+- (void)clickNext
+{
+    PostService* postService = GlobalGetPostService();
+    [postService setPostTextContent:postContentTextView.text];
+    
+    // next step
+    [SelectPostPhotoController showSelectPostPhotoController:self];
 }
 
 - (void)viewDidUnload
@@ -138,7 +166,7 @@
 
 - (void)keyboardDidShowWithRect:(CGRect)keyboardRect
 {
-    CATransition *animation = [CATransition animation];
+    /*CATransition *animation = [CATransition animation];
     [animation setDuration:1.0f];
     [animation setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear]];
     [animation setType:kCATransitionFade];
@@ -149,12 +177,12 @@
     frame.origin.y = -47;
     self.view.frame = frame;
     
-    [self setNavigationLeftButton:NSLS(@"Cancel") action:@selector(clickCancel:)];        
+    [self setNavigationLeftButton:NSLS(@"Cancel") action:@selector(clickCancel:)];*/       
 }
 
 - (void)keyboardDidHide:(NSNotification *)notification
 {
-    CATransition *animation = [CATransition animation];
+    /*CATransition *animation = [CATransition animation];
     [animation setDuration:0.5f];
     [animation setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear]];
     [animation setType:kCATransitionFade];
@@ -165,7 +193,7 @@
     frame.origin.y = 0;
     self.view.frame = frame;
         
-    self.navigationItem.leftBarButtonItem = nil;
+    self.navigationItem.leftBarButtonItem = nil;*/
 }
 
 

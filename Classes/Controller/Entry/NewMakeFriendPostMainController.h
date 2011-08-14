@@ -11,7 +11,7 @@
 #import "UIRectTextView.h"
 #import "HelpWritePostController.h"
 
-@interface NewMakeFriendPostMainController : PPViewController <UITextViewDelegate, HelpWritePostControllerDelegate> {
+@interface NewMakeFriendPostMainController : UIViewController <UITextViewDelegate, HelpWritePostControllerDelegate> {
     
     UILabel *newPostLabel;
     UIRectTextView *postContentTextView;

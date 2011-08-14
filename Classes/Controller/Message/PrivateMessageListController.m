@@ -174,8 +174,12 @@
 {
 	// return [self getRowHeight:indexPath.row totalRow:[dataList count]];
 	// return cellImageHeight;
-	
-	return [PrivateMessageTableViewCell getCellHeight];
+    PrivateMessageTableViewCell *cell = [PrivateMessageTableViewCell createCell];
+    PrivateMessage *message = [dataList objectAtIndex:indexPath.row];
+    [cell setCellInfoWithMessage:message];
+    return cell.frame.size.height;
+    
+	//return [PrivateMessageTableViewCell getCellHeight];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -200,6 +204,7 @@
 	if (cell == nil) {
         cell = [PrivateMessageTableViewCell createCell];
 	}
+    cell.accessoryType = UITableViewCellAccessoryNone;
 	
 	// set text label
 	int row = [indexPath row];	

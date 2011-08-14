@@ -8,20 +8,6 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          isPathRelative = "1"
-         filePath = "Classes/Controller/Register/OAuthCore.m"
-         timestampString = "327581168.222141"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "103"
-         endingLineNumber = "103"
-         landmarkName = "+queryStringWithUrl:Parameters:consumerKey:consumerSecret:token:tokenSecret:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         isPathRelative = "1"
          filePath = "Classes/Controller/Register/RegisterController.m"
          timestampString = "328442793.697346"
          startingColumnNumber = "9223372036854775807"
@@ -36,13 +22,13 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          isPathRelative = "1"
-         filePath = "Classes/Controller/Entry/MyInfoController.m"
-         timestampString = "328443735.503835"
+         filePath = "Classes/Controller/Register/OAuthCore.m"
+         timestampString = "334985289.909252"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "36"
-         endingLineNumber = "36"
-         landmarkName = "-viewDidLoad"
+         startingLineNumber = "59"
+         endingLineNumber = "59"
+         landmarkName = "+queryStringWithUrl:method:parameters:consumerKey:consumerSecret:token:tokenSecret:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>
