@@ -118,7 +118,7 @@
     
     UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCompose target:self action:@selector(presentNewMakeFriendPostMainController)];
     self.navigationItem.title = @"最新";
-    self.navigationItem.rightBarButtonItem = rightItem;
+    //self.navigationItem.rightBarButtonItem = rightItem;
     [rightItem release];
     
     // Do any additional setup after loading the view from its nib.

@@ -67,7 +67,7 @@
 {        
 //    [self setNavigationRightButton:NSLS(@"Next") action:@selector(clickNext:)];
     UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(dismissNewMakeFriendPostMainController)];
-    self.navigationItem.leftBarButtonItem = leftItem;
+    //self.navigationItem.leftBarButtonItem = leftItem;
     [leftItem release];
     UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:@"下一步" style:UIBarButtonItemStyleDone target:self action:@selector(clickNext)];
     self.navigationItem.rightBarButtonItem = rightItem;
@@ -80,10 +80,10 @@
     DipanAppDelegate* appDelegate = (DipanAppDelegate*)[[UIApplication sharedApplication] delegate];
     if ([appDelegate hasDataForRegistration]){        
         self.postContentTextView.text = [appDelegate dataForRegistration];
-        [self popupHappyMessage:NSLS(@"kTipsNext") title:nil];
+        //[self popupHappyMessage:NSLS(@"kTipsNext") title:nil];
     }
     
-    [self.postContentTextView becomeFirstResponder];
+    //[self.postContentTextView becomeFirstResponder];
 }
 
 - (void)dismissNewMakeFriendPostMainController
@@ -151,6 +151,11 @@
 {
     [postContentTextView resignFirstResponder];
     [HelpWritePostController showHelpWritePostController:self];
+}
+
+- (IBAction)backgroundTap:(id)sender
+{
+	[postContentTextView resignFirstResponder];
 }
 
 - (void)clickCancel:(id)sender

@@ -119,17 +119,23 @@ NSString* GlobalGetPlaceAppId()
 {    
 	NSMutableArray *controllers = [[NSMutableArray alloc] init];
     
-    [UIUtils addViewController:[PublicTimelinePostController alloc]
-					 viewTitle:@"最新"
+    [UIUtils addViewController:[NewMakeFriendPostMainController alloc]
+					 viewTitle:@"发表"
 					 viewImage:@"comment_24.png"
 			  hasNavController:YES			
 			   viewControllers:controllers];
     
-	[UIUtils addViewController:[NearbyPostController alloc]
-					 viewTitle:@"附近"
+    [UIUtils addViewController:[PublicTimelinePostController alloc]
+					 viewTitle:@"最新"
 					 viewImage:@"app_globe_24.png"
 			  hasNavController:YES			
 			   viewControllers:controllers];
+    
+	/*[UIUtils addViewController:[NearbyPostController alloc]
+					 viewTitle:@"附近"
+					 viewImage:@"app_globe_24.png"
+			  hasNavController:YES			
+			   viewControllers:controllers];*/
 
     [UIUtils addViewController:[PrivateMessageUserController alloc]
 					 viewTitle:@"私信"

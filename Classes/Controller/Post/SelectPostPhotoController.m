@@ -114,7 +114,6 @@
 - (void)createPostFinish:(int)result
 {
     [self dismissModalViewControllerAnimated:YES];
-    return;
     if (result == ERROR_SUCCESS){
         [self popupHappyMessage:NSLS(@"kNewPostSuccess") title:nil];
     }

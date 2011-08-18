@@ -26,5 +26,6 @@
 - (IBAction)clickReferButton:(id)sender;
 - (IBAction)clickHelpButton:(id)sender;
 - (IBAction)clickNext:(id)sender;
+- (IBAction)backgroundTap:(id)sender;
 
 @end

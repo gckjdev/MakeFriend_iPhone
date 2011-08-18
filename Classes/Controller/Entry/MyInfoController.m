@@ -145,7 +145,7 @@ enum{
     [self updateImageView];
     [self initLogoutButton];
     
-    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:NSLS(@"Save") style:UIBarButtonItemStyleDone target:self action:@selector(clickSave)];
+    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:NSLS(@"Save") style:UIBarButtonItemStyleDone target:self action:@selector(clickSave:)];
     self.navigationItem.rightBarButtonItem = rightItem;
     [rightItem release];
     

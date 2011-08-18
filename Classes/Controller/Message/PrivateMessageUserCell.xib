@@ -77,9 +77,9 @@
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 								<string key="IBUIText">userName</string>
-								<object class="NSFont" key="IBUIFont" id="244692496">
+								<object class="NSFont" key="IBUIFont" id="95563463">
 									<string key="NSName">Helvetica</string>
-									<double key="NSSize">17</double>
+									<double key="NSSize">11</double>
 									<int key="NSfFlags">16</int>
 								</object>
 								<object class="NSColor" key="IBUITextColor" id="41381296">
@@ -88,7 +88,7 @@
 								</object>
 								<nil key="IBUIHighlightedColor"/>
 								<int key="IBUIBaselineAdjustment">1</int>
-								<float key="IBUIMinimumFontSize">10</float>
+								<float key="IBUIMinimumFontSize">11</float>
 							</object>
 							<object class="IBUILabel" id="205577231">
 								<reference key="NSNextResponder" ref="449120249"/>
@@ -103,11 +103,11 @@
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 								<string key="IBUIText">2011-8-11 17:57</string>
-								<reference key="IBUIFont" ref="244692496"/>
+								<reference key="IBUIFont" ref="95563463"/>
 								<reference key="IBUITextColor" ref="41381296"/>
 								<nil key="IBUIHighlightedColor"/>
 								<int key="IBUIBaselineAdjustment">1</int>
-								<float key="IBUIMinimumFontSize">10</float>
+								<float key="IBUIMinimumFontSize">11</float>
 							</object>
 							<object class="IBUILabel" id="646016599">
 								<reference key="NSNextResponder" ref="449120249"/>
@@ -121,11 +121,15 @@
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 								<string key="IBUIText">content</string>
-								<reference key="IBUIFont" ref="244692496"/>
+								<object class="NSFont" key="IBUIFont">
+									<string key="NSName">Helvetica</string>
+									<double key="NSSize">14</double>
+									<int key="NSfFlags">16</int>
+								</object>
 								<reference key="IBUITextColor" ref="41381296"/>
 								<nil key="IBUIHighlightedColor"/>
 								<int key="IBUIBaselineAdjustment">1</int>
-								<float key="IBUIMinimumFontSize">17</float>
+								<float key="IBUIMinimumFontSize">14</float>
 							</object>
 						</object>
 						<string key="NSFrameSize">{300, 60}</string>

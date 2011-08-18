@@ -70,6 +70,7 @@
 
 - (void)setCellInfoWithMessage:(PrivateMessage*)message
 {
+    NSLog(@"%i", [message.type intValue]);
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"YYYY-MM-dd HH:mm:ss"];
     self.dateLabel.text = [dateFormatter stringFromDate:message.createDate];
