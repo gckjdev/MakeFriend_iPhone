@@ -70,23 +70,38 @@
 
 - (void)setCellInfoWithMessage:(PrivateMessage*)message
 {
-    NSLog(@"%i", [message.type intValue]);
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"YYYY-MM-dd HH:mm:ss"];
     self.dateLabel.text = [dateFormatter stringFromDate:message.createDate];
     [dateFormatter release];
     
-    CGRect fra = self.messageLabel.frame;
-    CGSize size = fra.size;
-    size = CGSizeMake(size.width, 10000);
+    CGSize size = CGSizeMake(250, 10000);
     size = [message.content sizeWithFont:self.messageLabel.font constrainedToSize:size];
+    CGRect fra = self.messageLabel.frame;
     CGFloat d = fra.size.height - size.height;
-    fra = CGRectMake(fra.origin.x, fra.origin.y, fra.size.width, size.height);
+    if (0 == [message.type intValue]) {
+        fra = CGRectMake(10, 10, size.width, size.height);
+    } else if (1 == [message.type intValue]) {
+        fra = CGRectMake(310 - size.width, 10, size.width, size.height);
+    }
     self.messageLabel.frame = fra;
     self.messageLabel.text = message.content;
+    fra = self.dateLabel.frame;
+    fra = CGRectMake(fra.origin.x, fra.origin.y - d, fra.size.width, fra.size.height);
+    self.dateLabel.frame = fra;
     fra = self.frame;
     fra = CGRectMake(fra.origin.x, fra.origin.y, fra.size.width, fra.size.height - d);
     self.frame = fra;
+    
+    if (0 == [message.type intValue]) {
+        self.dateLabel.textAlignment = UITextAlignmentLeft;
+        //self.dateLabel.backgroundColor = [UIColor lightGrayColor];
+        //self.messageLabel.backgroundColor = [UIColor lightGrayColor];
+    } else if (1 == [message.type intValue]) {
+        self.dateLabel.textAlignment = UITextAlignmentRight;
+        //self.dateLabel.backgroundColor = [UIColor greenColor];
+        //self.messageLabel.backgroundColor = [UIColor greenColor];
+    }
 }
 
 

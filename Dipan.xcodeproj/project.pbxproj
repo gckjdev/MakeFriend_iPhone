@@ -310,10 +310,10 @@
 		FB52F3FA1388FA3100710F0C /* blueArrow_new.png in Resources */ = {isa = PBXBuildFile; fileRef = FB52F3EE1388FA3100710F0C /* blueArrow_new.png */; };
 		FB52F3FB1388FA3100710F0C /* EGORefresh.strings in Resources */ = {isa = PBXBuildFile; fileRef = FB52F3F01388FA3100710F0C /* EGORefresh.strings */; };
 		FB52F3FC1388FA3100710F0C /* whiteArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = FB52F3F21388FA3100710F0C /* whiteArrow.png */; };
+		FB7CF06213FE0E25007F5536 /* OAuthCore.m in Sources */ = {isa = PBXBuildFile; fileRef = FB7CF06113FE0E25007F5536 /* OAuthCore.m */; };
 		FB8D1CA213F76A0E002695FE /* sina.png in Resources */ = {isa = PBXBuildFile; fileRef = FB8D1CA013F76A0E002695FE /* sina.png */; };
 		FB8D1CA313F76A0E002695FE /* tencent.png in Resources */ = {isa = PBXBuildFile; fileRef = FB8D1CA113F76A0E002695FE /* tencent.png */; };
 		FB8D1CA513F76BD8002695FE /* sina240x48.png in Resources */ = {isa = PBXBuildFile; fileRef = FB8D1CA413F76BD8002695FE /* sina240x48.png */; };
-		FB8D1CB913F77C38002695FE /* OAuthCore.m in Sources */ = {isa = PBXBuildFile; fileRef = FB8D1CB813F77C37002695FE /* OAuthCore.m */; };
 		FBC5BCF013F3B58600636178 /* NearbyPostController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBC5BCEE13F3B58400636178 /* NearbyPostController.m */; };
 		FBC5BCF113F3B58600636178 /* NearbyPostController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBC5BCEF13F3B58500636178 /* NearbyPostController.xib */; };
 		FBC5BCF413F3B69100636178 /* PostControllerUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = FBC5BCF313F3B69000636178 /* PostControllerUtils.m */; };
@@ -1000,11 +1000,11 @@
 		FB52F3F21388FA3100710F0C /* whiteArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whiteArrow.png; sourceTree = "<group>"; };
 		FB52F3F31388FA3100710F0C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/EGORefresh.strings"; sourceTree = "<group>"; };
 		FB52F3F41388FA3100710F0C /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/EGORefresh.strings"; sourceTree = "<group>"; };
+		FB7CF06113FE0E25007F5536 /* OAuthCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuthCore.m; sourceTree = "<group>"; };
 		FB8D1CA013F76A0E002695FE /* sina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sina.png; sourceTree = "<group>"; };
 		FB8D1CA113F76A0E002695FE /* tencent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tencent.png; sourceTree = "<group>"; };
 		FB8D1CA413F76BD8002695FE /* sina240x48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sina240x48.png; sourceTree = "<group>"; };
 		FB8D1CB713F77C37002695FE /* OAuthCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthCore.h; sourceTree = "<group>"; };
-		FB8D1CB813F77C37002695FE /* OAuthCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuthCore.m; sourceTree = "<group>"; };
 		FBC5BCED13F3B58400636178 /* NearbyPostController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NearbyPostController.h; sourceTree = "<group>"; };
 		FBC5BCEE13F3B58400636178 /* NearbyPostController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NearbyPostController.m; sourceTree = "<group>"; };
 		FBC5BCEF13F3B58500636178 /* NearbyPostController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NearbyPostController.xib; sourceTree = "<group>"; };
@@ -1645,8 +1645,8 @@
 		CA9E0936139CB7AF000B6FEE /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				FB7CF06113FE0E25007F5536 /* OAuthCore.m */,
 				FB8D1CB713F77C37002695FE /* OAuthCore.h */,
-				FB8D1CB813F77C37002695FE /* OAuthCore.m */,
 				CA9E0939139CB7CB000B6FEE /* CommonSNSRequest.h */,
 				CA9E093A139CB7CB000B6FEE /* CommonSNSRequest.m */,
 				CA9E093C139CB7E2000B6FEE /* SNSServiceHandler.h */,
@@ -2791,7 +2791,7 @@
 				CA24A24613E7EC2400329554 /* CityPickerViewController.m in Sources */,
 				FBC5BCF013F3B58600636178 /* NearbyPostController.m in Sources */,
 				FBC5BCF413F3B69100636178 /* PostControllerUtils.m in Sources */,
-				FB8D1CB913F77C38002695FE /* OAuthCore.m in Sources */,
+				FB7CF06213FE0E25007F5536 /* OAuthCore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
