@@ -26,8 +26,8 @@
 @class ReviewRequest;
 
 #define _THREE20_		1
-#define kAppId			@"388419035"					// To be changed for each project
-#define kMobClickKey	@"4dba296b112cf77d98000015"		// To be changed for each project
+#define kAppId			@"458921290"					// To be changed for each project
+#define kMobClickKey	@"4e506bcb431fe34e18000001"		// To be changed for each project
 
 #define MAKE_FRIEND_PLACEID @"MakeFriendPlaceID"
 
