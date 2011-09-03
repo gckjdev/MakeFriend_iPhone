@@ -48,31 +48,20 @@ enum{
     ROW_ACTION_NUM
 };
 
-@implementation MyInfoController
-
-@synthesize avatarImageView;
-@synthesize logoutButton;
-
-@synthesize loginIdLabel;
-@synthesize loginIdTypeLabel;
-@synthesize avatarView;
-@synthesize nicknameLabel;
-
-// The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
-/*
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization.
-    }
-    return self;
-}
-*/
-
 enum{
     ROW_MALE,
     ROW_FEMALE
 };
+
+@implementation MyInfoController
+
+@synthesize avatarImageView;
+@synthesize loginIdLabel;
+
+@synthesize avatar;
+@synthesize nickName;
+@synthesize genderText;
+@synthesize mobile;
 
 - (NSString*)rowToGender:(int)row
 {
@@ -125,15 +114,12 @@ enum{
     [self.avatarImageView clear];    
     
     // set new
+    NSLog(@"%@", [userService getUserAvatarURL]);
     self.avatarImageView.url = [userService getUserAvatarURL];
     
+    NSLog(@"%@", [userService getUserAvatarURL]);
+    
     [GlobalGetImageCache() manage:self.avatarImageView];    
-}
-
-- (void)initLogoutButton
-{
-    [logoutButton setTitle:NSLS(@"Logout") forState:UIControlStateNormal];
-//    logoutButton.hidden = YES;  // don't show it at this momement to make the app clear
 }
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
@@ -143,19 +129,25 @@ enum{
     
     [self updateLoginId];
     [self updateImageView];
-    [self initLogoutButton];
-    
-    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:NSLS(@"Save") style:UIBarButtonItemStyleDone target:self action:@selector(clickSave:)];
-    self.navigationItem.rightBarButtonItem = rightItem;
-    [rightItem release];
     
     self.dataTableView.backgroundColor = [UIColor whiteColor];
     self.view.backgroundColor = [UIColor whiteColor];
+    
+    UserService *userService = GlobalGetUserService();
+    self.nickName = [[userService user] nickName];
+    self.genderText = [self genderTextByGender:[userService user].gender];
+    self.mobile = [[userService user] mobile];
+}
+
+- (void)showSaveButtonItem
+{
+    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:NSLS(@"Save") style:UIBarButtonItemStyleDone target:self action:@selector(clickSave:)];
+    self.navigationItem.rightBarButtonItem = rightItem;
+    [rightItem release];
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
-    [self updateImageView];
     [super viewDidAppear:animated];
 }
 
@@ -175,17 +167,25 @@ enum{
 }
 
 - (void)viewDidUnload {
-    [self setAvatarImageView:nil];
-    [self setLogoutButton:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
+    self.loginIdLabel = nil;
+    self.avatarImageView = nil;
+    self.avatar = nil;
+    self.nickName = nil;
+    self.genderText = nil;
+    self.mobile = nil;
 }
 
 
 - (void)dealloc {
-    [avatarImageView release];
-    [logoutButton release];
+    self.loginIdLabel = nil;
+    self.avatarImageView = nil;
+    self.avatar = nil;
+    self.nickName = nil;
+    self.genderText = nil;
+    self.mobile = nil;
     [super dealloc];
 }
 
@@ -297,27 +297,24 @@ enum{
 
 - (void)setNickNameCell:(UITableViewCell*)cell
 {
-    UserService *userService = GlobalGetUserService();
     cell.textLabel.text = NSLS(@"kNickName");
-    cell.detailTextLabel.text = [[userService user] nickName];
+    cell.detailTextLabel.text = self.nickName;
 
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 }
 
 - (void)setMobileCell:(UITableViewCell*)cell
 {
-    UserService *userService = GlobalGetUserService();
     cell.textLabel.text = NSLS(@"kMobile");
-    cell.detailTextLabel.text = [[userService user] mobile];    
+    cell.detailTextLabel.text = self.mobile;    
     
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 }
 
 - (void)setGenderCell:(UITableViewCell*)cell
 {
-    UserService *userService = GlobalGetUserService();
     cell.textLabel.text = NSLS(@"kGender");
-    cell.detailTextLabel.text = [self genderTextByGender:[[userService user] gender]];    
+    cell.detailTextLabel.text = self.genderText;   
     
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 }
@@ -350,7 +347,7 @@ enum{
     
     BOOL bindFlag = [userService hasUserBindSina];
     cell.detailTextLabel.text = [self getBindText:bindFlag];
-    cell.accessoryType = [self getBindAccessoryType:bindFlag];    
+    //cell.accessoryType = [self getBindAccessoryType:bindFlag];    
 }
 
 - (void)setQQCell:(UITableViewCell*)cell
@@ -360,7 +357,7 @@ enum{
     
     BOOL bindFlag = [userService hasUserBindQQ];
     cell.detailTextLabel.text = [self getBindText:bindFlag];
-    cell.accessoryType = [self getBindAccessoryType:bindFlag];    
+    //cell.accessoryType = [self getBindAccessoryType:bindFlag];    
     
 }
 
@@ -447,7 +444,7 @@ enum{
                     
                 case ROW_LOGOUT:
                     cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil] autorelease];
-                    cell.textLabel.text = @"注销";
+                    cell.textLabel.text = NSLS(@"Logout");
                     cell.textLabel.textAlignment = UITextAlignmentCenter;
                     break;
                     
@@ -466,9 +463,8 @@ enum{
 
 - (void)clickBindSina
 {
-    UserService *userService = GlobalGetUserService();
-    if ([userService hasUserBindSina])
-        return;
+    //UserService *userService = GlobalGetUserService();
+    //if ([userService hasUserBindSina]) return;
     
     PlaceSNSService *snsService = GlobalGetSNSService();
     [snsService sinaInitiateLogin:self];
@@ -476,9 +472,8 @@ enum{
 
 - (void)clickBindQQ
 {
-    UserService *userService = GlobalGetUserService();
-    if ([userService hasUserBindQQ])
-        return;
+    //UserService *userService = GlobalGetUserService();
+    //if ([userService hasUserBindQQ]) return;
     
     PlaceSNSService *snsService = GlobalGetSNSService();
     [snsService qqInitiateLogin:self];    
@@ -503,13 +498,19 @@ enum{
                         [self popupMessage:NSLS(@"kNickNameNotNull") title:@""];
                         return;
                     }
-                    [userService updateUserNickName:newText];
+                    if (![newText isEqual:[userService user].nickName]) {
+                        self.nickName = newText;
+                        [self showSaveButtonItem];
+                    }
                 }
                     break;
                     
                 case ROW_MOBILE:
                 {
-                    [userService updateUserMobile:newText];                    
+                    if (![newText isEqual:[userService user].mobile]) {
+                        self.mobile = newText;
+                        [self showSaveButtonItem];
+                    }                   
                 }
                     break;                                        
                     
@@ -521,17 +522,21 @@ enum{
     }
 }
 
-
 - (BOOL)shouldContinueAfterRowSelect:(int)row
 {
-    UserService* userService = GlobalGetUserService();  
-    [userService updateUserGender:[self rowToGender:row]];
+    UserService* userService = GlobalGetUserService();
+    if (![[userService user].gender isEqual:[self rowToGender:row]]) {
+        self.genderText = [self rowToGender:row];
+        [self showSaveButtonItem];
+    }
     return YES;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	
     [self updateSelectSectionAndRow:indexPath];
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     switch (indexPath.section) {
         case SECTION_AVATAR:
@@ -651,11 +656,8 @@ enum{
             
         default:            
             break;
-    }        
-
-    
+    }
 }
-
 
 #pragma mark - Button Action
 
@@ -683,8 +685,12 @@ SaveUserSuccessHandler saveSuccessHandler = ^(PPViewController* viewController){
 {
     // send request to server
     UserService *userService = GlobalGetUserService();
+    [userService updateUserAvatar:self.avatar];
+    [userService updateUserNickName:self.nickName];
+    [userService updateUserGender:self.genderText];
+    [userService updateUserMobile:self.mobile];
     [userService updateUserToServer:self successHandler:^(PPViewController* viewController){        
-        MyInfoController *vc = (MyInfoController*)viewController;        
+        MyInfoController *vc = (MyInfoController*)viewController;
         [vc.dataTableView reloadData];
         [vc updateImageView];
     }];
@@ -708,9 +714,11 @@ SaveUserSuccessHandler saveSuccessHandler = ^(PPViewController* viewController){
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
-    UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
+    UIImage *image = [info objectForKey:UIImagePickerControllerEditedImage];
     if (image != nil){
-        [self setUserAvatar:image];
+        self.avatar = image;
+        self.avatarImageView.image = self.avatar;
+        [self showSaveButtonItem];
     }
     
     [self dismissModalViewControllerAnimated:YES];

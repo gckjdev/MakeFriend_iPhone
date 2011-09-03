@@ -11,20 +11,22 @@
 #import "HJManagedImageV.h"
 
 @interface MyInfoController : PPTableViewController <UIActionSheetDelegate> {
-    IBOutlet UILabel         *loginIdLabel;
-    IBOutlet UILabel         *loginIdTypeLabel;
-    IBOutlet UIImageView     *avatarView;           // useless
-    IBOutlet UILabel         *nicknameLabel;
+    UILabel         *loginIdLabel;
     HJManagedImageV *avatarImageView;
-    UIButton *logoutButton;
+    
+    UIImage *avatar;
+    NSString *nickName;
+    NSString *genderText;
+    NSString *mobile;
 }
 
 @property (nonatomic, retain) IBOutlet UILabel         *loginIdLabel;
-@property (nonatomic, retain) IBOutlet UILabel         *loginIdTypeLabel;
-@property (nonatomic, retain) IBOutlet UIImageView     *avatarView;
-@property (nonatomic, retain) IBOutlet UILabel         *nicknameLabel;
 @property (nonatomic, retain) IBOutlet HJManagedImageV *avatarImageView;
-@property (nonatomic, retain) IBOutlet UIButton *logoutButton;
+
+@property (nonatomic, retain) UIImage *avatar;
+@property (nonatomic, retain) NSString *nickName;
+@property (nonatomic, retain) NSString *genderText;
+@property (nonatomic, retain) NSString *mobile;
 
 - (IBAction)clickLogout:(id)sender;
 - (IBAction)clickAvatar:(id)sender;

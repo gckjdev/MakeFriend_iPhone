@@ -221,17 +221,6 @@
         self.moreLoadingView = moreCell.loadingView;
         return moreCell;
     }
-
-    if ([self isControlRowIndexPath:indexPath]){
-        NSString *CellIdentifier = [PostActionCell getCellIdentifier];
-        PostActionCell *cell = (PostActionCell*)[theTableView dequeueReusableCellWithIdentifier:CellIdentifier];
-        if (cell == nil) {
-            cell = [PostActionCell createCell:self];
-        }        
-
-        cell.indexPath = [NSIndexPath indexPathForRow:indexPath.row inSection:indexPath.section];
-        return cell;
-    }
     
     NSString *CellIdentifier = [PostTableViewCell getCellIdentifier];
 	PostTableViewCell *cell = (PostTableViewCell*)[theTableView dequeueReusableCellWithIdentifier:CellIdentifier];
@@ -275,6 +264,11 @@
                                                  viewController:self.superController];      
 }
 
+-(void)clickPostImageButton:(id)sender atIndexPath:(NSIndexPath *)indexPath
+{
+    
+}
+
 - (void)clickLikeButton:(id)sender atIndexPath:(NSIndexPath*)indexPath
 {
     Post* post = [self postByControlRowIndexPath:indexPath];
@@ -288,7 +282,7 @@
                viewController:self];
 }
 
-- (void)clickSendMessageButton:(id)sender atIndexPath:(NSIndexPath*)indexPath
+- (void)clickMessageButton:(id)sender atIndexPath:(NSIndexPath*)indexPath
 {
     Post* post = [self postByControlRowIndexPath:indexPath];
     if (post == nil)

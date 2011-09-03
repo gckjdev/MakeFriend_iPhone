@@ -355,6 +355,10 @@
 		FBC5BCF013F3B58600636178 /* NearbyPostController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBC5BCEE13F3B58400636178 /* NearbyPostController.m */; };
 		FBC5BCF113F3B58600636178 /* NearbyPostController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBC5BCEF13F3B58500636178 /* NearbyPostController.xib */; };
 		FBC5BCF413F3B69100636178 /* PostControllerUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = FBC5BCF313F3B69000636178 /* PostControllerUtils.m */; };
+		FBEC182A1411C346005D839C /* 57.png in Resources */ = {isa = PBXBuildFile; fileRef = FBEC18251411C346005D839C /* 57.png */; };
+		FBEC182D1411C346005D839C /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = FBEC18281411C346005D839C /* Default.png */; };
+		FBEC182E1411C346005D839C /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBEC18291411C346005D839C /* Default@2x.png */; };
+		FBEC18311411C468005D839C /* 57@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBEC18301411C468005D839C /* 57@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -985,6 +989,10 @@
 		FBC5BCEF13F3B58500636178 /* NearbyPostController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NearbyPostController.xib; sourceTree = "<group>"; };
 		FBC5BCF213F3B68F00636178 /* PostControllerUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostControllerUtils.h; sourceTree = "<group>"; };
 		FBC5BCF313F3B69000636178 /* PostControllerUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostControllerUtils.m; sourceTree = "<group>"; };
+		FBEC18251411C346005D839C /* 57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 57.png; sourceTree = "<group>"; };
+		FBEC18281411C346005D839C /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		FBEC18291411C346005D839C /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		FBEC18301411C468005D839C /* 57@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "57@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2167,6 +2175,10 @@
 		CAB2F04E125F4A8400593157 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				FBEC18301411C468005D839C /* 57@2x.png */,
+				FBEC18251411C346005D839C /* 57.png */,
+				FBEC18281411C346005D839C /* Default.png */,
+				FBEC18291411C346005D839C /* Default@2x.png */,
 				CAA5F69B13BAF32C00F3F2D2 /* girl1.png */,
 				CAA5F69C13BAF32C00F3F2D2 /* boy1.png */,
 				CAA6AB1113987F52009F26E3 /* touxiang.png */,
@@ -2427,6 +2439,10 @@
 				FB8D1CA313F76A0E002695FE /* tencent.png in Resources */,
 				FB8D1CA513F76BD8002695FE /* sina240x48.png in Resources */,
 				CA2A9F791400A1EB002D87C2 /* TapkuLibrary.bundle in Resources */,
+				FBEC182A1411C346005D839C /* 57.png in Resources */,
+				FBEC182D1411C346005D839C /* Default.png in Resources */,
+				FBEC182E1411C346005D839C /* Default@2x.png in Resources */,
+				FBEC18311411C468005D839C /* 57@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

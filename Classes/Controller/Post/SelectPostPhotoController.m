@@ -61,8 +61,8 @@
 {
     PostService* postService = GlobalGetPostService();    
     
-    CGRect origRect = initImageRect;
-    CGRect retRect = [UIImage shrinkFromOrigRect:origRect imageSize:postService.postImage.size];
+    //CGRect origRect = initImageRect;
+    //CGRect retRect = [UIImage shrinkFromOrigRect:origRect imageSize:postService.postImage.size];
     
     //photoImageView.frame = retRect;
     photoImageView.image = postService.postImage;

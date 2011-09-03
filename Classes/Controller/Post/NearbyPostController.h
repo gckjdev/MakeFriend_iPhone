@@ -15,7 +15,7 @@
 
 @class CreatePrivateMessageController;
 
-@interface NearbyPostController : PPTableViewController <LocalDataServiceDelegate, PostActionCellDelegate, PostTableViewCellDelegate, PostServiceDelegate> {
+@interface NearbyPostController : PPTableViewController <LocalDataServiceDelegate, PostTableViewCellDelegate, PostServiceDelegate> {
     
     
     UIViewController                *superController;    
