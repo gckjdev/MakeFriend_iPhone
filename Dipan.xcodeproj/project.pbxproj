@@ -2873,6 +2873,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Lingzhe Peng";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Dipan_Prefix.pch;
@@ -2885,6 +2886,7 @@
 					/3PP/Flurry/FlurryLibWithLocation,
 				);
 				PRODUCT_NAME = MakeFriend;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "9B8C5B86-6E83-467E-A585-BD33AAB01ACE";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Distribution;
