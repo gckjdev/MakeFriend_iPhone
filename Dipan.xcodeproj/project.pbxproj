@@ -1112,7 +1112,6 @@
 		8239C3F7125317CE0007CBBB /* Image */ = {
 			isa = PBXGroup;
 			children = (
-				CAB2F04C125F4A8400593157 /* Background */,
 				CAB2F04D125F4A8400593157 /* Icon */,
 				CAB2F04E125F4A8400593157 /* Image */,
 			);
@@ -2145,13 +2144,6 @@
 			path = Select;
 			sourceTree = "<group>";
 		};
-		CAB2F04C125F4A8400593157 /* Background */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Background;
-			sourceTree = "<group>";
-		};
 		CAB2F04D125F4A8400593157 /* Icon */ = {
 			isa = PBXGroup;
 			children = (
@@ -2865,6 +2857,7 @@
 					"-ObjC",
 				);
 				PREBINDING = NO;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "9B8C5B86-6E83-467E-A585-BD33AAB01ACE";
 				SDKROOT = iphoneos;
 			};
 			name = Distribution;

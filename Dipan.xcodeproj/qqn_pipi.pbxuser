@@ -1,20 +1,5 @@
 // !$*UTF8*$!
 {
-	1D3623240D0F684500981E51 /* DipanAppDelegate.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {897, 484}}";
-			sepNavSelRange = "{829, 0}";
-			sepNavVisRange = "{0, 829}";
-		};
-	};
-	1D3623250D0F684500981E51 /* DipanAppDelegate.m */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1965, 3380}}";
-			sepNavSelRange = "{3605, 0}";
-			sepNavVisRange = "{2830, 1291}";
-			sepNavWindowFrame = "{{15, 105}, {1223, 668}}";
-		};
-	};
 	1D6058900D05DD3D006BFB54 /* Dipan */ = {
 		activeExec = 0;
 		executables = (
@@ -22,9 +7,9 @@
 		);
 	};
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
-		activeBuildConfigurationName = Release;
+		activeBuildConfigurationName = Distribution;
 		activeExecutable = CA1DA1C41254E19B0071F74B /* Dipan */;
-		activeSDKPreference = iphonesimulator4.2;
+		activeSDKPreference = iphoneos4.2;
 		activeTarget = 1D6058900D05DD3D006BFB54 /* Dipan */;
 		addToTargets = (
 		);
@@ -40,7 +25,7 @@
 				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
 				PBXFileTableDataSourceColumnWidthsKey = (
 					20,
-					719,
+					892,
 					20,
 					48,
 					43,
@@ -57,8 +42,8 @@
 					PBXFileDataSource_Target_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 327149103;
-			PBXWorkspaceStateSaveDate = 327149103;
+			PBXPerProjectTemplateStateSaveDate = 337053841;
+			PBXWorkspaceStateSaveDate = 337053841;
 		};
 		perUserProjectItems = {
 			CA1549FC12584DC80020F076 /* PBXTextBookmark */ = CA1549FC12584DC80020F076 /* PBXTextBookmark */;
@@ -102,7 +87,6 @@
 			CA5D4605136A8D5800B9ECF2 /* PBXTextBookmark */ = CA5D4605136A8D5800B9ECF2 /* PBXTextBookmark */;
 			CA5D4606136A8D5800B9ECF2 /* PBXTextBookmark */ = CA5D4606136A8D5800B9ECF2 /* PBXTextBookmark */;
 			CA933EB5137FE6D9001E0D1E /* PBXTextBookmark */ = CA933EB5137FE6D9001E0D1E /* PBXTextBookmark */;
-			CA933EB6137FE6D9001E0D1E /* PBXTextBookmark */ = CA933EB6137FE6D9001E0D1E /* PBXTextBookmark */;
 			CA94B93C137BB04800273836 /* PBXTextBookmark */ = CA94B93C137BB04800273836 /* PBXTextBookmark */;
 			CA94B93D137BB04800273836 /* PBXTextBookmark */ = CA94B93D137BB04800273836 /* PBXTextBookmark */;
 			CA94B93E137BB04800273836 /* PBXTextBookmark */ = CA94B93E137BB04800273836 /* PBXTextBookmark */;
@@ -154,6 +138,8 @@
 			CAD19C20137BAC1A00A8817B /* PBXTextBookmark */ = CAD19C20137BAC1A00A8817B /* PBXTextBookmark */;
 			CAD19C21137BAC1A00A8817B /* PBXTextBookmark */ = CAD19C21137BAC1A00A8817B /* PBXTextBookmark */;
 			CAD19C22137BAC1A00A8817B /* PBXTextBookmark */ = CAD19C22137BAC1A00A8817B /* PBXTextBookmark */;
+			CAD9F0B71417100200768298 /* PBXTextBookmark */ = CAD9F0B71417100200768298 /* PBXTextBookmark */;
+			CAD9F0B81417100200768298 /* PlistBookmark */ = CAD9F0B81417100200768298 /* PlistBookmark */;
 			CAFA1613125C10730026DFEB /* PBXTextBookmark */ = CAFA1613125C10730026DFEB /* PBXTextBookmark */;
 		};
 		sourceControlManager = CA1DA1F41254E1B60071F74B /* Source Control */;
@@ -223,13 +209,6 @@
 	8D1107310486CEB800E47090 /* Dipan-Info.plist */ = {
 		uiCtxt = {
 			sepNavWindowFrame = "{{38, 84}, {1223, 668}}";
-		};
-	};
-	CA0A56BC137BAF1F003CD06C /* RegisterUserRequest.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {897, 689}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 975}";
 		};
 	};
 	CA1549FC12584DC80020F076 /* PBXTextBookmark */ = {
@@ -674,16 +653,6 @@
 		vrLen = 221;
 		vrLoc = 0;
 	};
-	CA933EB6137FE6D9001E0D1E /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 1D3623240D0F684500981E51 /* DipanAppDelegate.h */;
-		name = "DipanAppDelegate.h: 30";
-		rLen = 0;
-		rLoc = 829;
-		rType = 0;
-		vrLen = 829;
-		vrLoc = 0;
-	};
 	CA94B93C137BB04800273836 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = CAD19B0F137A6A3500A8817B /* InfoMainController.m */;
@@ -696,7 +665,6 @@
 	};
 	CA94B93D137BB04800273836 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = CA0A56BC137BAF1F003CD06C /* RegisterUserRequest.h */;
 		name = "RegisterUserRequest.h: 1";
 		rLen = 0;
 		rLoc = 0;
@@ -706,7 +674,6 @@
 	};
 	CA94B93E137BB04800273836 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = CAD19BCA137A832900A8817B /* VariableConstants.h */;
 		name = "VariableConstants.h: 3";
 		rLen = 0;
 		rLoc = 23;
@@ -716,7 +683,6 @@
 	};
 	CA94B93F137BB04800273836 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = CAD19B3E137A6FFB00A8817B /* User.h */;
 		name = "User.h: 12";
 		rLen = 0;
 		rLoc = 189;
@@ -726,7 +692,6 @@
 	};
 	CA94B940137BB04800273836 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = CAD19B1B137A6A3500A8817B /* RegisterController.h */;
 		name = "RegisterController.h: 17";
 		rLen = 0;
 		rLoc = 249;
@@ -778,165 +743,6 @@
 		rType = 0;
 		vrLen = 1512;
 		vrLoc = 189;
-	};
-	CAB2F048125F49E400593157 /* MainDataModel.xcdatamodel */ = {
-		uiCtxt = {
-			"Xdesign Model Editor Bookmark Key" = {
-				UIContextForDetailArea = {
-					_indexOfSelectedPane = 0;
-					_indexOfSelectedView = 0;
-				};
-				UIContextForEntityArea = {
-					_indexOfSelectedView = 0;
-					chosenTableColumnns = (
-						"ET Entity",
-						"ET Abstract",
-						"ET Class",
-					);
-					chosenTableColumnns_sortDirections = (
-						YES,
-					);
-					chosenTableColumnns_sortKeys = (
-						name,
-					);
-					chosenTableColumnns_sortSelectors = (
-						"_xdcaseInsensitiveNumericCompare:",
-					);
-					chosenTableWidths = (
-						103.000000,
-						22.000000,
-						53.080078,
-					);
-				};
-				UIContextForLayoutManager = {
-					detailSplitGeometry = {
-						_collapsingFrameDimension = 0;
-						_indexOfCollapsedView = 0;
-						_percentageOfCollapsedView = 0;
-						isCollapsed = yes;
-						sizes = (
-							"{{0, 0}, {623, 218}}",
-							"{{628, 0}, {328, 218}}",
-						);
-					};
-					diagramSplitGeometry = {
-						_collapsingFrameDimension = 0;
-						_indexOfCollapsedView = 0;
-						_percentageOfCollapsedView = 0;
-						isCollapsed = yes;
-						sizes = (
-							"{{0, 0}, {956, 220}}",
-							"{{0, 225}, {956, 280}}",
-						);
-					};
-					tableSplitGeometry = {
-						_collapsingFrameDimension = 0;
-						_indexOfCollapsedView = 0;
-						_percentageOfCollapsedView = 0;
-						isCollapsed = yes;
-						sizes = (
-							"{{0, 0}, {203, 218}}",
-							"{{208, 0}, {413, 218}}",
-						);
-					};
-				};
-				UIContextForPropertyArea = {
-					_indexOfSelectedView = 4;
-					chosenTableColumnnFRTs = (
-						"FT Fetch Request",
-						"FT Predicate",
-					);
-					chosenTableColumnnFRTs_sortDirections = (
-						YES,
-					);
-					chosenTableColumnnFRTs_sortKeys = (
-						name,
-					);
-					chosenTableColumnnFRTs_sortSelectors = (
-						"_xdcaseInsensitiveNumericCompare:",
-					);
-					chosenTableColumnnsAT = (
-						"AT Attribute",
-						"AT Type",
-					);
-					chosenTableColumnnsAT_sortDirections = (
-						YES,
-					);
-					chosenTableColumnnsAT_sortKeys = (
-						name,
-					);
-					chosenTableColumnnsAT_sortSelectors = (
-						"_xdcaseInsensitiveNumericCompare:",
-					);
-					chosenTableColumnnsFPT = (
-						"FP FetchedProperty",
-						"FP Destination",
-						"FP Predicate",
-					);
-					chosenTableColumnnsFPT_sortDirections = (
-						YES,
-					);
-					chosenTableColumnnsFPT_sortKeys = (
-						name,
-					);
-					chosenTableColumnnsFPT_sortSelectors = (
-						"_xdcaseInsensitiveNumericCompare:",
-					);
-					chosenTableColumnnsPT = (
-						"PT Property",
-						"PT Kind",
-						"PT SharedKeyOne",
-					);
-					chosenTableColumnnsPT_sortDirections = (
-						YES,
-					);
-					chosenTableColumnnsPT_sortKeys = (
-						name,
-					);
-					chosenTableColumnnsPT_sortSelectors = (
-						"_xdcaseInsensitiveNumericCompare:",
-					);
-					chosenTableColumnnsRT = (
-						"RT Relationship",
-						"RT Destination",
-					);
-					chosenTableColumnnsRT_sortDirections = (
-						YES,
-					);
-					chosenTableColumnnsRT_sortKeys = (
-						name,
-					);
-					chosenTableColumnnsRT_sortSelectors = (
-						"_xdcaseInsensitiveNumericCompare:",
-					);
-					chosenTableWidthsAT = (
-						128.000000,
-						64.000000,
-					);
-					chosenTableWidthsFPT = (
-						128.000000,
-						64.000000,
-						144.764160,
-					);
-					chosenTableWidthsFRT = (
-						128.000000,
-						261.764160,
-					);
-					chosenTableWidthsPT = (
-						128.000000,
-						108.110840,
-						150.570801,
-					);
-					chosenTableWidthsRT = (
-						128.000000,
-						64.000000,
-					);
-				};
-				"xdesign model browser state key - shown/hidden" = 1;
-				"xdesign model diagram view visible rect key" = "{{-122, 0}, {941, 265}}";
-			};
-			sepNavWindowFrame = "{{15, 105}, {1223, 668}}";
-		};
 	};
 	CAB2F0A7125F562200593157 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
@@ -1089,66 +895,8 @@
 			sepNavVisRange = "{0, 920}";
 		};
 	};
-	CAD19B17137A6A3500A8817B /* PlaceMainController.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {897, 419}}";
-			sepNavSelRange = "{254, 0}";
-			sepNavVisRange = "{0, 261}";
-		};
-	};
-	CAD19B18137A6A3500A8817B /* PlaceMainController.m */ = {
-		uiCtxt = {
-			sepNavFolds = "{\n    c =     (\n                {\n            l = constant;\n            r = \"{2183, 12}\";\n            s = 1;\n        },\n                {\n            l = statements;\n            r = \"{2203, 14}\";\n            s = 1;\n        }\n    );\n    r = \"{0, 5625}\";\n    s = 0;\n}";
-			sepNavIntBoundsRect = "{{0, 0}, {1139, 2470}}";
-			sepNavSelRange = "{5595, 0}";
-			sepNavVisRange = "{4768, 833}";
-		};
-	};
-	CAD19B1B137A6A3500A8817B /* RegisterController.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {897, 487}}";
-			sepNavSelRange = "{249, 0}";
-			sepNavVisRange = "{0, 249}";
-		};
-	};
-	CAD19B1C137A6A3500A8817B /* RegisterController.m */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1139, 780}}";
-			sepNavSelRange = "{203, 0}";
-			sepNavVisRange = "{0, 1043}";
-		};
-	};
-	CAD19B35137A6FAB00A8817B /* UserManager.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {897, 490}}";
-			sepNavSelRange = "{306, 0}";
-			sepNavVisRange = "{0, 306}";
-		};
-	};
-	CAD19B36137A6FAB00A8817B /* UserManager.m */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1134, 520}}";
-			sepNavSelRange = "{937, 0}";
-			sepNavVisRange = "{178, 579}";
-		};
-	};
-	CAD19B3E137A6FFB00A8817B /* User.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {897, 487}}";
-			sepNavSelRange = "{189, 0}";
-			sepNavVisRange = "{0, 302}";
-		};
-	};
-	CAD19B3F137A6FFB00A8817B /* User.m */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {897, 490}}";
-			sepNavSelRange = "{199, 0}";
-			sepNavVisRange = "{0, 206}";
-		};
-	};
 	CAD19B62137A73F500A8817B /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = CAD19B1C137A6A3500A8817B /* RegisterController.m */;
 		name = "RegisterController.m: 13";
 		rLen = 0;
 		rLoc = 203;
@@ -1217,12 +965,10 @@
 	};
 	CAD19B8D137A776800A8817B /* XDModelBookmark */ = {
 		isa = XDModelBookmark;
-		fRef = CAB2F048125F49E400593157 /* MainDataModel.xcdatamodel */;
 		fallbackIsa = PBXBookmark;
 	};
 	CAD19B8F137A776800A8817B /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = CAD19B3F137A6FFB00A8817B /* User.m */;
 		name = "User.m: 15";
 		rLen = 0;
 		rLoc = 199;
@@ -1232,7 +978,6 @@
 	};
 	CAD19B90137A776800A8817B /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = CAD19B35137A6FAB00A8817B /* UserManager.h */;
 		name = "UserManager.h: 21";
 		rLen = 0;
 		rLoc = 306;
@@ -1242,48 +987,12 @@
 	};
 	CAD19B91137A776800A8817B /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = CAD19B36137A6FAB00A8817B /* UserManager.m */;
 		name = "UserManager.m: 32";
 		rLen = 0;
 		rLoc = 738;
 		rType = 0;
 		vrLen = 911;
 		vrLoc = 31;
-	};
-	CAD19BB5137A812600A8817B /* NetworkRequest.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {897, 819}}";
-			sepNavSelRange = "{317, 0}";
-			sepNavVisRange = "{0, 715}";
-		};
-	};
-	CAD19BB6137A812600A8817B /* NetworkRequest.m */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {897, 1885}}";
-			sepNavSelRange = "{2562, 0}";
-			sepNavVisRange = "{1575, 1065}";
-		};
-	};
-	CAD19BB7137A812600A8817B /* NetworkRequestParameter.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {897, 637}}";
-			sepNavSelRange = "{788, 0}";
-			sepNavVisRange = "{262, 629}";
-		};
-	};
-	CAD19BB8137A812600A8817B /* NetworkRequestResultCode.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {897, 442}}";
-			sepNavSelRange = "{43, 0}";
-			sepNavVisRange = "{0, 155}";
-		};
-	};
-	CAD19BCA137A832900A8817B /* VariableConstants.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {897, 487}}";
-			sepNavSelRange = "{23, 0}";
-			sepNavVisRange = "{0, 109}";
-		};
 	};
 	CAD19BDB137A83E900A8817B /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
@@ -1340,7 +1049,6 @@
 	};
 	CAD19C0A137BA78100A8817B /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 1D3623240D0F684500981E51 /* DipanAppDelegate.h */;
 		name = "DipanAppDelegate.h: 30";
 		rLen = 0;
 		rLoc = 829;
@@ -1350,7 +1058,6 @@
 	};
 	CAD19C0B137BA78100A8817B /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 1D3623250D0F684500981E51 /* DipanAppDelegate.m */;
 		name = "DipanAppDelegate.m: 135";
 		rLen = 0;
 		rLoc = 3605;
@@ -1360,7 +1067,6 @@
 	};
 	CAD19C0C137BA78100A8817B /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = CAD19BB6137A812600A8817B /* NetworkRequest.m */;
 		name = "NetworkRequest.m: 97";
 		rLen = 0;
 		rLoc = 2562;
@@ -1370,7 +1076,6 @@
 	};
 	CAD19C0D137BA78100A8817B /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = CAD19BB5137A812600A8817B /* NetworkRequest.h */;
 		name = "NetworkRequest.h: 14";
 		rLen = 0;
 		rLoc = 317;
@@ -1380,7 +1085,6 @@
 	};
 	CAD19C0F137BA78100A8817B /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = CAD19BB8137A812600A8817B /* NetworkRequestResultCode.h */;
 		name = "NetworkRequestResultCode.h: 7";
 		rLen = 0;
 		rLoc = 43;
@@ -1390,7 +1094,6 @@
 	};
 	CAD19C15137BAB9600A8817B /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = CAD19BB7137A812600A8817B /* NetworkRequestParameter.h */;
 		name = "NetworkRequestParameter.h: 40";
 		rLen = 0;
 		rLoc = 788;
@@ -1400,7 +1103,6 @@
 	};
 	CAD19C17137BAB9600A8817B /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = CAD19B17137A6A3500A8817B /* PlaceMainController.h */;
 		name = "PlaceMainController.h: 14";
 		rLen = 0;
 		rLoc = 254;
@@ -1448,7 +1150,6 @@
 	};
 	CAD19C21137BAC1A00A8817B /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = CAD19B18137A6A3500A8817B /* PlaceMainController.m */;
 		name = "PlaceMainController.m: 196";
 		rLen = 0;
 		rLoc = 5619;
@@ -1466,6 +1167,27 @@
 		vrLen = 920;
 		vrLoc = 0;
 	};
+	CAD9F0B71417100200768298 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FB51D2D11381106E001D5AC5 /* DipanAppDelegate.m */;
+		name = "DipanAppDelegate.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1049;
+		vrLoc = 0;
+	};
+	CAD9F0B81417100200768298 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* Dipan-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/gitdata/MakeFriend_iPhone/Dipan-Info.plist";
+		rLen = 0;
+		rLoc = 9223372036854775807;
+	};
 	CAFA1613125C10730026DFEB /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		name = "TextEditorViewController.h: 33";
@@ -1474,5 +1196,12 @@
 		rType = 0;
 		vrLen = 774;
 		vrLoc = 0;
+	};
+	FB51D2D11381106E001D5AC5 /* DipanAppDelegate.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1070, 7137}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1049}";
+		};
 	};
 }
